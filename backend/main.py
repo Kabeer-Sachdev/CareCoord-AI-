@@ -1,0 +1,79 @@
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
+from sqlalchemy import text
+
+from backend.config.settings import settings
+from backend.database.database import init_db, get_db
+from backend.routes import patients, doctors, appointments, beds, emergencies, dashboard, workflow
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Lifespan event handler to ensure DB tables exist on startup."""
+    init_db()
+    yield
+
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    version=settings.VERSION,
+    description="Backend API foundation for CareCoord hospital workflow coordination system.",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    lifespan=lifespan
+)
+
+# CORS Middleware setup - Allow frontend development server
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Register API Routers
+app.include_router(patients.router, prefix=settings.API_V1_STR)
+app.include_router(doctors.router, prefix=settings.API_V1_STR)
+app.include_router(appointments.router, prefix=settings.API_V1_STR)
+app.include_router(beds.router, prefix=settings.API_V1_STR)
+app.include_router(emergencies.router, prefix=settings.API_V1_STR)
+app.include_router(dashboard.router, prefix=settings.API_V1_STR)
+app.include_router(workflow.router, prefix=settings.API_V1_STR)
+
+
+@app.get("/health", summary="Basic health check", tags=["System"])
+def health_check():
+    """Return system operational status."""
+    return {
+        "status": "healthy",
+        "service": "CareCoord Backend",
+        "version": settings.VERSION
+    }
+
+
+@app.get("/health/database", summary="Database health check", tags=["System"])
+def database_health_check(db: Session = Depends(get_db)):
+    """Verify SQLite database connectivity and return entity counts."""
+    try:
+        # Test DB connection with a simple query
+        db.execute(text("SELECT 1"))
+        
+        from backend.database.models import Patient, Doctor, Appointment, Bed, Emergency
+        return {
+            "status": "healthy",
+            "database": "SQLite",
+            "connected": True,
+            "counts": {
+                "patients": db.query(Patient).count(),
+                "doctors": db.query(Doctor).count(),
+                "appointments": db.query(Appointment).count(),
+                "beds": db.query(Bed).count(),
+                "emergencies": db.query(Emergency).count()
+            }
+        }
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Database connection failed: {str(exc)}"
+        )
