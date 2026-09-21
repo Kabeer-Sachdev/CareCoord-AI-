@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Terminal, Send, Sparkles, AlertCircle, CheckCircle2, User, Calendar, UserCheck } from 'lucide-react';
+import { Terminal, Send, Sparkles, AlertCircle, CheckCircle2, User, Calendar, UserCheck, Network } from 'lucide-react';
 import { StatusBadge } from '../components/StatusBadge';
+import { WorkflowGraphVisualizer } from '../components/WorkflowGraphVisualizer';
+import { HumanApprovalCard } from '../components/HumanApprovalCard';
 import { apiService } from '../services/api';
 
 export function WorkflowRequestPage({ onExecuteWorkflow }) {
@@ -11,10 +13,10 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
 
   const sampleQueries = [
     "I need an appointment with a cardiologist tomorrow.",
-    "Find an available neurologist.",
+    "Find me an available cardiologist.",
     "Show appointments for patient P001.",
-    "Find an available doctor.",
-    "Book an appointment."
+    "Book an appointment.",
+    "Find an available neurologist."
   ];
 
   const handleSubmit = async (e) => {
@@ -41,8 +43,18 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
     setQuery(text);
   };
 
+  const handleApprovalComplete = (updatedWorkflow) => {
+    setResponse((prev) => ({
+      ...prev,
+      status: 'success',
+      requires_human_approval: false,
+      recommendation: updatedWorkflow.recommendation || prev.recommendation
+    }));
+  };
+
   const parsed = response?.parsed_request;
   const resultData = response?.data;
+  const executionEvents = response?.execution_events || [];
 
   return (
     <div className="space-y-6">
@@ -54,7 +66,7 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
           </div>
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight">AI Workflow Command Terminal</h1>
-            <p className="text-xs text-gray-400 mt-1">Submit natural-language hospital requests to be parsed by LLM and processed by AI Agents.</p>
+            <p className="text-xs text-gray-400 mt-1">Submit natural-language hospital requests to be processed by LangGraph stateful AI Agents.</p>
           </div>
         </div>
       </div>
@@ -81,7 +93,7 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
               {isProcessing ? (
                 <>
                   <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Parsing...</span>
+                  <span>Executing Graph...</span>
                 </>
               ) : (
                 <>
@@ -95,7 +107,7 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
 
         {/* Sample Prompt Chips */}
         <div>
-          <span className="text-[11px] font-mono text-gray-500 block mb-2">QUICK TEST PROMPTS:</span>
+          <span className="text-[11px] font-mono text-gray-500 block mb-2">QUICK DEMO PROMPTS:</span>
           <div className="flex flex-wrap gap-2">
             {sampleQueries.map((sample, idx) => (
               <button
@@ -118,14 +130,19 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
         </div>
       )}
 
-      {/* Response Panel */}
+      {/* Response & Workflow Visualization Panel */}
       {response && (
         <div className="space-y-6 animate-fadeIn">
           {/* Top Status Bar */}
           <div className="bg-dark-800 border border-dark-700/80 rounded-xl p-5 shadow-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
             <div>
-              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest block">EXECUTED WORKFLOW</span>
-              <h3 className="font-bold text-white text-base mt-0.5">"{response.original_request}"</h3>
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest block">WORKFLOW ID:</span>
+                <span className="text-xs font-mono font-bold text-cyan-400 bg-dark-900 px-2 py-0.5 rounded border border-dark-700">
+                  {response.workflow_id || 'WF-CURRENT'}
+                </span>
+              </div>
+              <h3 className="font-bold text-white text-base mt-1">"{response.original_request}"</h3>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-lg border border-cyan-500/20">
@@ -135,7 +152,15 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
             </div>
           </div>
 
-          {/* Grid: Parsed Request Parameters & Agent Steps */}
+          {/* LangGraph State Visualizer */}
+          <WorkflowGraphVisualizer currentWorkflow={response} events={executionEvents} />
+
+          {/* Human-in-the-Loop Approval Card if pending approval */}
+          {(response.requires_human_approval || response.status === 'REQUIRES_HUMAN_APPROVAL') && (
+            <HumanApprovalCard workflow={response} onApprovalComplete={handleApprovalComplete} />
+          )}
+
+          {/* Grid: Parsed Request Parameters & Agent Tool Log */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Parsed JSON Parameters */}
             <div className="bg-dark-800 border border-dark-700/80 rounded-xl p-5 shadow-lg space-y-3">
@@ -166,14 +191,14 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
               )}
             </div>
 
-            {/* Agent Steps Timeline */}
+            {/* Agent Tool Execution Log */}
             <div className="bg-dark-800 border border-dark-700/80 rounded-xl p-5 shadow-lg space-y-3">
               <h4 className="font-bold text-sm text-white pb-2 border-b border-dark-700 flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>Agent Tool Execution Steps</span>
+                <span>LangGraph Execution Event Steps</span>
               </h4>
 
-              <div className="space-y-2 font-mono text-xs">
+              <div className="space-y-2 font-mono text-xs max-h-56 overflow-y-auto">
                 {response.steps?.map((step, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-gray-300 p-2 bg-dark-900/60 rounded-lg border border-dark-700/50">
                     <span className="text-cyan-400 font-bold">&gt;</span>
@@ -198,7 +223,7 @@ export function WorkflowRequestPage({ onExecuteWorkflow }) {
             {/* Render Detailed Result Cards if available */}
             {resultData?.doctors && (
               <div className="space-y-3 pt-2">
-                <h5 className="text-xs font-mono text-gray-400 uppercase">Matching Doctor Records:</h5>
+                <h5 className="text-xs font-mono text-gray-400 uppercase">Matching Doctor Records from SQLite:</h5>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {resultData.doctors.map((doc, idx) => (
                     <div key={idx} className="p-3 bg-dark-900 rounded-lg border border-dark-700 text-xs flex justify-between items-center">

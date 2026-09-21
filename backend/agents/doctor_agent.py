@@ -1,7 +1,10 @@
 from typing import Dict, Any, List
+import time
 from sqlalchemy.orm import Session
 from backend.services import doctor_service
 from backend.schemas.workflow import WorkflowParseResult
+from backend.agents.state import CareCoordState
+from backend.tools import doctor_tools
 
 class DoctorAgent:
     """Agent responsible for checking doctor availability, specializations, and schedules."""
@@ -9,17 +12,72 @@ class DoctorAgent:
     def __init__(self, name: str = "Doctor Agent"):
         self.name = name
 
-    def process(self, db: Session, parsed_req: WorkflowParseResult) -> Dict[str, Any]:
-        steps: List[str] = ["Doctor Agent initialized."]
+    def process_node(self, state: CareCoordState) -> CareCoordState:
+        """LangGraph node execution handler."""
+        state["current_agent"] = self.name
+        start_time = time.time()
+        db = state.get("db_session")
 
+        parsed = state.get("workflow_request", {})
+        spec = parsed.get("specialization") or parsed.get("department")
+        doctor_id = parsed.get("doctor_id")
+
+        if doctor_id and db:
+            docs = [doc for doc in [doctor_tools.get_doctor_schedule(db, doctor_id)] if doc]
+        elif spec and db:
+            docs = doctor_tools.get_doctors_by_specialization(db, spec)
+        elif db:
+            docs = doctor_tools.get_available_doctors(db)
+        else:
+            docs = []
+
+        avail_docs = [d for d in docs if d.get("availability")]
+        elapsed_ms = int((time.time() - start_time) * 1000)
+
+        result_data = {
+            "specialization": spec,
+            "doctor_id": doctor_id,
+            "total_found": len(docs),
+            "available_count": len(avail_docs),
+            "doctors": avail_docs if avail_docs else docs
+        }
+
+        state["doctor_result"] = {
+            "agent": self.name,
+            "status": "success" if avail_docs else "no_available_doctors",
+            "data": result_data
+        }
+
+        if "Doctor Agent" not in state.get("executed_agents", []):
+            state["executed_agents"].append("Doctor Agent")
+
+        summary = f"Queried doctor tools: {len(avail_docs)} available doctor(s) found." if avail_docs else f"No available doctor found for {spec or 'requested criteria'}."
+
+        log_entry = {
+            "timestamp": time.strftime("%H:%M:%S"),
+            "agent_name": self.name,
+            "node_name": "doctor_agent",
+            "event_type": "tool_call",
+            "tool_name": "get_doctors_by_specialization / get_available_doctors",
+            "status": "success" if avail_docs else "warning",
+            "execution_time_ms": elapsed_ms,
+            "details": {
+                "summary": summary,
+                "data": result_data
+            }
+        }
+        state["execution_log"].append(log_entry)
+        return state
+
+    def process(self, db: Session, parsed_req: WorkflowParseResult) -> Dict[str, Any]:
+        """Legacy direct execution method for backwards compatibility."""
+        steps: List[str] = ["Doctor Agent initialized."]
         spec = parsed_req.specialization or parsed_req.department
         doctor_id = parsed_req.doctor_id
 
         if doctor_id:
-            steps.append(f"Searching for Doctor ID '{doctor_id}'...")
             doc = doctor_service.get_doctor_by_id(db, doctor_id)
             if not doc:
-                steps.append(f"Doctor ID '{doctor_id}' not found.")
                 return {
                     "agent": self.name,
                     "status": "error",
@@ -27,7 +85,6 @@ class DoctorAgent:
                     "data": {"found": False},
                     "steps": steps
                 }
-            steps.append(f"Found doctor {doc.name} ({doc.specialization}). Availability: {doc.availability}.")
             return {
                 "agent": self.name,
                 "status": "success",
@@ -47,19 +104,13 @@ class DoctorAgent:
             }
 
         if spec:
-            steps.append(f"Filtering doctors by specialization/department: '{spec}'...")
             docs = doctor_service.get_doctors_by_specialization(db, spec)
-            steps.append(f"Retrieved {len(docs)} doctor(s) matching '{spec}'.")
-            
             avail_docs = [d for d in docs if d.availability]
-            steps.append(f"Found {len(avail_docs)} currently available doctor(s) in {spec}.")
-
             rec = (
                 f"Found {len(avail_docs)} available specialist(s) in {spec}: " +
                 ", ".join([f"{d.name} ({d.doctor_id})" for d in avail_docs])
                 if avail_docs else f"No available specialists currently found in {spec}."
             )
-
             return {
                 "agent": self.name,
                 "status": "success" if avail_docs else "warning",
@@ -82,10 +133,7 @@ class DoctorAgent:
                 "steps": steps
             }
 
-        steps.append("Querying all available doctors in the hospital...")
         avail_docs = doctor_service.get_available_doctors(db)
-        steps.append(f"Retrieved {len(avail_docs)} available doctor(s) across all departments.")
-
         return {
             "agent": self.name,
             "status": "success",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, UserCheck, Calendar, BedDouble, Siren, Activity, ArrowUpRight } from 'lucide-react';
+import { Users, UserCheck, Calendar, BedDouble, Siren, Activity, ArrowUpRight, Network, Sparkles } from 'lucide-react';
 import { KpiCard } from '../components/KpiCard';
 import { ProgressBar } from '../components/ProgressBar';
 import { StatusBadge } from '../components/StatusBadge';
@@ -8,6 +8,7 @@ import { apiService } from '../services/api';
 
 export function OverviewPage({ onNavigateToWorkflow, lastWorkflowEvent }) {
   const [summary, setSummary] = useState(null);
+  const [latestWf, setLatestWf] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,6 +18,11 @@ export function OverviewPage({ onNavigateToWorkflow, lastWorkflowEvent }) {
     try {
       const data = await apiService.getDashboardSummary();
       setSummary(data);
+
+      const wfs = await apiService.getWorkflows();
+      if (wfs && wfs.length > 0) {
+        setLatestWf(wfs[0]);
+      }
     } catch (err) {
       setError(err.message || 'Failed to load hospital operations summary.');
     } finally {
@@ -70,7 +76,7 @@ export function OverviewPage({ onNavigateToWorkflow, lastWorkflowEvent }) {
             HOSPITAL OPERATIONS CENTER
           </div>
           <h1 className="text-2xl font-bold text-white tracking-tight">Real-Time Operations Command</h1>
-          <p className="text-xs text-gray-400 mt-1">Live SQLite database metrics & agentic workflow orchestration layer.</p>
+          <p className="text-xs text-gray-400 mt-1">Live SQLite database metrics & LangGraph multi-agent workflow orchestration layer.</p>
         </div>
 
         <button
@@ -82,6 +88,34 @@ export function OverviewPage({ onNavigateToWorkflow, lastWorkflowEvent }) {
           <ArrowUpRight className="w-4 h-4" />
         </button>
       </div>
+
+      {/* Current Active Workflow Card */}
+      {latestWf && (
+        <div className="bg-dark-800 border border-cyan-500/30 rounded-2xl p-5 shadow-xl space-y-3">
+          <div className="flex justify-between items-center pb-2 border-b border-dark-700">
+            <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+              <Network className="w-4 h-4" />
+              <span>CURRENT AI WORKFLOW STATE ({latestWf.workflow_id})</span>
+            </div>
+            <StatusBadge status={latestWf.status} />
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div>
+              <div className="text-xs text-gray-400 font-mono">"{latestWf.original_request}"</div>
+              <div className="text-sm font-medium text-white mt-1">{latestWf.recommendation}</div>
+            </div>
+
+            <button
+              onClick={onNavigateToWorkflow}
+              className="px-3.5 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-xl text-xs font-mono flex items-center gap-1.5 shrink-0 transition-colors"
+            >
+              <span>Inspect Execution</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* KPI Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -233,10 +267,10 @@ export function OverviewPage({ onNavigateToWorkflow, lastWorkflowEvent }) {
         {/* AI Activity Timeline Panel */}
         <div>
           <ActivityTimeline
-            steps={lastWorkflowEvent?.steps || []}
-            agentUsed={lastWorkflowEvent?.agent_used}
-            status={lastWorkflowEvent?.status}
-            requestText={lastWorkflowEvent?.original_request}
+            steps={lastWorkflowEvent?.steps || latestWf?.final_result?.steps || []}
+            agentUsed={lastWorkflowEvent?.agent_used || latestWf?.agent_used}
+            status={lastWorkflowEvent?.status || latestWf?.status}
+            requestText={lastWorkflowEvent?.original_request || latestWf?.original_request}
           />
         </div>
       </div>

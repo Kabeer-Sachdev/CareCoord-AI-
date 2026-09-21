@@ -8,6 +8,7 @@ import {
   Siren, 
   Bot, 
   Terminal, 
+  History,
   BarChart3, 
   BookOpen, 
   Settings, 
@@ -22,6 +23,7 @@ export function Sidebar({ currentPage, setCurrentPage }) {
     { id: 'appointments', label: 'Appointments', icon: Calendar },
     { id: 'ai-agents', label: 'AI Agents', icon: Bot },
     { id: 'workflow', label: 'Workflow Terminal', icon: Terminal, highlight: true },
+    { id: 'workflows', label: 'Workflow History', icon: History },
   ];
 
   const futureNav = [

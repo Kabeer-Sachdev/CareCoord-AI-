@@ -91,3 +91,41 @@ class Emergency(Base):
     # Relationships
     patient = relationship("Patient", back_populates="emergencies")
     assigned_doctor = relationship("Doctor", back_populates="assigned_emergencies")
+
+
+class WorkflowRun(Base):
+    __tablename__ = "workflow_runs"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    workflow_id = Column(String(50), unique=True, index=True, nullable=False)
+    original_request = Column(Text, nullable=False)
+    workflow_type = Column(String(50), nullable=False)
+    status = Column(String(50), nullable=False, default="RUNNING")  # RUNNING, NEEDS_CLARIFICATION, REQUIRES_HUMAN_APPROVAL, APPROVED, REJECTED, COMPLETED, FAILED
+    requires_human_approval = Column(Boolean, default=False, nullable=False)
+    agent_used = Column(String(100), nullable=True)
+    recommendation = Column(Text, nullable=True)
+    final_result = Column(JSON, nullable=True)
+    started_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    completed_at = Column(DateTime, nullable=True)
+
+    # Relationships
+    events = relationship("WorkflowEvent", back_populates="workflow_run", cascade="all, delete-orphan")
+
+
+class WorkflowEvent(Base):
+    __tablename__ = "workflow_events"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    workflow_id = Column(String(50), ForeignKey("workflow_runs.workflow_id"), nullable=False, index=True)
+    timestamp = Column(DateTime, default=datetime.utcnow, nullable=False)
+    agent_name = Column(String(50), nullable=False)
+    node_name = Column(String(50), nullable=False)
+    event_type = Column(String(50), nullable=False)  # node_start, tool_call, tool_result, validation, approval_required, approved, rejected, completed, failed
+    status = Column(String(50), nullable=False)
+    tool_name = Column(String(50), nullable=True)
+    execution_time_ms = Column(Integer, nullable=True)
+    details = Column(JSON, nullable=True)
+
+    # Relationships
+    workflow_run = relationship("WorkflowRun", back_populates="events")
+

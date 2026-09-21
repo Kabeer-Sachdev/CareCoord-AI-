@@ -7,6 +7,7 @@ import { DoctorsPage } from './pages/Doctors';
 import { AppointmentsPage } from './pages/Appointments';
 import { AiAgentsPage } from './pages/AiAgents';
 import { WorkflowRequestPage } from './pages/WorkflowRequest';
+import { WorkflowHistoryPage } from './pages/WorkflowHistory';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('overview');
@@ -15,7 +16,6 @@ export default function App() {
 
   const handleRefresh = () => {
     setIsRefreshing(true);
-    // Simulate short refresh trigger
     setTimeout(() => {
       setIsRefreshing(false);
     }, 600);
@@ -59,6 +59,8 @@ export default function App() {
           {currentPage === 'workflow' && (
             <WorkflowRequestPage onExecuteWorkflow={handleExecuteWorkflow} />
           )}
+
+          {currentPage === 'workflows' && <WorkflowHistoryPage />}
         </main>
       </div>
     </div>

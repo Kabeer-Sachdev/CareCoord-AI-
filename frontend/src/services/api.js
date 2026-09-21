@@ -31,6 +31,19 @@ export const apiService = {
     body: JSON.stringify({ message }),
   }),
 
+  // Phase 3 Stateful LangGraph Workflows
+  getWorkflows: () => request('/workflows'),
+  getWorkflowById: (id) => request(`/workflows/${id}`),
+  getWorkflowEvents: (id) => request(`/workflows/${id}/events`),
+  approveWorkflow: (id, notes) => request(`/workflows/${id}/approve`, {
+    method: 'POST',
+    body: JSON.stringify({ action: 'approve', notes: notes || 'Approved via Hospital Command Terminal' }),
+  }),
+  rejectWorkflow: (id, notes) => request(`/workflows/${id}/reject`, {
+    method: 'POST',
+    body: JSON.stringify({ action: 'reject', notes: notes || 'Rejected via Hospital Command Terminal' }),
+  }),
+
   // Patients
   getPatients: () => request('/patients'),
   getPatientById: (id) => request(`/patients/${id}`),

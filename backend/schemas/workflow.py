@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional, List, Any, Dict, Literal
 from pydantic import BaseModel, Field
 
@@ -24,10 +25,52 @@ class WorkflowParseResult(BaseModel):
 
 
 class WorkflowResponse(BaseModel):
+    workflow_id: Optional[str] = None
     original_request: str
     parsed_request: WorkflowParseResult
     agent_used: str
-    status: str  # success, clarification_required, error
+    status: str  # success, clarification_required, error, REQUIRES_HUMAN_APPROVAL, COMPLETED
+    requires_human_approval: bool = False
     recommendation: Optional[str] = None
     data: Optional[Dict[str, Any]] = None
     steps: List[str] = Field(default_factory=list)
+    execution_events: Optional[List[Dict[str, Any]]] = Field(default_factory=list)
+
+
+class WorkflowEventResponse(BaseModel):
+    id: int
+    workflow_id: str
+    timestamp: str
+    agent_name: str
+    node_name: str
+    event_type: str
+    status: str
+    tool_name: Optional[str] = None
+    execution_time_ms: Optional[int] = None
+    details: Optional[Dict[str, Any]] = None
+
+    class Config:
+        from_attributes = True
+
+
+class WorkflowRunResponse(BaseModel):
+    id: int
+    workflow_id: str
+    original_request: str
+    workflow_type: str
+    status: str
+    requires_human_approval: bool
+    agent_used: Optional[str] = None
+    recommendation: Optional[str] = None
+    final_result: Optional[Dict[str, Any]] = None
+    started_at: str
+    completed_at: Optional[str] = None
+    events: List[WorkflowEventResponse] = Field(default_factory=list)
+
+    class Config:
+        from_attributes = True
+
+
+class WorkflowApprovalRequest(BaseModel):
+    action: Literal["approve", "reject"] = Field(..., example="approve")
+    notes: Optional[str] = Field(None, example="Approved by shift supervisor")

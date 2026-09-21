@@ -42,6 +42,19 @@ app.include_router(dashboard.router, prefix=settings.API_V1_STR)
 app.include_router(workflow.router, prefix=settings.API_V1_STR)
 
 
+@app.get("/", summary="Root endpoint", tags=["System"])
+def root():
+    """Root backend route providing operational status and links."""
+    return {
+        "status": "healthy",
+        "service": "CareCoord Backend API",
+        "version": settings.VERSION,
+        "frontend_dashboard": "http://localhost:5173/",
+        "swagger_docs": "http://localhost:8000/docs",
+        "health_check": "http://localhost:8000/health"
+    }
+
+
 @app.get("/health", summary="Basic health check", tags=["System"])
 def health_check():
     """Return system operational status."""
