@@ -1,0 +1,1289 @@
+date,day_of_week,is_weekend,month,day,department,patient_arrivals,appointment_count,emergency_cases,available_doctors,occupied_beds,available_beds,total_beds,bed_occupancy_rate,data_type
+2026-05-15,4,0,5,15,Cardiology,22,14,6,4,7,5,12,0.5833,synthetic_operational
+2026-05-15,4,0,5,15,Neurology,13,9,0,3,3,5,8,0.375,synthetic_operational
+2026-05-15,4,0,5,15,Orthopedics,18,12,2,3,3,5,8,0.375,synthetic_operational
+2026-05-15,4,0,5,15,General Medicine,22,14,6,5,6,9,15,0.4,synthetic_operational
+2026-05-15,4,0,5,15,Emergency Medicine,33,2,27,4,5,5,10,0.5,synthetic_operational
+2026-05-15,4,0,5,15,Pediatrics,16,15,0,3,3,3,6,0.5,synthetic_operational
+2026-05-15,4,0,5,15,Dermatology,14,11,0,2,1,1,2,0.5,synthetic_operational
+2026-05-16,5,1,5,16,Cardiology,13,9,2,3,5,7,12,0.4167,synthetic_operational
+2026-05-16,5,1,5,16,Neurology,9,9,3,1,3,5,8,0.375,synthetic_operational
+2026-05-16,5,1,5,16,Orthopedics,8,4,2,1,3,5,8,0.375,synthetic_operational
+2026-05-16,5,1,5,16,General Medicine,21,9,9,3,6,9,15,0.4,synthetic_operational
+2026-05-16,5,1,5,16,Emergency Medicine,45,5,51,3,7,3,10,0.7,synthetic_operational
+2026-05-16,5,1,5,16,Pediatrics,12,9,2,1,2,4,6,0.3333,synthetic_operational
+2026-05-16,5,1,5,16,Dermatology,4,1,1,1,1,1,2,0.5,synthetic_operational
+2026-05-17,6,1,5,17,Cardiology,13,11,4,3,5,7,12,0.4167,synthetic_operational
+2026-05-17,6,1,5,17,Neurology,7,5,4,1,3,5,8,0.375,synthetic_operational
+2026-05-17,6,1,5,17,Orthopedics,13,13,3,1,3,5,8,0.375,synthetic_operational
+2026-05-17,6,1,5,17,General Medicine,17,10,7,3,6,9,15,0.4,synthetic_operational
+2026-05-17,6,1,5,17,Emergency Medicine,42,3,44,3,5,5,10,0.5,synthetic_operational
+2026-05-17,6,1,5,17,Pediatrics,10,7,6,1,2,4,6,0.3333,synthetic_operational
+2026-05-17,6,1,5,17,Dermatology,6,6,2,1,1,1,2,0.5,synthetic_operational
+2026-05-18,0,0,5,18,Cardiology,32,22,8,5,10,2,12,0.8333,synthetic_operational
+2026-05-18,0,0,5,18,Neurology,22,16,4,3,6,2,8,0.75,synthetic_operational
+2026-05-18,0,0,5,18,Orthopedics,24,20,3,3,4,4,8,0.5,synthetic_operational
+2026-05-18,0,0,5,18,General Medicine,37,21,13,4,9,6,15,0.6,synthetic_operational
+2026-05-18,0,0,5,18,Emergency Medicine,31,3,24,4,7,3,10,0.7,synthetic_operational
+2026-05-18,0,0,5,18,Pediatrics,22,14,4,3,4,2,6,0.6667,synthetic_operational
+2026-05-18,0,0,5,18,Dermatology,12,13,1,3,1,1,2,0.5,synthetic_operational
+2026-05-19,1,0,5,19,Cardiology,25,13,5,4,6,6,12,0.5,synthetic_operational
+2026-05-19,1,0,5,19,Neurology,17,12,5,3,3,5,8,0.375,synthetic_operational
+2026-05-19,1,0,5,19,Orthopedics,23,15,5,2,5,3,8,0.625,synthetic_operational
+2026-05-19,1,0,5,19,General Medicine,36,20,11,5,9,6,15,0.6,synthetic_operational
+2026-05-19,1,0,5,19,Emergency Medicine,31,3,26,5,5,5,10,0.5,synthetic_operational
+2026-05-19,1,0,5,19,Pediatrics,23,17,3,3,4,2,6,0.6667,synthetic_operational
+2026-05-19,1,0,5,19,Dermatology,12,11,0,2,1,1,2,0.5,synthetic_operational
+2026-05-20,2,0,5,20,Cardiology,24,11,7,4,7,5,12,0.5833,synthetic_operational
+2026-05-20,2,0,5,20,Neurology,16,12,5,2,4,4,8,0.5,synthetic_operational
+2026-05-20,2,0,5,20,Orthopedics,17,13,4,2,3,5,8,0.375,synthetic_operational
+2026-05-20,2,0,5,20,General Medicine,28,14,9,5,7,8,15,0.4667,synthetic_operational
+2026-05-20,2,0,5,20,Emergency Medicine,36,3,32,5,6,4,10,0.6,synthetic_operational
+2026-05-20,2,0,5,20,Pediatrics,19,11,5,2,4,2,6,0.6667,synthetic_operational
+2026-05-20,2,0,5,20,Dermatology,11,10,3,2,1,1,2,0.5,synthetic_operational
+2026-05-21,3,0,5,21,Cardiology,24,19,6,4,6,6,12,0.5,synthetic_operational
+2026-05-21,3,0,5,21,Neurology,17,9,3,3,5,3,8,0.625,synthetic_operational
+2026-05-21,3,0,5,21,Orthopedics,23,18,8,3,5,3,8,0.625,synthetic_operational
+2026-05-21,3,0,5,21,General Medicine,29,18,13,5,7,8,15,0.4667,synthetic_operational
+2026-05-21,3,0,5,21,Emergency Medicine,31,4,26,4,5,5,10,0.5,synthetic_operational
+2026-05-21,3,0,5,21,Pediatrics,18,13,7,3,4,2,6,0.6667,synthetic_operational
+2026-05-21,3,0,5,21,Dermatology,13,13,2,3,1,1,2,0.5,synthetic_operational
+2026-05-22,4,0,5,22,Cardiology,15,9,5,4,5,7,12,0.4167,synthetic_operational
+2026-05-22,4,0,5,22,Neurology,13,9,3,3,3,5,8,0.375,synthetic_operational
+2026-05-22,4,0,5,22,Orthopedics,21,15,4,2,4,4,8,0.5,synthetic_operational
+2026-05-22,4,0,5,22,General Medicine,31,17,10,4,8,7,15,0.5333,synthetic_operational
+2026-05-22,4,0,5,22,Emergency Medicine,30,3,25,5,4,6,10,0.4,synthetic_operational
+2026-05-22,4,0,5,22,Pediatrics,16,13,2,2,3,3,6,0.5,synthetic_operational
+2026-05-22,4,0,5,22,Dermatology,10,11,1,2,1,1,2,0.5,synthetic_operational
+2026-05-23,5,1,5,23,Cardiology,12,7,6,3,5,7,12,0.4167,synthetic_operational
+2026-05-23,5,1,5,23,Neurology,12,6,7,1,4,4,8,0.5,synthetic_operational
+2026-05-23,5,1,5,23,Orthopedics,16,14,3,1,3,5,8,0.375,synthetic_operational
+2026-05-23,5,1,5,23,General Medicine,22,12,8,3,6,9,15,0.4,synthetic_operational
+2026-05-23,5,1,5,23,Emergency Medicine,42,6,44,3,6,4,10,0.6,synthetic_operational
+2026-05-23,5,1,5,23,Pediatrics,12,5,4,1,3,3,6,0.5,synthetic_operational
+2026-05-23,5,1,5,23,Dermatology,10,12,0,1,1,1,2,0.5,synthetic_operational
+2026-05-24,6,1,5,24,Cardiology,10,4,3,3,5,7,12,0.4167,synthetic_operational
+2026-05-24,6,1,5,24,Neurology,9,4,0,1,3,5,8,0.375,synthetic_operational
+2026-05-24,6,1,5,24,Orthopedics,6,2,3,1,3,5,8,0.375,synthetic_operational
+2026-05-24,6,1,5,24,General Medicine,16,9,6,3,7,8,15,0.4667,synthetic_operational
+2026-05-24,6,1,5,24,Emergency Medicine,45,5,48,3,6,4,10,0.6,synthetic_operational
+2026-05-24,6,1,5,24,Pediatrics,12,9,0,1,3,3,6,0.5,synthetic_operational
+2026-05-24,6,1,5,24,Dermatology,6,10,1,1,1,1,2,0.5,synthetic_operational
+2026-05-25,0,0,5,25,Cardiology,29,19,7,5,8,4,12,0.6667,synthetic_operational
+2026-05-25,0,0,5,25,Neurology,24,15,3,2,5,3,8,0.625,synthetic_operational
+2026-05-25,0,0,5,25,Orthopedics,26,18,5,3,5,3,8,0.625,synthetic_operational
+2026-05-25,0,0,5,25,General Medicine,39,23,8,5,11,4,15,0.7333,synthetic_operational
+2026-05-25,0,0,5,25,Emergency Medicine,29,2,24,5,5,5,10,0.5,synthetic_operational
+2026-05-25,0,0,5,25,Pediatrics,19,14,6,2,4,2,6,0.6667,synthetic_operational
+2026-05-25,0,0,5,25,Dermatology,21,19,2,2,1,1,2,0.5,synthetic_operational
+2026-05-26,1,0,5,26,Cardiology,24,18,6,5,7,5,12,0.5833,synthetic_operational
+2026-05-26,1,0,5,26,Neurology,23,18,2,2,5,3,8,0.625,synthetic_operational
+2026-05-26,1,0,5,26,Orthopedics,19,15,6,2,4,4,8,0.5,synthetic_operational
+2026-05-26,1,0,5,26,General Medicine,36,20,10,4,9,6,15,0.6,synthetic_operational
+2026-05-26,1,0,5,26,Emergency Medicine,30,3,27,5,4,6,10,0.4,synthetic_operational
+2026-05-26,1,0,5,26,Pediatrics,24,16,4,2,5,1,6,0.8333,synthetic_operational
+2026-05-26,1,0,5,26,Dermatology,10,8,0,2,1,1,2,0.5,synthetic_operational
+2026-05-27,2,0,5,27,Cardiology,23,13,6,5,6,6,12,0.5,synthetic_operational
+2026-05-27,2,0,5,27,Neurology,19,15,5,2,5,3,8,0.625,synthetic_operational
+2026-05-27,2,0,5,27,Orthopedics,22,17,1,3,4,4,8,0.5,synthetic_operational
+2026-05-27,2,0,5,27,General Medicine,25,17,5,5,7,8,15,0.4667,synthetic_operational
+2026-05-27,2,0,5,27,Emergency Medicine,34,3,29,5,4,6,10,0.4,synthetic_operational
+2026-05-27,2,0,5,27,Pediatrics,17,10,6,2,2,4,6,0.3333,synthetic_operational
+2026-05-27,2,0,5,27,Dermatology,14,15,0,3,1,1,2,0.5,synthetic_operational
+2026-05-28,3,0,5,28,Cardiology,19,16,4,4,5,7,12,0.4167,synthetic_operational
+2026-05-28,3,0,5,28,Neurology,17,16,5,3,4,4,8,0.5,synthetic_operational
+2026-05-28,3,0,5,28,Orthopedics,18,13,5,2,3,5,8,0.375,synthetic_operational
+2026-05-28,3,0,5,28,General Medicine,32,19,9,4,8,7,15,0.5333,synthetic_operational
+2026-05-28,3,0,5,28,Emergency Medicine,34,3,31,4,4,6,10,0.4,synthetic_operational
+2026-05-28,3,0,5,28,Pediatrics,18,15,1,3,3,3,6,0.5,synthetic_operational
+2026-05-28,3,0,5,28,Dermatology,15,13,3,2,1,1,2,0.5,synthetic_operational
+2026-05-29,4,0,5,29,Cardiology,25,17,6,5,5,7,12,0.4167,synthetic_operational
+2026-05-29,4,0,5,29,Neurology,13,7,3,3,3,5,8,0.375,synthetic_operational
+2026-05-29,4,0,5,29,Orthopedics,15,14,3,3,3,5,8,0.375,synthetic_operational
+2026-05-29,4,0,5,29,General Medicine,32,19,11,5,7,8,15,0.4667,synthetic_operational
+2026-05-29,4,0,5,29,Emergency Medicine,36,4,29,4,5,5,10,0.5,synthetic_operational
+2026-05-29,4,0,5,29,Pediatrics,21,14,6,2,4,2,6,0.6667,synthetic_operational
+2026-05-29,4,0,5,29,Dermatology,16,11,0,2,1,1,2,0.5,synthetic_operational
+2026-05-30,5,1,5,30,Cardiology,15,13,6,3,5,7,12,0.4167,synthetic_operational
+2026-05-30,5,1,5,30,Neurology,11,4,4,1,3,5,8,0.375,synthetic_operational
+2026-05-30,5,1,5,30,Orthopedics,16,12,3,1,3,5,8,0.375,synthetic_operational
+2026-05-30,5,1,5,30,General Medicine,17,9,4,3,6,9,15,0.4,synthetic_operational
+2026-05-30,5,1,5,30,Emergency Medicine,38,6,38,3,7,3,10,0.7,synthetic_operational
+2026-05-30,5,1,5,30,Pediatrics,9,7,1,1,2,4,6,0.3333,synthetic_operational
+2026-05-30,5,1,5,30,Dermatology,9,10,1,1,1,1,2,0.5,synthetic_operational
+2026-05-31,6,1,5,31,Cardiology,14,8,2,3,5,7,12,0.4167,synthetic_operational
+2026-05-31,6,1,5,31,Neurology,9,5,0,1,3,5,8,0.375,synthetic_operational
+2026-05-31,6,1,5,31,Orthopedics,8,4,1,1,3,5,8,0.375,synthetic_operational
+2026-05-31,6,1,5,31,General Medicine,17,14,6,3,6,9,15,0.4,synthetic_operational
+2026-05-31,6,1,5,31,Emergency Medicine,44,4,47,3,7,3,10,0.7,synthetic_operational
+2026-05-31,6,1,5,31,Pediatrics,10,7,3,1,2,4,6,0.3333,synthetic_operational
+2026-05-31,6,1,5,31,Dermatology,7,7,2,1,1,1,2,0.5,synthetic_operational
+2026-06-01,0,0,6,1,Cardiology,27,19,5,4,7,5,12,0.5833,synthetic_operational
+2026-06-01,0,0,6,1,Neurology,20,14,2,3,5,3,8,0.625,synthetic_operational
+2026-06-01,0,0,6,1,Orthopedics,21,16,3,3,3,5,8,0.375,synthetic_operational
+2026-06-01,0,0,6,1,General Medicine,37,25,11,5,8,7,15,0.5333,synthetic_operational
+2026-06-01,0,0,6,1,Emergency Medicine,38,5,29,4,6,4,10,0.6,synthetic_operational
+2026-06-01,0,0,6,1,Pediatrics,26,16,2,2,5,1,6,0.8333,synthetic_operational
+2026-06-01,0,0,6,1,Dermatology,19,17,1,3,1,1,2,0.5,synthetic_operational
+2026-06-02,1,0,6,2,Cardiology,24,14,6,5,6,6,12,0.5,synthetic_operational
+2026-06-02,1,0,6,2,Neurology,19,15,4,3,5,3,8,0.625,synthetic_operational
+2026-06-02,1,0,6,2,Orthopedics,24,18,7,2,6,2,8,0.75,synthetic_operational
+2026-06-02,1,0,6,2,General Medicine,33,21,11,5,7,8,15,0.4667,synthetic_operational
+2026-06-02,1,0,6,2,Emergency Medicine,34,2,30,4,4,6,10,0.4,synthetic_operational
+2026-06-02,1,0,6,2,Pediatrics,20,15,1,3,4,2,6,0.6667,synthetic_operational
+2026-06-02,1,0,6,2,Dermatology,15,15,2,2,1,1,2,0.5,synthetic_operational
+2026-06-03,2,0,6,3,Cardiology,29,18,7,4,8,4,12,0.6667,synthetic_operational
+2026-06-03,2,0,6,3,Neurology,18,11,4,3,4,4,8,0.5,synthetic_operational
+2026-06-03,2,0,6,3,Orthopedics,22,18,4,2,5,3,8,0.625,synthetic_operational
+2026-06-03,2,0,6,3,General Medicine,33,22,7,4,9,6,15,0.6,synthetic_operational
+2026-06-03,2,0,6,3,Emergency Medicine,38,5,35,5,5,5,10,0.5,synthetic_operational
+2026-06-03,2,0,6,3,Pediatrics,14,9,3,2,3,3,6,0.5,synthetic_operational
+2026-06-03,2,0,6,3,Dermatology,12,8,0,3,1,1,2,0.5,synthetic_operational
+2026-06-04,3,0,6,4,Cardiology,20,14,5,5,6,6,12,0.5,synthetic_operational
+2026-06-04,3,0,6,4,Neurology,14,11,3,3,4,4,8,0.5,synthetic_operational
+2026-06-04,3,0,6,4,Orthopedics,20,15,2,2,3,5,8,0.375,synthetic_operational
+2026-06-04,3,0,6,4,General Medicine,29,18,10,4,6,9,15,0.4,synthetic_operational
+2026-06-04,3,0,6,4,Emergency Medicine,32,4,29,4,4,6,10,0.4,synthetic_operational
+2026-06-04,3,0,6,4,Pediatrics,12,8,4,3,3,3,6,0.5,synthetic_operational
+2026-06-04,3,0,6,4,Dermatology,12,8,0,2,1,1,2,0.5,synthetic_operational
+2026-06-05,4,0,6,5,Cardiology,23,12,5,5,6,6,12,0.5,synthetic_operational
+2026-06-05,4,0,6,5,Neurology,20,15,4,3,5,3,8,0.625,synthetic_operational
+2026-06-05,4,0,6,5,Orthopedics,17,15,2,3,3,5,8,0.375,synthetic_operational
+2026-06-05,4,0,6,5,General Medicine,29,20,6,4,9,6,15,0.6,synthetic_operational
+2026-06-05,4,0,6,5,Emergency Medicine,31,4,27,4,5,5,10,0.5,synthetic_operational
+2026-06-05,4,0,6,5,Pediatrics,19,9,3,3,3,3,6,0.5,synthetic_operational
+2026-06-05,4,0,6,5,Dermatology,15,13,0,2,1,1,2,0.5,synthetic_operational
+2026-06-06,5,1,6,6,Cardiology,14,9,0,3,5,7,12,0.4167,synthetic_operational
+2026-06-06,5,1,6,6,Neurology,10,8,5,1,3,5,8,0.375,synthetic_operational
+2026-06-06,5,1,6,6,Orthopedics,12,7,6,1,3,5,8,0.375,synthetic_operational
+2026-06-06,5,1,6,6,General Medicine,20,12,8,3,6,9,15,0.4,synthetic_operational
+2026-06-06,5,1,6,6,Emergency Medicine,42,4,45,3,6,4,10,0.6,synthetic_operational
+2026-06-06,5,1,6,6,Pediatrics,10,7,2,1,2,4,6,0.3333,synthetic_operational
+2026-06-06,5,1,6,6,Dermatology,3,5,2,1,1,1,2,0.5,synthetic_operational
+2026-06-07,6,1,6,7,Cardiology,11,6,1,3,5,7,12,0.4167,synthetic_operational
+2026-06-07,6,1,6,7,Neurology,6,8,3,1,3,5,8,0.375,synthetic_operational
+2026-06-07,6,1,6,7,Orthopedics,13,7,2,1,3,5,8,0.375,synthetic_operational
+2026-06-07,6,1,6,7,General Medicine,13,9,5,3,6,9,15,0.4,synthetic_operational
+2026-06-07,6,1,6,7,Emergency Medicine,46,5,48,3,7,3,10,0.7,synthetic_operational
+2026-06-07,6,1,6,7,Pediatrics,7,6,3,1,2,4,6,0.3333,synthetic_operational
+2026-06-07,6,1,6,7,Dermatology,9,6,2,1,1,1,2,0.5,synthetic_operational
+2026-06-08,0,0,6,8,Cardiology,26,19,5,4,6,6,12,0.5,synthetic_operational
+2026-06-08,0,0,6,8,Neurology,23,15,6,2,6,2,8,0.75,synthetic_operational
+2026-06-08,0,0,6,8,Orthopedics,27,20,4,2,6,2,8,0.75,synthetic_operational
+2026-06-08,0,0,6,8,General Medicine,42,25,11,4,12,3,15,0.8,synthetic_operational
+2026-06-08,0,0,6,8,Emergency Medicine,34,3,29,4,5,5,10,0.5,synthetic_operational
+2026-06-08,0,0,6,8,Pediatrics,25,20,5,3,5,1,6,0.8333,synthetic_operational
+2026-06-08,0,0,6,8,Dermatology,13,13,4,3,1,1,2,0.5,synthetic_operational
+2026-06-09,1,0,6,9,Cardiology,24,16,5,4,6,6,12,0.5,synthetic_operational
+2026-06-09,1,0,6,9,Neurology,19,15,6,2,5,3,8,0.625,synthetic_operational
+2026-06-09,1,0,6,9,Orthopedics,26,20,6,3,5,3,8,0.625,synthetic_operational
+2026-06-09,1,0,6,9,General Medicine,34,21,8,4,9,6,15,0.6,synthetic_operational
+2026-06-09,1,0,6,9,Emergency Medicine,33,5,28,5,5,5,10,0.5,synthetic_operational
+2026-06-09,1,0,6,9,Pediatrics,18,18,4,2,3,3,6,0.5,synthetic_operational
+2026-06-09,1,0,6,9,Dermatology,12,11,0,3,1,1,2,0.5,synthetic_operational
+2026-06-10,2,0,6,10,Cardiology,23,14,3,5,7,5,12,0.5833,synthetic_operational
+2026-06-10,2,0,6,10,Neurology,12,8,1,2,3,5,8,0.375,synthetic_operational
+2026-06-10,2,0,6,10,Orthopedics,19,18,4,2,3,5,8,0.375,synthetic_operational
+2026-06-10,2,0,6,10,General Medicine,34,19,11,5,11,4,15,0.7333,synthetic_operational
+2026-06-10,2,0,6,10,Emergency Medicine,36,4,32,4,6,4,10,0.6,synthetic_operational
+2026-06-10,2,0,6,10,Pediatrics,21,17,6,2,4,2,6,0.6667,synthetic_operational
+2026-06-10,2,0,6,10,Dermatology,16,15,1,3,1,1,2,0.5,synthetic_operational
+2026-06-11,3,0,6,11,Cardiology,20,12,4,5,6,6,12,0.5,synthetic_operational
+2026-06-11,3,0,6,11,Neurology,19,13,3,3,5,3,8,0.625,synthetic_operational
+2026-06-11,3,0,6,11,Orthopedics,23,20,5,2,3,5,8,0.375,synthetic_operational
+2026-06-11,3,0,6,11,General Medicine,31,18,11,5,7,8,15,0.4667,synthetic_operational
+2026-06-11,3,0,6,11,Emergency Medicine,37,4,35,4,6,4,10,0.6,synthetic_operational
+2026-06-11,3,0,6,11,Pediatrics,20,15,2,2,4,2,6,0.6667,synthetic_operational
+2026-06-11,3,0,6,11,Dermatology,15,13,2,2,1,1,2,0.5,synthetic_operational
+2026-06-12,4,0,6,12,Cardiology,20,16,8,5,5,7,12,0.4167,synthetic_operational
+2026-06-12,4,0,6,12,Neurology,14,7,2,3,3,5,8,0.375,synthetic_operational
+2026-06-12,4,0,6,12,Orthopedics,17,14,2,3,3,5,8,0.375,synthetic_operational
+2026-06-12,4,0,6,12,General Medicine,30,19,7,4,8,7,15,0.5333,synthetic_operational
+2026-06-12,4,0,6,12,Emergency Medicine,33,4,30,5,4,6,10,0.4,synthetic_operational
+2026-06-12,4,0,6,12,Pediatrics,19,10,5,3,3,3,6,0.5,synthetic_operational
+2026-06-12,4,0,6,12,Dermatology,16,18,0,3,1,1,2,0.5,synthetic_operational
+2026-06-13,5,1,6,13,Cardiology,13,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-06-13,5,1,6,13,Neurology,11,5,4,1,4,4,8,0.5,synthetic_operational
+2026-06-13,5,1,6,13,Orthopedics,13,6,3,1,3,5,8,0.375,synthetic_operational
+2026-06-13,5,1,6,13,General Medicine,19,13,9,3,6,9,15,0.4,synthetic_operational
+2026-06-13,5,1,6,13,Emergency Medicine,43,5,43,3,6,4,10,0.6,synthetic_operational
+2026-06-13,5,1,6,13,Pediatrics,10,7,3,1,2,4,6,0.3333,synthetic_operational
+2026-06-13,5,1,6,13,Dermatology,7,8,0,1,1,1,2,0.5,synthetic_operational
+2026-06-14,6,1,6,14,Cardiology,13,9,4,3,5,7,12,0.4167,synthetic_operational
+2026-06-14,6,1,6,14,Neurology,9,8,3,1,4,4,8,0.5,synthetic_operational
+2026-06-14,6,1,6,14,Orthopedics,12,10,4,1,3,5,8,0.375,synthetic_operational
+2026-06-14,6,1,6,14,General Medicine,15,8,5,3,6,9,15,0.4,synthetic_operational
+2026-06-14,6,1,6,14,Emergency Medicine,45,4,48,3,6,4,10,0.6,synthetic_operational
+2026-06-14,6,1,6,14,Pediatrics,10,8,2,1,2,4,6,0.3333,synthetic_operational
+2026-06-14,6,1,6,14,Dermatology,12,11,0,1,1,1,2,0.5,synthetic_operational
+2026-06-15,0,0,6,15,Cardiology,27,16,5,5,8,4,12,0.6667,synthetic_operational
+2026-06-15,0,0,6,15,Neurology,22,20,4,3,6,2,8,0.75,synthetic_operational
+2026-06-15,0,0,6,15,Orthopedics,25,18,3,2,6,2,8,0.75,synthetic_operational
+2026-06-15,0,0,6,15,General Medicine,38,24,11,4,9,6,15,0.6,synthetic_operational
+2026-06-15,0,0,6,15,Emergency Medicine,35,4,29,5,5,5,10,0.5,synthetic_operational
+2026-06-15,0,0,6,15,Pediatrics,21,15,7,3,3,3,6,0.5,synthetic_operational
+2026-06-15,0,0,6,15,Dermatology,19,17,3,2,1,1,2,0.5,synthetic_operational
+2026-06-16,1,0,6,16,Cardiology,28,21,7,4,7,5,12,0.5833,synthetic_operational
+2026-06-16,1,0,6,16,Neurology,14,9,5,3,3,5,8,0.375,synthetic_operational
+2026-06-16,1,0,6,16,Orthopedics,20,18,3,3,5,3,8,0.625,synthetic_operational
+2026-06-16,1,0,6,16,General Medicine,33,19,12,4,6,9,15,0.4,synthetic_operational
+2026-06-16,1,0,6,16,Emergency Medicine,31,3,28,4,5,5,10,0.5,synthetic_operational
+2026-06-16,1,0,6,16,Pediatrics,17,13,1,3,3,3,6,0.5,synthetic_operational
+2026-06-16,1,0,6,16,Dermatology,16,13,2,2,1,1,2,0.5,synthetic_operational
+2026-06-17,2,0,6,17,Cardiology,28,17,7,5,8,4,12,0.6667,synthetic_operational
+2026-06-17,2,0,6,17,Neurology,19,11,4,3,5,3,8,0.625,synthetic_operational
+2026-06-17,2,0,6,17,Orthopedics,23,19,3,3,5,3,8,0.625,synthetic_operational
+2026-06-17,2,0,6,17,General Medicine,35,23,10,5,9,6,15,0.6,synthetic_operational
+2026-06-17,2,0,6,17,Emergency Medicine,33,3,27,4,6,4,10,0.6,synthetic_operational
+2026-06-17,2,0,6,17,Pediatrics,19,11,5,3,3,3,6,0.5,synthetic_operational
+2026-06-17,2,0,6,17,Dermatology,15,13,1,2,1,1,2,0.5,synthetic_operational
+2026-06-18,3,0,6,18,Cardiology,22,13,7,5,6,6,12,0.5,synthetic_operational
+2026-06-18,3,0,6,18,Neurology,19,14,3,2,6,2,8,0.75,synthetic_operational
+2026-06-18,3,0,6,18,Orthopedics,20,17,3,2,5,3,8,0.625,synthetic_operational
+2026-06-18,3,0,6,18,General Medicine,34,19,13,4,10,5,15,0.6667,synthetic_operational
+2026-06-18,3,0,6,18,Emergency Medicine,32,4,28,4,4,6,10,0.4,synthetic_operational
+2026-06-18,3,0,6,18,Pediatrics,19,9,3,2,3,3,6,0.5,synthetic_operational
+2026-06-18,3,0,6,18,Dermatology,13,12,2,2,1,1,2,0.5,synthetic_operational
+2026-06-19,4,0,6,19,Cardiology,24,15,8,5,7,5,12,0.5833,synthetic_operational
+2026-06-19,4,0,6,19,Neurology,16,13,6,3,4,4,8,0.5,synthetic_operational
+2026-06-19,4,0,6,19,Orthopedics,23,21,4,2,5,3,8,0.625,synthetic_operational
+2026-06-19,4,0,6,19,General Medicine,31,19,10,5,6,9,15,0.4,synthetic_operational
+2026-06-19,4,0,6,19,Emergency Medicine,32,4,26,5,6,4,10,0.6,synthetic_operational
+2026-06-19,4,0,6,19,Pediatrics,16,10,3,3,3,3,6,0.5,synthetic_operational
+2026-06-19,4,0,6,19,Dermatology,13,10,3,3,1,1,2,0.5,synthetic_operational
+2026-06-20,5,1,6,20,Cardiology,11,8,4,3,5,7,12,0.4167,synthetic_operational
+2026-06-20,5,1,6,20,Neurology,12,6,5,1,3,5,8,0.375,synthetic_operational
+2026-06-20,5,1,6,20,Orthopedics,9,6,0,1,3,5,8,0.375,synthetic_operational
+2026-06-20,5,1,6,20,General Medicine,19,14,8,3,6,9,15,0.4,synthetic_operational
+2026-06-20,5,1,6,20,Emergency Medicine,42,5,46,3,7,3,10,0.7,synthetic_operational
+2026-06-20,5,1,6,20,Pediatrics,15,10,4,1,3,3,6,0.5,synthetic_operational
+2026-06-20,5,1,6,20,Dermatology,8,8,0,1,1,1,2,0.5,synthetic_operational
+2026-06-21,6,1,6,21,Cardiology,12,6,4,3,5,7,12,0.4167,synthetic_operational
+2026-06-21,6,1,6,21,Neurology,8,6,1,1,3,5,8,0.375,synthetic_operational
+2026-06-21,6,1,6,21,Orthopedics,11,9,2,1,3,5,8,0.375,synthetic_operational
+2026-06-21,6,1,6,21,General Medicine,11,12,3,3,6,9,15,0.4,synthetic_operational
+2026-06-21,6,1,6,21,Emergency Medicine,41,5,44,3,5,5,10,0.5,synthetic_operational
+2026-06-21,6,1,6,21,Pediatrics,13,9,4,1,2,4,6,0.3333,synthetic_operational
+2026-06-21,6,1,6,21,Dermatology,8,11,2,1,1,1,2,0.5,synthetic_operational
+2026-06-22,0,0,6,22,Cardiology,26,17,7,4,8,4,12,0.6667,synthetic_operational
+2026-06-22,0,0,6,22,Neurology,22,16,5,2,6,2,8,0.75,synthetic_operational
+2026-06-22,0,0,6,22,Orthopedics,26,18,4,3,5,3,8,0.625,synthetic_operational
+2026-06-22,0,0,6,22,General Medicine,37,23,10,5,9,6,15,0.6,synthetic_operational
+2026-06-22,0,0,6,22,Emergency Medicine,29,2,26,5,5,5,10,0.5,synthetic_operational
+2026-06-22,0,0,6,22,Pediatrics,22,17,4,3,4,2,6,0.6667,synthetic_operational
+2026-06-22,0,0,6,22,Dermatology,17,15,0,2,1,1,2,0.5,synthetic_operational
+2026-06-23,1,0,6,23,Cardiology,20,15,8,5,7,5,12,0.5833,synthetic_operational
+2026-06-23,1,0,6,23,Neurology,15,9,3,3,3,5,8,0.375,synthetic_operational
+2026-06-23,1,0,6,23,Orthopedics,26,21,9,3,5,3,8,0.625,synthetic_operational
+2026-06-23,1,0,6,23,General Medicine,28,21,6,4,6,9,15,0.4,synthetic_operational
+2026-06-23,1,0,6,23,Emergency Medicine,33,2,30,5,4,6,10,0.4,synthetic_operational
+2026-06-23,1,0,6,23,Pediatrics,20,15,4,3,4,2,6,0.6667,synthetic_operational
+2026-06-23,1,0,6,23,Dermatology,17,13,4,2,1,1,2,0.5,synthetic_operational
+2026-06-24,2,0,6,24,Cardiology,24,18,7,5,5,7,12,0.4167,synthetic_operational
+2026-06-24,2,0,6,24,Neurology,18,12,4,2,5,3,8,0.625,synthetic_operational
+2026-06-24,2,0,6,24,Orthopedics,19,15,6,3,4,4,8,0.5,synthetic_operational
+2026-06-24,2,0,6,24,General Medicine,30,19,9,5,8,7,15,0.5333,synthetic_operational
+2026-06-24,2,0,6,24,Emergency Medicine,34,5,29,4,5,5,10,0.5,synthetic_operational
+2026-06-24,2,0,6,24,Pediatrics,25,18,6,3,5,1,6,0.8333,synthetic_operational
+2026-06-24,2,0,6,24,Dermatology,18,16,0,3,1,1,2,0.5,synthetic_operational
+2026-06-25,3,0,6,25,Cardiology,20,11,6,4,6,6,12,0.5,synthetic_operational
+2026-06-25,3,0,6,25,Neurology,14,10,2,3,5,3,8,0.625,synthetic_operational
+2026-06-25,3,0,6,25,Orthopedics,19,13,3,2,4,4,8,0.5,synthetic_operational
+2026-06-25,3,0,6,25,General Medicine,33,23,8,5,9,6,15,0.6,synthetic_operational
+2026-06-25,3,0,6,25,Emergency Medicine,32,3,27,4,4,6,10,0.4,synthetic_operational
+2026-06-25,3,0,6,25,Pediatrics,16,14,6,2,2,4,6,0.3333,synthetic_operational
+2026-06-25,3,0,6,25,Dermatology,15,16,2,2,1,1,2,0.5,synthetic_operational
+2026-06-26,4,0,6,26,Cardiology,18,10,4,4,5,7,12,0.4167,synthetic_operational
+2026-06-26,4,0,6,26,Neurology,16,13,3,3,4,4,8,0.5,synthetic_operational
+2026-06-26,4,0,6,26,Orthopedics,20,17,0,2,4,4,8,0.5,synthetic_operational
+2026-06-26,4,0,6,26,General Medicine,25,12,7,5,6,9,15,0.4,synthetic_operational
+2026-06-26,4,0,6,26,Emergency Medicine,33,3,27,5,5,5,10,0.5,synthetic_operational
+2026-06-26,4,0,6,26,Pediatrics,13,5,0,2,2,4,6,0.3333,synthetic_operational
+2026-06-26,4,0,6,26,Dermatology,11,9,2,2,1,1,2,0.5,synthetic_operational
+2026-06-27,5,1,6,27,Cardiology,14,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-06-27,5,1,6,27,Neurology,11,13,2,1,3,5,8,0.375,synthetic_operational
+2026-06-27,5,1,6,27,Orthopedics,10,4,0,1,3,5,8,0.375,synthetic_operational
+2026-06-27,5,1,6,27,General Medicine,23,14,9,3,6,9,15,0.4,synthetic_operational
+2026-06-27,5,1,6,27,Emergency Medicine,45,6,45,3,7,3,10,0.7,synthetic_operational
+2026-06-27,5,1,6,27,Pediatrics,5,4,5,1,2,4,6,0.3333,synthetic_operational
+2026-06-27,5,1,6,27,Dermatology,10,13,0,1,1,1,2,0.5,synthetic_operational
+2026-06-28,6,1,6,28,Cardiology,14,8,4,3,5,7,12,0.4167,synthetic_operational
+2026-06-28,6,1,6,28,Neurology,9,7,2,1,3,5,8,0.375,synthetic_operational
+2026-06-28,6,1,6,28,Orthopedics,6,4,0,1,3,5,8,0.375,synthetic_operational
+2026-06-28,6,1,6,28,General Medicine,17,10,7,3,6,9,15,0.4,synthetic_operational
+2026-06-28,6,1,6,28,Emergency Medicine,44,3,44,3,6,4,10,0.6,synthetic_operational
+2026-06-28,6,1,6,28,Pediatrics,11,6,4,1,2,4,6,0.3333,synthetic_operational
+2026-06-28,6,1,6,28,Dermatology,4,6,2,1,1,1,2,0.5,synthetic_operational
+2026-06-29,0,0,6,29,Cardiology,26,16,9,4,7,5,12,0.5833,synthetic_operational
+2026-06-29,0,0,6,29,Neurology,19,12,3,2,4,4,8,0.5,synthetic_operational
+2026-06-29,0,0,6,29,Orthopedics,26,18,6,3,6,2,8,0.75,synthetic_operational
+2026-06-29,0,0,6,29,General Medicine,39,26,13,5,8,7,15,0.5333,synthetic_operational
+2026-06-29,0,0,6,29,Emergency Medicine,34,4,28,5,6,4,10,0.6,synthetic_operational
+2026-06-29,0,0,6,29,Pediatrics,21,12,6,2,3,3,6,0.5,synthetic_operational
+2026-06-29,0,0,6,29,Dermatology,19,17,0,2,1,1,2,0.5,synthetic_operational
+2026-06-30,1,0,6,30,Cardiology,24,16,4,4,7,5,12,0.5833,synthetic_operational
+2026-06-30,1,0,6,30,Neurology,19,15,4,2,4,4,8,0.5,synthetic_operational
+2026-06-30,1,0,6,30,Orthopedics,18,18,1,3,4,4,8,0.5,synthetic_operational
+2026-06-30,1,0,6,30,General Medicine,36,19,11,4,10,5,15,0.6667,synthetic_operational
+2026-06-30,1,0,6,30,Emergency Medicine,37,3,30,4,6,4,10,0.6,synthetic_operational
+2026-06-30,1,0,6,30,Pediatrics,22,15,6,3,3,3,6,0.5,synthetic_operational
+2026-06-30,1,0,6,30,Dermatology,20,20,1,2,2,0,2,1.0,synthetic_operational
+2026-07-01,2,0,7,1,Cardiology,23,17,6,5,7,5,12,0.5833,synthetic_operational
+2026-07-01,2,0,7,1,Neurology,16,12,1,2,3,5,8,0.375,synthetic_operational
+2026-07-01,2,0,7,1,Orthopedics,19,17,5,3,3,5,8,0.375,synthetic_operational
+2026-07-01,2,0,7,1,General Medicine,30,20,10,5,9,6,15,0.6,synthetic_operational
+2026-07-01,2,0,7,1,Emergency Medicine,31,2,28,5,4,6,10,0.4,synthetic_operational
+2026-07-01,2,0,7,1,Pediatrics,17,14,3,2,3,3,6,0.5,synthetic_operational
+2026-07-01,2,0,7,1,Dermatology,15,15,0,3,1,1,2,0.5,synthetic_operational
+2026-07-02,3,0,7,2,Cardiology,23,15,5,4,5,7,12,0.4167,synthetic_operational
+2026-07-02,3,0,7,2,Neurology,11,10,1,3,3,5,8,0.375,synthetic_operational
+2026-07-02,3,0,7,2,Orthopedics,19,14,3,2,4,4,8,0.5,synthetic_operational
+2026-07-02,3,0,7,2,General Medicine,27,18,8,4,7,8,15,0.4667,synthetic_operational
+2026-07-02,3,0,7,2,Emergency Medicine,35,3,32,5,5,5,10,0.5,synthetic_operational
+2026-07-02,3,0,7,2,Pediatrics,15,11,3,3,2,4,6,0.3333,synthetic_operational
+2026-07-02,3,0,7,2,Dermatology,15,12,0,2,1,1,2,0.5,synthetic_operational
+2026-07-03,4,0,7,3,Cardiology,20,11,7,4,5,7,12,0.4167,synthetic_operational
+2026-07-03,4,0,7,3,Neurology,10,7,5,2,3,5,8,0.375,synthetic_operational
+2026-07-03,4,0,7,3,Orthopedics,22,17,2,3,4,4,8,0.5,synthetic_operational
+2026-07-03,4,0,7,3,General Medicine,28,15,8,5,8,7,15,0.5333,synthetic_operational
+2026-07-03,4,0,7,3,Emergency Medicine,35,4,32,5,6,4,10,0.6,synthetic_operational
+2026-07-03,4,0,7,3,Pediatrics,18,16,1,2,2,4,6,0.3333,synthetic_operational
+2026-07-03,4,0,7,3,Dermatology,13,14,0,2,1,1,2,0.5,synthetic_operational
+2026-07-04,5,1,7,4,Cardiology,19,12,6,3,6,6,12,0.5,synthetic_operational
+2026-07-04,5,1,7,4,Neurology,7,1,0,1,3,5,8,0.375,synthetic_operational
+2026-07-04,5,1,7,4,Orthopedics,12,14,1,1,3,5,8,0.375,synthetic_operational
+2026-07-04,5,1,7,4,General Medicine,23,18,12,3,7,8,15,0.4667,synthetic_operational
+2026-07-04,5,1,7,4,Emergency Medicine,46,5,50,3,6,4,10,0.6,synthetic_operational
+2026-07-04,5,1,7,4,Pediatrics,10,7,2,1,2,4,6,0.3333,synthetic_operational
+2026-07-04,5,1,7,4,Dermatology,11,12,1,1,1,1,2,0.5,synthetic_operational
+2026-07-05,6,1,7,5,Cardiology,9,5,2,3,5,7,12,0.4167,synthetic_operational
+2026-07-05,6,1,7,5,Neurology,9,6,5,1,3,5,8,0.375,synthetic_operational
+2026-07-05,6,1,7,5,Orthopedics,8,10,3,1,3,5,8,0.375,synthetic_operational
+2026-07-05,6,1,7,5,General Medicine,16,8,5,3,6,9,15,0.4,synthetic_operational
+2026-07-05,6,1,7,5,Emergency Medicine,48,6,50,3,6,4,10,0.6,synthetic_operational
+2026-07-05,6,1,7,5,Pediatrics,10,3,3,1,2,4,6,0.3333,synthetic_operational
+2026-07-05,6,1,7,5,Dermatology,7,3,1,1,1,1,2,0.5,synthetic_operational
+2026-07-06,0,0,7,6,Cardiology,25,11,6,4,9,3,12,0.75,synthetic_operational
+2026-07-06,0,0,7,6,Neurology,19,11,4,2,5,3,8,0.625,synthetic_operational
+2026-07-06,0,0,7,6,Orthopedics,23,15,4,3,4,4,8,0.5,synthetic_operational
+2026-07-06,0,0,7,6,General Medicine,37,23,13,5,9,6,15,0.6,synthetic_operational
+2026-07-06,0,0,7,6,Emergency Medicine,33,3,24,4,5,5,10,0.5,synthetic_operational
+2026-07-06,0,0,7,6,Pediatrics,22,15,5,3,4,2,6,0.6667,synthetic_operational
+2026-07-06,0,0,7,6,Dermatology,19,17,1,3,1,1,2,0.5,synthetic_operational
+2026-07-07,1,0,7,7,Cardiology,25,21,5,4,7,5,12,0.5833,synthetic_operational
+2026-07-07,1,0,7,7,Neurology,20,14,2,2,6,2,8,0.75,synthetic_operational
+2026-07-07,1,0,7,7,Orthopedics,21,15,4,3,5,3,8,0.625,synthetic_operational
+2026-07-07,1,0,7,7,General Medicine,34,21,11,5,11,4,15,0.7333,synthetic_operational
+2026-07-07,1,0,7,7,Emergency Medicine,35,3,28,5,5,5,10,0.5,synthetic_operational
+2026-07-07,1,0,7,7,Pediatrics,22,17,1,2,3,3,6,0.5,synthetic_operational
+2026-07-07,1,0,7,7,Dermatology,14,15,0,2,1,1,2,0.5,synthetic_operational
+2026-07-08,2,0,7,8,Cardiology,21,14,4,4,6,6,12,0.5,synthetic_operational
+2026-07-08,2,0,7,8,Neurology,17,14,5,2,5,3,8,0.625,synthetic_operational
+2026-07-08,2,0,7,8,Orthopedics,22,16,3,3,3,5,8,0.375,synthetic_operational
+2026-07-08,2,0,7,8,General Medicine,32,22,8,4,8,7,15,0.5333,synthetic_operational
+2026-07-08,2,0,7,8,Emergency Medicine,33,4,27,5,5,5,10,0.5,synthetic_operational
+2026-07-08,2,0,7,8,Pediatrics,13,7,2,2,2,4,6,0.3333,synthetic_operational
+2026-07-08,2,0,7,8,Dermatology,15,11,2,3,1,1,2,0.5,synthetic_operational
+2026-07-09,3,0,7,9,Cardiology,20,11,3,5,6,6,12,0.5,synthetic_operational
+2026-07-09,3,0,7,9,Neurology,13,9,4,2,4,4,8,0.5,synthetic_operational
+2026-07-09,3,0,7,9,Orthopedics,16,15,6,2,3,5,8,0.375,synthetic_operational
+2026-07-09,3,0,7,9,General Medicine,28,18,11,5,6,9,15,0.4,synthetic_operational
+2026-07-09,3,0,7,9,Emergency Medicine,31,4,26,4,5,5,10,0.5,synthetic_operational
+2026-07-09,3,0,7,9,Pediatrics,21,18,2,2,3,3,6,0.5,synthetic_operational
+2026-07-09,3,0,7,9,Dermatology,12,11,0,2,1,1,2,0.5,synthetic_operational
+2026-07-10,4,0,7,10,Cardiology,22,14,6,4,7,5,12,0.5833,synthetic_operational
+2026-07-10,4,0,7,10,Neurology,16,13,2,3,3,5,8,0.375,synthetic_operational
+2026-07-10,4,0,7,10,Orthopedics,18,15,4,3,3,5,8,0.375,synthetic_operational
+2026-07-10,4,0,7,10,General Medicine,29,16,10,4,7,8,15,0.4667,synthetic_operational
+2026-07-10,4,0,7,10,Emergency Medicine,37,3,33,5,7,3,10,0.7,synthetic_operational
+2026-07-10,4,0,7,10,Pediatrics,19,15,3,2,3,3,6,0.5,synthetic_operational
+2026-07-10,4,0,7,10,Dermatology,14,11,2,3,1,1,2,0.5,synthetic_operational
+2026-07-11,5,1,7,11,Cardiology,12,9,5,3,5,7,12,0.4167,synthetic_operational
+2026-07-11,5,1,7,11,Neurology,9,4,4,1,3,5,8,0.375,synthetic_operational
+2026-07-11,5,1,7,11,Orthopedics,13,10,3,1,3,5,8,0.375,synthetic_operational
+2026-07-11,5,1,7,11,General Medicine,19,9,5,3,6,9,15,0.4,synthetic_operational
+2026-07-11,5,1,7,11,Emergency Medicine,41,4,46,3,6,4,10,0.6,synthetic_operational
+2026-07-11,5,1,7,11,Pediatrics,11,8,2,1,2,4,6,0.3333,synthetic_operational
+2026-07-11,5,1,7,11,Dermatology,10,11,2,1,1,1,2,0.5,synthetic_operational
+2026-07-12,6,1,7,12,Cardiology,14,14,3,3,6,6,12,0.5,synthetic_operational
+2026-07-12,6,1,7,12,Neurology,8,5,2,1,3,5,8,0.375,synthetic_operational
+2026-07-12,6,1,7,12,Orthopedics,11,7,3,1,3,5,8,0.375,synthetic_operational
+2026-07-12,6,1,7,12,General Medicine,18,14,6,3,6,9,15,0.4,synthetic_operational
+2026-07-12,6,1,7,12,Emergency Medicine,45,7,47,3,7,3,10,0.7,synthetic_operational
+2026-07-12,6,1,7,12,Pediatrics,6,3,2,1,2,4,6,0.3333,synthetic_operational
+2026-07-12,6,1,7,12,Dermatology,5,6,0,1,1,1,2,0.5,synthetic_operational
+2026-07-13,0,0,7,13,Cardiology,28,22,5,4,8,4,12,0.6667,synthetic_operational
+2026-07-13,0,0,7,13,Neurology,20,16,6,3,6,2,8,0.75,synthetic_operational
+2026-07-13,0,0,7,13,Orthopedics,26,22,3,3,5,3,8,0.625,synthetic_operational
+2026-07-13,0,0,7,13,General Medicine,37,17,12,5,9,6,15,0.6,synthetic_operational
+2026-07-13,0,0,7,13,Emergency Medicine,34,3,28,5,4,6,10,0.4,synthetic_operational
+2026-07-13,0,0,7,13,Pediatrics,21,12,3,3,3,3,6,0.5,synthetic_operational
+2026-07-13,0,0,7,13,Dermatology,17,12,0,2,1,1,2,0.5,synthetic_operational
+2026-07-14,1,0,7,14,Cardiology,26,14,5,4,6,6,12,0.5,synthetic_operational
+2026-07-14,1,0,7,14,Neurology,21,15,3,2,6,2,8,0.75,synthetic_operational
+2026-07-14,1,0,7,14,Orthopedics,24,21,1,3,5,3,8,0.625,synthetic_operational
+2026-07-14,1,0,7,14,General Medicine,37,21,12,4,9,6,15,0.6,synthetic_operational
+2026-07-14,1,0,7,14,Emergency Medicine,34,1,29,4,6,4,10,0.6,synthetic_operational
+2026-07-14,1,0,7,14,Pediatrics,21,14,6,3,3,3,6,0.5,synthetic_operational
+2026-07-14,1,0,7,14,Dermatology,17,16,0,2,1,1,2,0.5,synthetic_operational
+2026-07-15,2,0,7,15,Cardiology,25,17,6,5,7,5,12,0.5833,synthetic_operational
+2026-07-15,2,0,7,15,Neurology,15,6,2,3,4,4,8,0.5,synthetic_operational
+2026-07-15,2,0,7,15,Orthopedics,23,17,1,2,4,4,8,0.5,synthetic_operational
+2026-07-15,2,0,7,15,General Medicine,32,20,8,4,10,5,15,0.6667,synthetic_operational
+2026-07-15,2,0,7,15,Emergency Medicine,33,6,28,5,4,6,10,0.4,synthetic_operational
+2026-07-15,2,0,7,15,Pediatrics,19,12,1,2,3,3,6,0.5,synthetic_operational
+2026-07-15,2,0,7,15,Dermatology,14,11,0,3,1,1,2,0.5,synthetic_operational
+2026-07-16,3,0,7,16,Cardiology,24,16,5,4,8,4,12,0.6667,synthetic_operational
+2026-07-16,3,0,7,16,Neurology,16,10,4,3,5,3,8,0.625,synthetic_operational
+2026-07-16,3,0,7,16,Orthopedics,21,17,0,3,4,4,8,0.5,synthetic_operational
+2026-07-16,3,0,7,16,General Medicine,30,17,11,5,11,4,15,0.7333,synthetic_operational
+2026-07-16,3,0,7,16,Emergency Medicine,30,3,25,5,5,5,10,0.5,synthetic_operational
+2026-07-16,3,0,7,16,Pediatrics,19,9,6,2,3,3,6,0.5,synthetic_operational
+2026-07-16,3,0,7,16,Dermatology,17,13,0,3,1,1,2,0.5,synthetic_operational
+2026-07-17,4,0,7,17,Cardiology,25,20,6,4,7,5,12,0.5833,synthetic_operational
+2026-07-17,4,0,7,17,Neurology,14,10,3,3,3,5,8,0.375,synthetic_operational
+2026-07-17,4,0,7,17,Orthopedics,15,9,2,3,3,5,8,0.375,synthetic_operational
+2026-07-17,4,0,7,17,General Medicine,28,17,9,5,8,7,15,0.5333,synthetic_operational
+2026-07-17,4,0,7,17,Emergency Medicine,31,3,25,4,5,5,10,0.5,synthetic_operational
+2026-07-17,4,0,7,17,Pediatrics,13,7,1,2,2,4,6,0.3333,synthetic_operational
+2026-07-17,4,0,7,17,Dermatology,10,9,1,2,1,1,2,0.5,synthetic_operational
+2026-07-18,5,1,7,18,Cardiology,12,6,2,3,5,7,12,0.4167,synthetic_operational
+2026-07-18,5,1,7,18,Neurology,11,9,4,1,3,5,8,0.375,synthetic_operational
+2026-07-18,5,1,7,18,Orthopedics,13,8,2,1,4,4,8,0.5,synthetic_operational
+2026-07-18,5,1,7,18,General Medicine,20,14,10,3,6,9,15,0.4,synthetic_operational
+2026-07-18,5,1,7,18,Emergency Medicine,43,3,46,3,6,4,10,0.6,synthetic_operational
+2026-07-18,5,1,7,18,Pediatrics,8,6,2,1,2,4,6,0.3333,synthetic_operational
+2026-07-18,5,1,7,18,Dermatology,8,8,0,1,1,1,2,0.5,synthetic_operational
+2026-07-19,6,1,7,19,Cardiology,12,5,4,3,5,7,12,0.4167,synthetic_operational
+2026-07-19,6,1,7,19,Neurology,9,8,0,1,3,5,8,0.375,synthetic_operational
+2026-07-19,6,1,7,19,Orthopedics,13,8,3,1,3,5,8,0.375,synthetic_operational
+2026-07-19,6,1,7,19,General Medicine,23,13,10,3,6,9,15,0.4,synthetic_operational
+2026-07-19,6,1,7,19,Emergency Medicine,45,6,50,3,6,4,10,0.6,synthetic_operational
+2026-07-19,6,1,7,19,Pediatrics,10,9,6,1,2,4,6,0.3333,synthetic_operational
+2026-07-19,6,1,7,19,Dermatology,13,11,2,1,1,1,2,0.5,synthetic_operational
+2026-07-20,0,0,7,20,Cardiology,26,15,8,5,7,5,12,0.5833,synthetic_operational
+2026-07-20,0,0,7,20,Neurology,21,18,4,2,5,3,8,0.625,synthetic_operational
+2026-07-20,0,0,7,20,Orthopedics,23,18,5,3,5,3,8,0.625,synthetic_operational
+2026-07-20,0,0,7,20,General Medicine,38,23,10,4,10,5,15,0.6667,synthetic_operational
+2026-07-20,0,0,7,20,Emergency Medicine,31,3,24,5,4,6,10,0.4,synthetic_operational
+2026-07-20,0,0,7,20,Pediatrics,24,13,6,3,5,1,6,0.8333,synthetic_operational
+2026-07-20,0,0,7,20,Dermatology,13,12,1,3,1,1,2,0.5,synthetic_operational
+2026-07-21,1,0,7,21,Cardiology,25,13,7,5,6,6,12,0.5,synthetic_operational
+2026-07-21,1,0,7,21,Neurology,16,10,5,3,4,4,8,0.5,synthetic_operational
+2026-07-21,1,0,7,21,Orthopedics,22,15,3,2,4,4,8,0.5,synthetic_operational
+2026-07-21,1,0,7,21,General Medicine,36,19,11,4,9,6,15,0.6,synthetic_operational
+2026-07-21,1,0,7,21,Emergency Medicine,37,3,32,5,5,5,10,0.5,synthetic_operational
+2026-07-21,1,0,7,21,Pediatrics,26,16,4,3,4,2,6,0.6667,synthetic_operational
+2026-07-21,1,0,7,21,Dermatology,10,13,0,2,1,1,2,0.5,synthetic_operational
+2026-07-22,2,0,7,22,Cardiology,26,22,7,5,7,5,12,0.5833,synthetic_operational
+2026-07-22,2,0,7,22,Neurology,14,9,1,2,4,4,8,0.5,synthetic_operational
+2026-07-22,2,0,7,22,Orthopedics,19,14,4,2,3,5,8,0.375,synthetic_operational
+2026-07-22,2,0,7,22,General Medicine,29,22,9,5,7,8,15,0.4667,synthetic_operational
+2026-07-22,2,0,7,22,Emergency Medicine,32,3,25,4,4,6,10,0.4,synthetic_operational
+2026-07-22,2,0,7,22,Pediatrics,19,15,1,3,3,3,6,0.5,synthetic_operational
+2026-07-22,2,0,7,22,Dermatology,15,17,3,3,1,1,2,0.5,synthetic_operational
+2026-07-23,3,0,7,23,Cardiology,20,14,6,4,5,7,12,0.4167,synthetic_operational
+2026-07-23,3,0,7,23,Neurology,16,12,2,2,4,4,8,0.5,synthetic_operational
+2026-07-23,3,0,7,23,Orthopedics,20,13,4,2,4,4,8,0.5,synthetic_operational
+2026-07-23,3,0,7,23,General Medicine,26,15,6,5,6,9,15,0.4,synthetic_operational
+2026-07-23,3,0,7,23,Emergency Medicine,33,4,25,5,6,4,10,0.6,synthetic_operational
+2026-07-23,3,0,7,23,Pediatrics,20,12,6,2,3,3,6,0.5,synthetic_operational
+2026-07-23,3,0,7,23,Dermatology,16,16,1,3,1,1,2,0.5,synthetic_operational
+2026-07-24,4,0,7,24,Cardiology,24,17,8,4,5,7,12,0.4167,synthetic_operational
+2026-07-24,4,0,7,24,Neurology,14,14,2,2,4,4,8,0.5,synthetic_operational
+2026-07-24,4,0,7,24,Orthopedics,18,13,3,3,3,5,8,0.375,synthetic_operational
+2026-07-24,4,0,7,24,General Medicine,29,16,9,5,7,8,15,0.4667,synthetic_operational
+2026-07-24,4,0,7,24,Emergency Medicine,33,1,29,5,4,6,10,0.4,synthetic_operational
+2026-07-24,4,0,7,24,Pediatrics,19,11,6,2,3,3,6,0.5,synthetic_operational
+2026-07-24,4,0,7,24,Dermatology,15,15,1,2,1,1,2,0.5,synthetic_operational
+2026-07-25,5,1,7,25,Cardiology,12,8,1,3,5,7,12,0.4167,synthetic_operational
+2026-07-25,5,1,7,25,Neurology,10,4,1,1,3,5,8,0.375,synthetic_operational
+2026-07-25,5,1,7,25,Orthopedics,11,10,3,1,3,5,8,0.375,synthetic_operational
+2026-07-25,5,1,7,25,General Medicine,24,16,11,3,6,9,15,0.4,synthetic_operational
+2026-07-25,5,1,7,25,Emergency Medicine,45,6,48,3,7,3,10,0.7,synthetic_operational
+2026-07-25,5,1,7,25,Pediatrics,9,5,3,1,2,4,6,0.3333,synthetic_operational
+2026-07-25,5,1,7,25,Dermatology,8,12,1,1,1,1,2,0.5,synthetic_operational
+2026-07-26,6,1,7,26,Cardiology,12,8,4,3,5,7,12,0.4167,synthetic_operational
+2026-07-26,6,1,7,26,Neurology,12,11,5,1,3,5,8,0.375,synthetic_operational
+2026-07-26,6,1,7,26,Orthopedics,13,8,4,1,3,5,8,0.375,synthetic_operational
+2026-07-26,6,1,7,26,General Medicine,15,11,7,3,6,9,15,0.4,synthetic_operational
+2026-07-26,6,1,7,26,Emergency Medicine,45,3,50,3,6,4,10,0.6,synthetic_operational
+2026-07-26,6,1,7,26,Pediatrics,8,6,4,1,2,4,6,0.3333,synthetic_operational
+2026-07-26,6,1,7,26,Dermatology,8,9,0,1,1,1,2,0.5,synthetic_operational
+2026-07-27,0,0,7,27,Cardiology,26,19,7,5,7,5,12,0.5833,synthetic_operational
+2026-07-27,0,0,7,27,Neurology,25,14,4,3,6,2,8,0.75,synthetic_operational
+2026-07-27,0,0,7,27,Orthopedics,25,21,4,2,5,3,8,0.625,synthetic_operational
+2026-07-27,0,0,7,27,General Medicine,36,23,8,4,10,5,15,0.6667,synthetic_operational
+2026-07-27,0,0,7,27,Emergency Medicine,31,4,25,5,6,4,10,0.6,synthetic_operational
+2026-07-27,0,0,7,27,Pediatrics,22,13,3,2,4,2,6,0.6667,synthetic_operational
+2026-07-27,0,0,7,27,Dermatology,21,18,2,2,2,0,2,1.0,synthetic_operational
+2026-07-28,1,0,7,28,Cardiology,22,16,7,5,6,6,12,0.5,synthetic_operational
+2026-07-28,1,0,7,28,Neurology,17,13,3,3,3,5,8,0.375,synthetic_operational
+2026-07-28,1,0,7,28,Orthopedics,21,16,2,2,3,5,8,0.375,synthetic_operational
+2026-07-28,1,0,7,28,General Medicine,34,22,6,4,11,4,15,0.7333,synthetic_operational
+2026-07-28,1,0,7,28,Emergency Medicine,37,3,29,5,6,4,10,0.6,synthetic_operational
+2026-07-28,1,0,7,28,Pediatrics,16,14,2,2,3,3,6,0.5,synthetic_operational
+2026-07-28,1,0,7,28,Dermatology,17,15,0,2,2,0,2,1.0,synthetic_operational
+2026-07-29,2,0,7,29,Cardiology,19,11,4,4,5,7,12,0.4167,synthetic_operational
+2026-07-29,2,0,7,29,Neurology,16,13,3,2,5,3,8,0.625,synthetic_operational
+2026-07-29,2,0,7,29,Orthopedics,17,13,1,3,3,5,8,0.375,synthetic_operational
+2026-07-29,2,0,7,29,General Medicine,31,19,9,4,9,6,15,0.6,synthetic_operational
+2026-07-29,2,0,7,29,Emergency Medicine,32,4,27,4,6,4,10,0.6,synthetic_operational
+2026-07-29,2,0,7,29,Pediatrics,14,10,2,3,2,4,6,0.3333,synthetic_operational
+2026-07-29,2,0,7,29,Dermatology,19,22,0,3,1,1,2,0.5,synthetic_operational
+2026-07-30,3,0,7,30,Cardiology,20,11,3,4,5,7,12,0.4167,synthetic_operational
+2026-07-30,3,0,7,30,Neurology,19,11,2,2,6,2,8,0.75,synthetic_operational
+2026-07-30,3,0,7,30,Orthopedics,16,11,4,2,3,5,8,0.375,synthetic_operational
+2026-07-30,3,0,7,30,General Medicine,28,16,6,5,6,9,15,0.4,synthetic_operational
+2026-07-30,3,0,7,30,Emergency Medicine,37,2,31,4,5,5,10,0.5,synthetic_operational
+2026-07-30,3,0,7,30,Pediatrics,18,9,5,3,2,4,6,0.3333,synthetic_operational
+2026-07-30,3,0,7,30,Dermatology,16,11,2,2,1,1,2,0.5,synthetic_operational
+2026-07-31,4,0,7,31,Cardiology,25,17,5,4,7,5,12,0.5833,synthetic_operational
+2026-07-31,4,0,7,31,Neurology,18,15,5,2,4,4,8,0.5,synthetic_operational
+2026-07-31,4,0,7,31,Orthopedics,18,13,4,2,3,5,8,0.375,synthetic_operational
+2026-07-31,4,0,7,31,General Medicine,30,20,10,4,10,5,15,0.6667,synthetic_operational
+2026-07-31,4,0,7,31,Emergency Medicine,29,3,27,5,4,6,10,0.4,synthetic_operational
+2026-07-31,4,0,7,31,Pediatrics,15,13,3,3,3,3,6,0.5,synthetic_operational
+2026-07-31,4,0,7,31,Dermatology,13,18,1,3,1,1,2,0.5,synthetic_operational
+2026-08-01,5,1,8,1,Cardiology,14,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-08-01,5,1,8,1,Neurology,12,7,0,1,4,4,8,0.5,synthetic_operational
+2026-08-01,5,1,8,1,Orthopedics,12,7,3,1,3,5,8,0.375,synthetic_operational
+2026-08-01,5,1,8,1,General Medicine,22,14,9,3,6,9,15,0.4,synthetic_operational
+2026-08-01,5,1,8,1,Emergency Medicine,47,5,49,3,7,3,10,0.7,synthetic_operational
+2026-08-01,5,1,8,1,Pediatrics,7,6,0,1,2,4,6,0.3333,synthetic_operational
+2026-08-01,5,1,8,1,Dermatology,5,7,0,1,1,1,2,0.5,synthetic_operational
+2026-08-02,6,1,8,2,Cardiology,11,4,2,3,5,7,12,0.4167,synthetic_operational
+2026-08-02,6,1,8,2,Neurology,8,5,2,1,3,5,8,0.375,synthetic_operational
+2026-08-02,6,1,8,2,Orthopedics,14,13,2,1,3,5,8,0.375,synthetic_operational
+2026-08-02,6,1,8,2,General Medicine,15,10,4,3,6,9,15,0.4,synthetic_operational
+2026-08-02,6,1,8,2,Emergency Medicine,45,4,48,3,6,4,10,0.6,synthetic_operational
+2026-08-02,6,1,8,2,Pediatrics,9,4,4,1,2,4,6,0.3333,synthetic_operational
+2026-08-02,6,1,8,2,Dermatology,3,1,0,1,1,1,2,0.5,synthetic_operational
+2026-08-03,0,0,8,3,Cardiology,27,15,5,5,6,6,12,0.5,synthetic_operational
+2026-08-03,0,0,8,3,Neurology,18,13,2,2,5,3,8,0.625,synthetic_operational
+2026-08-03,0,0,8,3,Orthopedics,25,19,4,3,4,4,8,0.5,synthetic_operational
+2026-08-03,0,0,8,3,General Medicine,38,21,13,5,11,4,15,0.7333,synthetic_operational
+2026-08-03,0,0,8,3,Emergency Medicine,35,2,31,4,6,4,10,0.6,synthetic_operational
+2026-08-03,0,0,8,3,Pediatrics,18,13,3,2,3,3,6,0.5,synthetic_operational
+2026-08-03,0,0,8,3,Dermatology,17,16,3,2,1,1,2,0.5,synthetic_operational
+2026-08-04,1,0,8,4,Cardiology,26,16,7,4,7,5,12,0.5833,synthetic_operational
+2026-08-04,1,0,8,4,Neurology,20,14,6,3,5,3,8,0.625,synthetic_operational
+2026-08-04,1,0,8,4,Orthopedics,21,17,3,2,6,2,8,0.75,synthetic_operational
+2026-08-04,1,0,8,4,General Medicine,32,19,10,5,8,7,15,0.5333,synthetic_operational
+2026-08-04,1,0,8,4,Emergency Medicine,34,4,25,4,5,5,10,0.5,synthetic_operational
+2026-08-04,1,0,8,4,Pediatrics,25,20,3,3,4,2,6,0.6667,synthetic_operational
+2026-08-04,1,0,8,4,Dermatology,18,14,0,3,1,1,2,0.5,synthetic_operational
+2026-08-05,2,0,8,5,Cardiology,27,20,7,4,8,4,12,0.6667,synthetic_operational
+2026-08-05,2,0,8,5,Neurology,12,8,2,3,4,4,8,0.5,synthetic_operational
+2026-08-05,2,0,8,5,Orthopedics,23,19,2,3,5,3,8,0.625,synthetic_operational
+2026-08-05,2,0,8,5,General Medicine,28,16,8,5,8,7,15,0.5333,synthetic_operational
+2026-08-05,2,0,8,5,Emergency Medicine,35,3,31,4,6,4,10,0.6,synthetic_operational
+2026-08-05,2,0,8,5,Pediatrics,21,14,6,3,4,2,6,0.6667,synthetic_operational
+2026-08-05,2,0,8,5,Dermatology,20,16,0,2,2,0,2,1.0,synthetic_operational
+2026-08-06,3,0,8,6,Cardiology,19,13,2,4,7,5,12,0.5833,synthetic_operational
+2026-08-06,3,0,8,6,Neurology,18,13,4,3,4,4,8,0.5,synthetic_operational
+2026-08-06,3,0,8,6,Orthopedics,20,15,5,3,4,4,8,0.5,synthetic_operational
+2026-08-06,3,0,8,6,General Medicine,32,20,10,4,9,6,15,0.6,synthetic_operational
+2026-08-06,3,0,8,6,Emergency Medicine,33,4,26,4,5,5,10,0.5,synthetic_operational
+2026-08-06,3,0,8,6,Pediatrics,21,14,3,3,4,2,6,0.6667,synthetic_operational
+2026-08-06,3,0,8,6,Dermatology,15,15,0,3,1,1,2,0.5,synthetic_operational
+2026-08-07,4,0,8,7,Cardiology,20,11,5,5,8,4,12,0.6667,synthetic_operational
+2026-08-07,4,0,8,7,Neurology,19,14,3,3,5,3,8,0.625,synthetic_operational
+2026-08-07,4,0,8,7,Orthopedics,18,17,1,2,4,4,8,0.5,synthetic_operational
+2026-08-07,4,0,8,7,General Medicine,32,18,9,4,6,9,15,0.4,synthetic_operational
+2026-08-07,4,0,8,7,Emergency Medicine,36,5,29,4,5,5,10,0.5,synthetic_operational
+2026-08-07,4,0,8,7,Pediatrics,15,7,4,3,3,3,6,0.5,synthetic_operational
+2026-08-07,4,0,8,7,Dermatology,11,9,1,3,1,1,2,0.5,synthetic_operational
+2026-08-08,5,1,8,8,Cardiology,12,7,3,3,5,7,12,0.4167,synthetic_operational
+2026-08-08,5,1,8,8,Neurology,13,8,4,1,3,5,8,0.375,synthetic_operational
+2026-08-08,5,1,8,8,Orthopedics,17,12,4,1,4,4,8,0.5,synthetic_operational
+2026-08-08,5,1,8,8,General Medicine,23,13,8,3,6,9,15,0.4,synthetic_operational
+2026-08-08,5,1,8,8,Emergency Medicine,49,6,52,3,9,1,10,0.9,synthetic_operational
+2026-08-08,5,1,8,8,Pediatrics,11,9,3,1,2,4,6,0.3333,synthetic_operational
+2026-08-08,5,1,8,8,Dermatology,10,8,2,1,1,1,2,0.5,synthetic_operational
+2026-08-09,6,1,8,9,Cardiology,15,10,3,3,6,6,12,0.5,synthetic_operational
+2026-08-09,6,1,8,9,Neurology,8,6,3,1,3,5,8,0.375,synthetic_operational
+2026-08-09,6,1,8,9,Orthopedics,13,12,2,1,4,4,8,0.5,synthetic_operational
+2026-08-09,6,1,8,9,General Medicine,16,10,5,3,6,9,15,0.4,synthetic_operational
+2026-08-09,6,1,8,9,Emergency Medicine,46,8,48,3,8,2,10,0.8,synthetic_operational
+2026-08-09,6,1,8,9,Pediatrics,9,6,5,1,2,4,6,0.3333,synthetic_operational
+2026-08-09,6,1,8,9,Dermatology,4,3,1,1,1,1,2,0.5,synthetic_operational
+2026-08-10,0,0,8,10,Cardiology,28,18,8,5,5,7,12,0.4167,synthetic_operational
+2026-08-10,0,0,8,10,Neurology,15,12,2,3,3,5,8,0.375,synthetic_operational
+2026-08-10,0,0,8,10,Orthopedics,29,23,2,2,5,3,8,0.625,synthetic_operational
+2026-08-10,0,0,8,10,General Medicine,41,27,12,5,13,2,15,0.8667,synthetic_operational
+2026-08-10,0,0,8,10,Emergency Medicine,31,3,24,5,6,4,10,0.6,synthetic_operational
+2026-08-10,0,0,8,10,Pediatrics,24,18,5,2,5,1,6,0.8333,synthetic_operational
+2026-08-10,0,0,8,10,Dermatology,15,17,0,3,1,1,2,0.5,synthetic_operational
+2026-08-11,1,0,8,11,Cardiology,26,17,7,5,8,4,12,0.6667,synthetic_operational
+2026-08-11,1,0,8,11,Neurology,20,15,6,3,5,3,8,0.625,synthetic_operational
+2026-08-11,1,0,8,11,Orthopedics,28,21,3,2,5,3,8,0.625,synthetic_operational
+2026-08-11,1,0,8,11,General Medicine,35,19,12,5,10,5,15,0.6667,synthetic_operational
+2026-08-11,1,0,8,11,Emergency Medicine,34,3,31,5,5,5,10,0.5,synthetic_operational
+2026-08-11,1,0,8,11,Pediatrics,20,15,6,2,4,2,6,0.6667,synthetic_operational
+2026-08-11,1,0,8,11,Dermatology,17,16,0,3,1,1,2,0.5,synthetic_operational
+2026-08-12,2,0,8,12,Cardiology,19,12,6,5,6,6,12,0.5,synthetic_operational
+2026-08-12,2,0,8,12,Neurology,19,14,5,3,5,3,8,0.625,synthetic_operational
+2026-08-12,2,0,8,12,Orthopedics,23,19,2,3,5,3,8,0.625,synthetic_operational
+2026-08-12,2,0,8,12,General Medicine,32,16,10,5,8,7,15,0.5333,synthetic_operational
+2026-08-12,2,0,8,12,Emergency Medicine,30,3,28,4,4,6,10,0.4,synthetic_operational
+2026-08-12,2,0,8,12,Pediatrics,18,14,3,3,3,3,6,0.5,synthetic_operational
+2026-08-12,2,0,8,12,Dermatology,21,17,0,2,1,1,2,0.5,synthetic_operational
+2026-08-13,3,0,8,13,Cardiology,22,14,6,4,7,5,12,0.5833,synthetic_operational
+2026-08-13,3,0,8,13,Neurology,15,9,3,3,4,4,8,0.5,synthetic_operational
+2026-08-13,3,0,8,13,Orthopedics,23,21,5,3,5,3,8,0.625,synthetic_operational
+2026-08-13,3,0,8,13,General Medicine,28,16,10,5,8,7,15,0.5333,synthetic_operational
+2026-08-13,3,0,8,13,Emergency Medicine,31,5,27,5,4,6,10,0.4,synthetic_operational
+2026-08-13,3,0,8,13,Pediatrics,14,7,5,2,3,3,6,0.5,synthetic_operational
+2026-08-13,3,0,8,13,Dermatology,17,16,2,2,1,1,2,0.5,synthetic_operational
+2026-08-14,4,0,8,14,Cardiology,23,14,5,4,6,6,12,0.5,synthetic_operational
+2026-08-14,4,0,8,14,Neurology,18,15,2,3,4,4,8,0.5,synthetic_operational
+2026-08-14,4,0,8,14,Orthopedics,18,16,1,3,5,3,8,0.625,synthetic_operational
+2026-08-14,4,0,8,14,General Medicine,30,21,10,5,8,7,15,0.5333,synthetic_operational
+2026-08-14,4,0,8,14,Emergency Medicine,35,4,30,4,5,5,10,0.5,synthetic_operational
+2026-08-14,4,0,8,14,Pediatrics,18,10,4,3,3,3,6,0.5,synthetic_operational
+2026-08-14,4,0,8,14,Dermatology,12,11,3,2,1,1,2,0.5,synthetic_operational
+2026-08-15,5,1,8,15,Cardiology,12,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-08-15,5,1,8,15,Neurology,11,9,3,1,3,5,8,0.375,synthetic_operational
+2026-08-15,5,1,8,15,Orthopedics,13,10,1,1,3,5,8,0.375,synthetic_operational
+2026-08-15,5,1,8,15,General Medicine,20,12,9,3,6,9,15,0.4,synthetic_operational
+2026-08-15,5,1,8,15,Emergency Medicine,43,4,46,3,6,4,10,0.6,synthetic_operational
+2026-08-15,5,1,8,15,Pediatrics,10,7,2,1,2,4,6,0.3333,synthetic_operational
+2026-08-15,5,1,8,15,Dermatology,5,4,0,1,1,1,2,0.5,synthetic_operational
+2026-08-16,6,1,8,16,Cardiology,11,9,2,3,5,7,12,0.4167,synthetic_operational
+2026-08-16,6,1,8,16,Neurology,8,4,4,1,3,5,8,0.375,synthetic_operational
+2026-08-16,6,1,8,16,Orthopedics,10,8,3,1,3,5,8,0.375,synthetic_operational
+2026-08-16,6,1,8,16,General Medicine,12,7,7,3,6,9,15,0.4,synthetic_operational
+2026-08-16,6,1,8,16,Emergency Medicine,44,3,45,3,6,4,10,0.6,synthetic_operational
+2026-08-16,6,1,8,16,Pediatrics,6,6,0,1,2,4,6,0.3333,synthetic_operational
+2026-08-16,6,1,8,16,Dermatology,3,2,0,1,1,1,2,0.5,synthetic_operational
+2026-08-17,0,0,8,17,Cardiology,29,22,9,4,9,3,12,0.75,synthetic_operational
+2026-08-17,0,0,8,17,Neurology,20,12,4,2,5,3,8,0.625,synthetic_operational
+2026-08-17,0,0,8,17,Orthopedics,25,22,6,2,5,3,8,0.625,synthetic_operational
+2026-08-17,0,0,8,17,General Medicine,38,22,12,4,9,6,15,0.6,synthetic_operational
+2026-08-17,0,0,8,17,Emergency Medicine,32,4,28,4,4,6,10,0.4,synthetic_operational
+2026-08-17,0,0,8,17,Pediatrics,25,18,6,3,4,2,6,0.6667,synthetic_operational
+2026-08-17,0,0,8,17,Dermatology,21,17,1,3,1,1,2,0.5,synthetic_operational
+2026-08-18,1,0,8,18,Cardiology,26,16,3,5,7,5,12,0.5833,synthetic_operational
+2026-08-18,1,0,8,18,Neurology,19,13,4,2,5,3,8,0.625,synthetic_operational
+2026-08-18,1,0,8,18,Orthopedics,21,17,5,2,4,4,8,0.5,synthetic_operational
+2026-08-18,1,0,8,18,General Medicine,33,21,8,5,9,6,15,0.6,synthetic_operational
+2026-08-18,1,0,8,18,Emergency Medicine,39,6,35,4,6,4,10,0.6,synthetic_operational
+2026-08-18,1,0,8,18,Pediatrics,21,15,6,3,4,2,6,0.6667,synthetic_operational
+2026-08-18,1,0,8,18,Dermatology,17,12,0,3,1,1,2,0.5,synthetic_operational
+2026-08-19,2,0,8,19,Cardiology,21,12,6,4,6,6,12,0.5,synthetic_operational
+2026-08-19,2,0,8,19,Neurology,19,16,4,3,6,2,8,0.75,synthetic_operational
+2026-08-19,2,0,8,19,Orthopedics,24,17,3,3,4,4,8,0.5,synthetic_operational
+2026-08-19,2,0,8,19,General Medicine,33,18,12,4,8,7,15,0.5333,synthetic_operational
+2026-08-19,2,0,8,19,Emergency Medicine,28,5,23,4,4,6,10,0.4,synthetic_operational
+2026-08-19,2,0,8,19,Pediatrics,17,13,3,2,2,4,6,0.3333,synthetic_operational
+2026-08-19,2,0,8,19,Dermatology,15,12,0,2,1,1,2,0.5,synthetic_operational
+2026-08-20,3,0,8,20,Cardiology,19,13,5,4,5,7,12,0.4167,synthetic_operational
+2026-08-20,3,0,8,20,Neurology,14,11,4,2,5,3,8,0.625,synthetic_operational
+2026-08-20,3,0,8,20,Orthopedics,20,16,5,2,3,5,8,0.375,synthetic_operational
+2026-08-20,3,0,8,20,General Medicine,34,21,9,4,7,8,15,0.4667,synthetic_operational
+2026-08-20,3,0,8,20,Emergency Medicine,30,2,26,4,4,6,10,0.4,synthetic_operational
+2026-08-20,3,0,8,20,Pediatrics,22,17,6,2,3,3,6,0.5,synthetic_operational
+2026-08-20,3,0,8,20,Dermatology,14,18,2,3,1,1,2,0.5,synthetic_operational
+2026-08-21,4,0,8,21,Cardiology,23,17,4,5,5,7,12,0.4167,synthetic_operational
+2026-08-21,4,0,8,21,Neurology,17,11,4,3,4,4,8,0.5,synthetic_operational
+2026-08-21,4,0,8,21,Orthopedics,21,15,4,3,3,5,8,0.375,synthetic_operational
+2026-08-21,4,0,8,21,General Medicine,27,12,8,5,8,7,15,0.5333,synthetic_operational
+2026-08-21,4,0,8,21,Emergency Medicine,35,4,31,5,6,4,10,0.6,synthetic_operational
+2026-08-21,4,0,8,21,Pediatrics,17,15,3,2,3,3,6,0.5,synthetic_operational
+2026-08-21,4,0,8,21,Dermatology,16,14,3,2,1,1,2,0.5,synthetic_operational
+2026-08-22,5,1,8,22,Cardiology,18,11,6,3,6,6,12,0.5,synthetic_operational
+2026-08-22,5,1,8,22,Neurology,11,8,3,1,3,5,8,0.375,synthetic_operational
+2026-08-22,5,1,8,22,Orthopedics,14,9,4,1,4,4,8,0.5,synthetic_operational
+2026-08-22,5,1,8,22,General Medicine,15,12,5,3,6,9,15,0.4,synthetic_operational
+2026-08-22,5,1,8,22,Emergency Medicine,41,4,44,3,7,3,10,0.7,synthetic_operational
+2026-08-22,5,1,8,22,Pediatrics,10,10,3,1,2,4,6,0.3333,synthetic_operational
+2026-08-22,5,1,8,22,Dermatology,9,7,0,1,1,1,2,0.5,synthetic_operational
+2026-08-23,6,1,8,23,Cardiology,12,7,4,3,5,7,12,0.4167,synthetic_operational
+2026-08-23,6,1,8,23,Neurology,10,7,4,1,3,5,8,0.375,synthetic_operational
+2026-08-23,6,1,8,23,Orthopedics,13,10,3,1,3,5,8,0.375,synthetic_operational
+2026-08-23,6,1,8,23,General Medicine,18,12,4,3,6,9,15,0.4,synthetic_operational
+2026-08-23,6,1,8,23,Emergency Medicine,47,4,49,3,6,4,10,0.6,synthetic_operational
+2026-08-23,6,1,8,23,Pediatrics,6,4,2,1,2,4,6,0.3333,synthetic_operational
+2026-08-23,6,1,8,23,Dermatology,9,7,1,1,1,1,2,0.5,synthetic_operational
+2026-08-24,0,0,8,24,Cardiology,26,18,7,4,6,6,12,0.5,synthetic_operational
+2026-08-24,0,0,8,24,Neurology,20,12,6,3,5,3,8,0.625,synthetic_operational
+2026-08-24,0,0,8,24,Orthopedics,24,17,6,2,5,3,8,0.625,synthetic_operational
+2026-08-24,0,0,8,24,General Medicine,33,19,10,4,9,6,15,0.6,synthetic_operational
+2026-08-24,0,0,8,24,Emergency Medicine,35,4,28,4,4,6,10,0.4,synthetic_operational
+2026-08-24,0,0,8,24,Pediatrics,23,16,7,2,4,2,6,0.6667,synthetic_operational
+2026-08-24,0,0,8,24,Dermatology,16,13,3,2,1,1,2,0.5,synthetic_operational
+2026-08-25,1,0,8,25,Cardiology,24,16,7,5,5,7,12,0.4167,synthetic_operational
+2026-08-25,1,0,8,25,Neurology,17,8,6,3,4,4,8,0.5,synthetic_operational
+2026-08-25,1,0,8,25,Orthopedics,26,22,4,3,5,3,8,0.625,synthetic_operational
+2026-08-25,1,0,8,25,General Medicine,33,20,10,5,6,9,15,0.4,synthetic_operational
+2026-08-25,1,0,8,25,Emergency Medicine,29,3,27,4,4,6,10,0.4,synthetic_operational
+2026-08-25,1,0,8,25,Pediatrics,23,15,5,2,4,2,6,0.6667,synthetic_operational
+2026-08-25,1,0,8,25,Dermatology,20,21,3,3,1,1,2,0.5,synthetic_operational
+2026-08-26,2,0,8,26,Cardiology,20,9,5,5,6,6,12,0.5,synthetic_operational
+2026-08-26,2,0,8,26,Neurology,20,14,1,2,4,4,8,0.5,synthetic_operational
+2026-08-26,2,0,8,26,Orthopedics,14,11,3,2,3,5,8,0.375,synthetic_operational
+2026-08-26,2,0,8,26,General Medicine,33,16,10,4,8,7,15,0.5333,synthetic_operational
+2026-08-26,2,0,8,26,Emergency Medicine,35,4,28,4,6,4,10,0.6,synthetic_operational
+2026-08-26,2,0,8,26,Pediatrics,17,14,5,3,3,3,6,0.5,synthetic_operational
+2026-08-26,2,0,8,26,Dermatology,14,11,0,3,1,1,2,0.5,synthetic_operational
+2026-08-27,3,0,8,27,Cardiology,22,14,7,4,7,5,12,0.5833,synthetic_operational
+2026-08-27,3,0,8,27,Neurology,14,9,3,2,3,5,8,0.375,synthetic_operational
+2026-08-27,3,0,8,27,Orthopedics,17,12,2,2,3,5,8,0.375,synthetic_operational
+2026-08-27,3,0,8,27,General Medicine,32,21,8,4,10,5,15,0.6667,synthetic_operational
+2026-08-27,3,0,8,27,Emergency Medicine,30,3,25,5,4,6,10,0.4,synthetic_operational
+2026-08-27,3,0,8,27,Pediatrics,18,13,4,3,3,3,6,0.5,synthetic_operational
+2026-08-27,3,0,8,27,Dermatology,14,13,0,2,1,1,2,0.5,synthetic_operational
+2026-08-28,4,0,8,28,Cardiology,27,20,6,4,8,4,12,0.6667,synthetic_operational
+2026-08-28,4,0,8,28,Neurology,14,10,5,2,3,5,8,0.375,synthetic_operational
+2026-08-28,4,0,8,28,Orthopedics,17,11,2,3,3,5,8,0.375,synthetic_operational
+2026-08-28,4,0,8,28,General Medicine,28,15,10,5,7,8,15,0.4667,synthetic_operational
+2026-08-28,4,0,8,28,Emergency Medicine,31,2,28,4,5,5,10,0.5,synthetic_operational
+2026-08-28,4,0,8,28,Pediatrics,12,7,3,2,2,4,6,0.3333,synthetic_operational
+2026-08-28,4,0,8,28,Dermatology,12,10,1,2,1,1,2,0.5,synthetic_operational
+2026-08-29,5,1,8,29,Cardiology,13,7,2,3,5,7,12,0.4167,synthetic_operational
+2026-08-29,5,1,8,29,Neurology,9,7,2,1,3,5,8,0.375,synthetic_operational
+2026-08-29,5,1,8,29,Orthopedics,11,9,0,1,3,5,8,0.375,synthetic_operational
+2026-08-29,5,1,8,29,General Medicine,17,9,4,3,6,9,15,0.4,synthetic_operational
+2026-08-29,5,1,8,29,Emergency Medicine,46,5,50,3,7,3,10,0.7,synthetic_operational
+2026-08-29,5,1,8,29,Pediatrics,9,6,1,1,2,4,6,0.3333,synthetic_operational
+2026-08-29,5,1,8,29,Dermatology,6,7,2,1,1,1,2,0.5,synthetic_operational
+2026-08-30,6,1,8,30,Cardiology,11,9,7,3,5,7,12,0.4167,synthetic_operational
+2026-08-30,6,1,8,30,Neurology,5,1,2,1,3,5,8,0.375,synthetic_operational
+2026-08-30,6,1,8,30,Orthopedics,10,8,2,1,3,5,8,0.375,synthetic_operational
+2026-08-30,6,1,8,30,General Medicine,17,13,5,3,6,9,15,0.4,synthetic_operational
+2026-08-30,6,1,8,30,Emergency Medicine,42,5,46,3,6,4,10,0.6,synthetic_operational
+2026-08-30,6,1,8,30,Pediatrics,13,7,6,1,3,3,6,0.5,synthetic_operational
+2026-08-30,6,1,8,30,Dermatology,10,13,0,1,1,1,2,0.5,synthetic_operational
+2026-08-31,0,0,8,31,Cardiology,26,18,5,4,8,4,12,0.6667,synthetic_operational
+2026-08-31,0,0,8,31,Neurology,23,19,6,2,5,3,8,0.625,synthetic_operational
+2026-08-31,0,0,8,31,Orthopedics,28,22,4,3,4,4,8,0.5,synthetic_operational
+2026-08-31,0,0,8,31,General Medicine,35,21,11,4,8,7,15,0.5333,synthetic_operational
+2026-08-31,0,0,8,31,Emergency Medicine,31,5,24,4,5,5,10,0.5,synthetic_operational
+2026-08-31,0,0,8,31,Pediatrics,25,19,7,2,4,2,6,0.6667,synthetic_operational
+2026-08-31,0,0,8,31,Dermatology,22,24,0,3,2,0,2,1.0,synthetic_operational
+2026-09-01,1,0,9,1,Cardiology,26,18,7,4,7,5,12,0.5833,synthetic_operational
+2026-09-01,1,0,9,1,Neurology,19,10,5,2,5,3,8,0.625,synthetic_operational
+2026-09-01,1,0,9,1,Orthopedics,25,18,6,2,6,2,8,0.75,synthetic_operational
+2026-09-01,1,0,9,1,General Medicine,36,19,13,4,11,4,15,0.7333,synthetic_operational
+2026-09-01,1,0,9,1,Emergency Medicine,33,3,28,4,4,6,10,0.4,synthetic_operational
+2026-09-01,1,0,9,1,Pediatrics,20,12,5,2,4,2,6,0.6667,synthetic_operational
+2026-09-01,1,0,9,1,Dermatology,18,12,3,2,1,1,2,0.5,synthetic_operational
+2026-09-02,2,0,9,2,Cardiology,27,14,5,4,7,5,12,0.5833,synthetic_operational
+2026-09-02,2,0,9,2,Neurology,14,10,3,3,4,4,8,0.5,synthetic_operational
+2026-09-02,2,0,9,2,Orthopedics,24,19,2,2,4,4,8,0.5,synthetic_operational
+2026-09-02,2,0,9,2,General Medicine,34,20,13,4,9,6,15,0.6,synthetic_operational
+2026-09-02,2,0,9,2,Emergency Medicine,31,3,29,4,5,5,10,0.5,synthetic_operational
+2026-09-02,2,0,9,2,Pediatrics,21,13,4,2,3,3,6,0.5,synthetic_operational
+2026-09-02,2,0,9,2,Dermatology,20,16,0,3,1,1,2,0.5,synthetic_operational
+2026-09-03,3,0,9,3,Cardiology,25,22,5,4,6,6,12,0.5,synthetic_operational
+2026-09-03,3,0,9,3,Neurology,14,10,5,3,5,3,8,0.625,synthetic_operational
+2026-09-03,3,0,9,3,Orthopedics,20,15,3,2,4,4,8,0.5,synthetic_operational
+2026-09-03,3,0,9,3,General Medicine,27,18,9,4,6,9,15,0.4,synthetic_operational
+2026-09-03,3,0,9,3,Emergency Medicine,33,4,27,4,6,4,10,0.6,synthetic_operational
+2026-09-03,3,0,9,3,Pediatrics,17,12,5,2,3,3,6,0.5,synthetic_operational
+2026-09-03,3,0,9,3,Dermatology,14,13,1,3,1,1,2,0.5,synthetic_operational
+2026-09-04,4,0,9,4,Cardiology,23,15,5,5,6,6,12,0.5,synthetic_operational
+2026-09-04,4,0,9,4,Neurology,11,10,2,2,4,4,8,0.5,synthetic_operational
+2026-09-04,4,0,9,4,Orthopedics,16,12,0,2,3,5,8,0.375,synthetic_operational
+2026-09-04,4,0,9,4,General Medicine,28,19,11,5,9,6,15,0.6,synthetic_operational
+2026-09-04,4,0,9,4,Emergency Medicine,32,3,28,4,5,5,10,0.5,synthetic_operational
+2026-09-04,4,0,9,4,Pediatrics,16,10,2,2,3,3,6,0.5,synthetic_operational
+2026-09-04,4,0,9,4,Dermatology,11,9,0,2,1,1,2,0.5,synthetic_operational
+2026-09-05,5,1,9,5,Cardiology,18,14,4,3,5,7,12,0.4167,synthetic_operational
+2026-09-05,5,1,9,5,Neurology,10,6,3,1,3,5,8,0.375,synthetic_operational
+2026-09-05,5,1,9,5,Orthopedics,15,15,2,1,3,5,8,0.375,synthetic_operational
+2026-09-05,5,1,9,5,General Medicine,20,14,7,3,6,9,15,0.4,synthetic_operational
+2026-09-05,5,1,9,5,Emergency Medicine,45,7,47,3,5,5,10,0.5,synthetic_operational
+2026-09-05,5,1,9,5,Pediatrics,8,6,4,1,2,4,6,0.3333,synthetic_operational
+2026-09-05,5,1,9,5,Dermatology,9,9,0,1,1,1,2,0.5,synthetic_operational
+2026-09-06,6,1,9,6,Cardiology,9,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-09-06,6,1,9,6,Neurology,8,8,3,1,3,5,8,0.375,synthetic_operational
+2026-09-06,6,1,9,6,Orthopedics,7,8,2,1,3,5,8,0.375,synthetic_operational
+2026-09-06,6,1,9,6,General Medicine,19,8,7,3,6,9,15,0.4,synthetic_operational
+2026-09-06,6,1,9,6,Emergency Medicine,48,5,51,3,6,4,10,0.6,synthetic_operational
+2026-09-06,6,1,9,6,Pediatrics,8,4,1,1,2,4,6,0.3333,synthetic_operational
+2026-09-06,6,1,9,6,Dermatology,3,1,0,1,1,1,2,0.5,synthetic_operational
+2026-09-07,0,0,9,7,Cardiology,27,17,6,5,7,5,12,0.5833,synthetic_operational
+2026-09-07,0,0,9,7,Neurology,20,13,4,3,6,2,8,0.75,synthetic_operational
+2026-09-07,0,0,9,7,Orthopedics,20,16,4,2,4,4,8,0.5,synthetic_operational
+2026-09-07,0,0,9,7,General Medicine,36,21,11,4,6,9,15,0.4,synthetic_operational
+2026-09-07,0,0,9,7,Emergency Medicine,32,4,27,4,4,6,10,0.4,synthetic_operational
+2026-09-07,0,0,9,7,Pediatrics,27,23,6,2,5,1,6,0.8333,synthetic_operational
+2026-09-07,0,0,9,7,Dermatology,19,18,1,3,2,0,2,1.0,synthetic_operational
+2026-09-08,1,0,9,8,Cardiology,24,17,4,4,7,5,12,0.5833,synthetic_operational
+2026-09-08,1,0,9,8,Neurology,19,13,5,2,4,4,8,0.5,synthetic_operational
+2026-09-08,1,0,9,8,Orthopedics,26,22,3,3,4,4,8,0.5,synthetic_operational
+2026-09-08,1,0,9,8,General Medicine,37,26,12,4,9,6,15,0.6,synthetic_operational
+2026-09-08,1,0,9,8,Emergency Medicine,30,2,26,4,5,5,10,0.5,synthetic_operational
+2026-09-08,1,0,9,8,Pediatrics,20,12,4,2,4,2,6,0.6667,synthetic_operational
+2026-09-08,1,0,9,8,Dermatology,19,16,1,3,1,1,2,0.5,synthetic_operational
+2026-09-09,2,0,9,9,Cardiology,29,18,8,5,9,3,12,0.75,synthetic_operational
+2026-09-09,2,0,9,9,Neurology,15,13,2,2,5,3,8,0.625,synthetic_operational
+2026-09-09,2,0,9,9,Orthopedics,22,12,2,3,6,2,8,0.75,synthetic_operational
+2026-09-09,2,0,9,9,General Medicine,33,15,8,5,10,5,15,0.6667,synthetic_operational
+2026-09-09,2,0,9,9,Emergency Medicine,29,5,24,5,4,6,10,0.4,synthetic_operational
+2026-09-09,2,0,9,9,Pediatrics,22,13,0,3,3,3,6,0.5,synthetic_operational
+2026-09-09,2,0,9,9,Dermatology,14,14,2,2,1,1,2,0.5,synthetic_operational
+2026-09-10,3,0,9,10,Cardiology,27,21,8,5,7,5,12,0.5833,synthetic_operational
+2026-09-10,3,0,9,10,Neurology,16,8,3,2,4,4,8,0.5,synthetic_operational
+2026-09-10,3,0,9,10,Orthopedics,22,20,4,3,5,3,8,0.625,synthetic_operational
+2026-09-10,3,0,9,10,General Medicine,30,16,10,5,7,8,15,0.4667,synthetic_operational
+2026-09-10,3,0,9,10,Emergency Medicine,34,6,26,5,5,5,10,0.5,synthetic_operational
+2026-09-10,3,0,9,10,Pediatrics,17,11,2,2,3,3,6,0.5,synthetic_operational
+2026-09-10,3,0,9,10,Dermatology,16,19,2,3,1,1,2,0.5,synthetic_operational
+2026-09-11,4,0,9,11,Cardiology,18,13,3,5,5,7,12,0.4167,synthetic_operational
+2026-09-11,4,0,9,11,Neurology,16,13,3,3,5,3,8,0.625,synthetic_operational
+2026-09-11,4,0,9,11,Orthopedics,16,10,1,3,3,5,8,0.375,synthetic_operational
+2026-09-11,4,0,9,11,General Medicine,27,15,9,5,6,9,15,0.4,synthetic_operational
+2026-09-11,4,0,9,11,Emergency Medicine,32,3,27,4,5,5,10,0.5,synthetic_operational
+2026-09-11,4,0,9,11,Pediatrics,17,9,2,3,2,4,6,0.3333,synthetic_operational
+2026-09-11,4,0,9,11,Dermatology,16,11,2,2,1,1,2,0.5,synthetic_operational
+2026-09-12,5,1,9,12,Cardiology,14,11,7,3,5,7,12,0.4167,synthetic_operational
+2026-09-12,5,1,9,12,Neurology,12,9,4,1,3,5,8,0.375,synthetic_operational
+2026-09-12,5,1,9,12,Orthopedics,12,10,2,1,3,5,8,0.375,synthetic_operational
+2026-09-12,5,1,9,12,General Medicine,20,14,6,3,6,9,15,0.4,synthetic_operational
+2026-09-12,5,1,9,12,Emergency Medicine,46,5,48,3,5,5,10,0.5,synthetic_operational
+2026-09-12,5,1,9,12,Pediatrics,13,9,5,1,2,4,6,0.3333,synthetic_operational
+2026-09-12,5,1,9,12,Dermatology,11,12,1,1,1,1,2,0.5,synthetic_operational
+2026-09-13,6,1,9,13,Cardiology,13,7,5,3,5,7,12,0.4167,synthetic_operational
+2026-09-13,6,1,9,13,Neurology,9,3,1,1,3,5,8,0.375,synthetic_operational
+2026-09-13,6,1,9,13,Orthopedics,14,12,2,1,3,5,8,0.375,synthetic_operational
+2026-09-13,6,1,9,13,General Medicine,14,7,5,3,6,9,15,0.4,synthetic_operational
+2026-09-13,6,1,9,13,Emergency Medicine,47,4,48,3,6,4,10,0.6,synthetic_operational
+2026-09-13,6,1,9,13,Pediatrics,10,6,2,1,2,4,6,0.3333,synthetic_operational
+2026-09-13,6,1,9,13,Dermatology,10,8,0,1,1,1,2,0.5,synthetic_operational
+2026-09-14,0,0,9,14,Cardiology,26,18,7,4,7,5,12,0.5833,synthetic_operational
+2026-09-14,0,0,9,14,Neurology,19,13,2,2,5,3,8,0.625,synthetic_operational
+2026-09-14,0,0,9,14,Orthopedics,24,17,4,3,5,3,8,0.625,synthetic_operational
+2026-09-14,0,0,9,14,General Medicine,35,21,9,4,10,5,15,0.6667,synthetic_operational
+2026-09-14,0,0,9,14,Emergency Medicine,35,3,30,4,4,6,10,0.4,synthetic_operational
+2026-09-14,0,0,9,14,Pediatrics,23,15,7,2,4,2,6,0.6667,synthetic_operational
+2026-09-14,0,0,9,14,Dermatology,18,16,3,3,1,1,2,0.5,synthetic_operational
+2026-09-15,1,0,9,15,Cardiology,27,17,8,4,9,3,12,0.75,synthetic_operational
+2026-09-15,1,0,9,15,Neurology,19,17,3,2,6,2,8,0.75,synthetic_operational
+2026-09-15,1,0,9,15,Orthopedics,23,19,6,2,4,4,8,0.5,synthetic_operational
+2026-09-15,1,0,9,15,General Medicine,37,22,10,5,10,5,15,0.6667,synthetic_operational
+2026-09-15,1,0,9,15,Emergency Medicine,31,2,26,5,4,6,10,0.4,synthetic_operational
+2026-09-15,1,0,9,15,Pediatrics,17,13,5,3,2,4,6,0.3333,synthetic_operational
+2026-09-15,1,0,9,15,Dermatology,16,15,0,3,1,1,2,0.5,synthetic_operational
+2026-09-16,2,0,9,16,Cardiology,26,17,11,5,9,3,12,0.75,synthetic_operational
+2026-09-16,2,0,9,16,Neurology,16,10,0,2,3,5,8,0.375,synthetic_operational
+2026-09-16,2,0,9,16,Orthopedics,17,16,5,2,3,5,8,0.375,synthetic_operational
+2026-09-16,2,0,9,16,General Medicine,29,18,9,5,8,7,15,0.5333,synthetic_operational
+2026-09-16,2,0,9,16,Emergency Medicine,35,3,29,5,5,5,10,0.5,synthetic_operational
+2026-09-16,2,0,9,16,Pediatrics,22,15,5,3,3,3,6,0.5,synthetic_operational
+2026-09-16,2,0,9,16,Dermatology,16,16,1,2,1,1,2,0.5,synthetic_operational
+2026-09-17,3,0,9,17,Cardiology,24,14,4,4,6,6,12,0.5,synthetic_operational
+2026-09-17,3,0,9,17,Neurology,20,11,3,3,5,3,8,0.625,synthetic_operational
+2026-09-17,3,0,9,17,Orthopedics,22,15,4,3,3,5,8,0.375,synthetic_operational
+2026-09-17,3,0,9,17,General Medicine,29,20,12,5,7,8,15,0.4667,synthetic_operational
+2026-09-17,3,0,9,17,Emergency Medicine,34,4,29,5,5,5,10,0.5,synthetic_operational
+2026-09-17,3,0,9,17,Pediatrics,19,13,4,3,3,3,6,0.5,synthetic_operational
+2026-09-17,3,0,9,17,Dermatology,16,13,0,3,1,1,2,0.5,synthetic_operational
+2026-09-18,4,0,9,18,Cardiology,22,13,3,4,6,6,12,0.5,synthetic_operational
+2026-09-18,4,0,9,18,Neurology,12,9,1,3,3,5,8,0.375,synthetic_operational
+2026-09-18,4,0,9,18,Orthopedics,14,8,0,3,3,5,8,0.375,synthetic_operational
+2026-09-18,4,0,9,18,General Medicine,27,18,10,4,6,9,15,0.4,synthetic_operational
+2026-09-18,4,0,9,18,Emergency Medicine,32,3,26,5,5,5,10,0.5,synthetic_operational
+2026-09-18,4,0,9,18,Pediatrics,21,14,4,3,3,3,6,0.5,synthetic_operational
+2026-09-18,4,0,9,18,Dermatology,13,11,0,2,1,1,2,0.5,synthetic_operational
+2026-09-19,5,1,9,19,Cardiology,17,11,9,3,5,7,12,0.4167,synthetic_operational
+2026-09-19,5,1,9,19,Neurology,8,7,4,1,3,5,8,0.375,synthetic_operational
+2026-09-19,5,1,9,19,Orthopedics,10,11,1,1,3,5,8,0.375,synthetic_operational
+2026-09-19,5,1,9,19,General Medicine,23,13,8,3,6,9,15,0.4,synthetic_operational
+2026-09-19,5,1,9,19,Emergency Medicine,46,6,49,3,8,2,10,0.8,synthetic_operational
+2026-09-19,5,1,9,19,Pediatrics,12,11,2,1,3,3,6,0.5,synthetic_operational
+2026-09-19,5,1,9,19,Dermatology,13,11,3,1,1,1,2,0.5,synthetic_operational
+2026-09-20,6,1,9,20,Cardiology,16,5,6,3,5,7,12,0.4167,synthetic_operational
+2026-09-20,6,1,9,20,Neurology,10,7,3,1,3,5,8,0.375,synthetic_operational
+2026-09-20,6,1,9,20,Orthopedics,12,9,4,1,3,5,8,0.375,synthetic_operational
+2026-09-20,6,1,9,20,General Medicine,18,15,6,3,6,9,15,0.4,synthetic_operational
+2026-09-20,6,1,9,20,Emergency Medicine,44,5,48,3,6,4,10,0.6,synthetic_operational
+2026-09-20,6,1,9,20,Pediatrics,12,13,4,1,2,4,6,0.3333,synthetic_operational
+2026-09-20,6,1,9,20,Dermatology,7,4,0,1,1,1,2,0.5,synthetic_operational
+2026-09-21,0,0,9,21,Cardiology,21,15,5,5,5,7,12,0.4167,synthetic_operational
+2026-09-21,0,0,9,21,Neurology,17,14,4,2,4,4,8,0.5,synthetic_operational
+2026-09-21,0,0,9,21,Orthopedics,21,16,1,2,4,4,8,0.5,synthetic_operational
+2026-09-21,0,0,9,21,General Medicine,37,22,11,4,8,7,15,0.5333,synthetic_operational
+2026-09-21,0,0,9,21,Emergency Medicine,34,2,31,4,5,5,10,0.5,synthetic_operational
+2026-09-21,0,0,9,21,Pediatrics,25,18,7,3,5,1,6,0.8333,synthetic_operational
+2026-09-21,0,0,9,21,Dermatology,15,16,0,3,1,1,2,0.5,synthetic_operational
+2026-09-22,1,0,9,22,Cardiology,23,17,7,4,7,5,12,0.5833,synthetic_operational
+2026-09-22,1,0,9,22,Neurology,18,9,4,3,4,4,8,0.5,synthetic_operational
+2026-09-22,1,0,9,22,Orthopedics,23,19,4,3,5,3,8,0.625,synthetic_operational
+2026-09-22,1,0,9,22,General Medicine,33,21,10,5,9,6,15,0.6,synthetic_operational
+2026-09-22,1,0,9,22,Emergency Medicine,35,4,29,4,4,6,10,0.4,synthetic_operational
+2026-09-22,1,0,9,22,Pediatrics,22,18,5,3,3,3,6,0.5,synthetic_operational
+2026-09-22,1,0,9,22,Dermatology,15,16,1,3,1,1,2,0.5,synthetic_operational
+2026-09-23,2,0,9,23,Cardiology,26,13,10,5,6,6,12,0.5,synthetic_operational
+2026-09-23,2,0,9,23,Neurology,18,11,1,2,5,3,8,0.625,synthetic_operational
+2026-09-23,2,0,9,23,Orthopedics,20,15,2,3,4,4,8,0.5,synthetic_operational
+2026-09-23,2,0,9,23,General Medicine,29,12,9,4,8,7,15,0.5333,synthetic_operational
+2026-09-23,2,0,9,23,Emergency Medicine,37,5,32,5,7,3,10,0.7,synthetic_operational
+2026-09-23,2,0,9,23,Pediatrics,21,16,2,2,4,2,6,0.6667,synthetic_operational
+2026-09-23,2,0,9,23,Dermatology,15,15,2,3,1,1,2,0.5,synthetic_operational
+2026-09-24,3,0,9,24,Cardiology,17,13,3,5,5,7,12,0.4167,synthetic_operational
+2026-09-24,3,0,9,24,Neurology,17,14,2,3,4,4,8,0.5,synthetic_operational
+2026-09-24,3,0,9,24,Orthopedics,19,16,4,2,4,4,8,0.5,synthetic_operational
+2026-09-24,3,0,9,24,General Medicine,32,18,11,4,9,6,15,0.6,synthetic_operational
+2026-09-24,3,0,9,24,Emergency Medicine,30,4,26,5,4,6,10,0.4,synthetic_operational
+2026-09-24,3,0,9,24,Pediatrics,18,13,2,3,3,3,6,0.5,synthetic_operational
+2026-09-24,3,0,9,24,Dermatology,14,14,0,3,1,1,2,0.5,synthetic_operational
+2026-09-25,4,0,9,25,Cardiology,21,16,7,4,7,5,12,0.5833,synthetic_operational
+2026-09-25,4,0,9,25,Neurology,15,11,1,2,4,4,8,0.5,synthetic_operational
+2026-09-25,4,0,9,25,Orthopedics,18,13,2,3,3,5,8,0.375,synthetic_operational
+2026-09-25,4,0,9,25,General Medicine,29,13,10,5,7,8,15,0.4667,synthetic_operational
+2026-09-25,4,0,9,25,Emergency Medicine,32,5,29,5,5,5,10,0.5,synthetic_operational
+2026-09-25,4,0,9,25,Pediatrics,18,9,4,3,3,3,6,0.5,synthetic_operational
+2026-09-25,4,0,9,25,Dermatology,10,7,2,2,1,1,2,0.5,synthetic_operational
+2026-09-26,5,1,9,26,Cardiology,9,5,5,3,5,7,12,0.4167,synthetic_operational
+2026-09-26,5,1,9,26,Neurology,8,6,2,1,3,5,8,0.375,synthetic_operational
+2026-09-26,5,1,9,26,Orthopedics,10,9,0,1,3,5,8,0.375,synthetic_operational
+2026-09-26,5,1,9,26,General Medicine,18,12,7,3,6,9,15,0.4,synthetic_operational
+2026-09-26,5,1,9,26,Emergency Medicine,41,4,43,3,5,5,10,0.5,synthetic_operational
+2026-09-26,5,1,9,26,Pediatrics,10,8,2,1,2,4,6,0.3333,synthetic_operational
+2026-09-26,5,1,9,26,Dermatology,15,11,0,1,1,1,2,0.5,synthetic_operational
+2026-09-27,6,1,9,27,Cardiology,10,6,2,3,5,7,12,0.4167,synthetic_operational
+2026-09-27,6,1,9,27,Neurology,13,11,5,1,3,5,8,0.375,synthetic_operational
+2026-09-27,6,1,9,27,Orthopedics,8,1,0,1,3,5,8,0.375,synthetic_operational
+2026-09-27,6,1,9,27,General Medicine,18,10,7,3,6,9,15,0.4,synthetic_operational
+2026-09-27,6,1,9,27,Emergency Medicine,44,5,44,3,7,3,10,0.7,synthetic_operational
+2026-09-27,6,1,9,27,Pediatrics,12,8,4,1,3,3,6,0.5,synthetic_operational
+2026-09-27,6,1,9,27,Dermatology,7,7,0,1,1,1,2,0.5,synthetic_operational
+2026-09-28,0,0,9,28,Cardiology,29,19,6,5,8,4,12,0.6667,synthetic_operational
+2026-09-28,0,0,9,28,Neurology,22,17,5,2,5,3,8,0.625,synthetic_operational
+2026-09-28,0,0,9,28,Orthopedics,26,21,3,3,5,3,8,0.625,synthetic_operational
+2026-09-28,0,0,9,28,General Medicine,43,25,10,4,10,5,15,0.6667,synthetic_operational
+2026-09-28,0,0,9,28,Emergency Medicine,35,3,27,5,5,5,10,0.5,synthetic_operational
+2026-09-28,0,0,9,28,Pediatrics,18,12,5,2,3,3,6,0.5,synthetic_operational
+2026-09-28,0,0,9,28,Dermatology,17,15,0,3,1,1,2,0.5,synthetic_operational
+2026-09-29,1,0,9,29,Cardiology,24,18,2,5,7,5,12,0.5833,synthetic_operational
+2026-09-29,1,0,9,29,Neurology,21,14,3,3,6,2,8,0.75,synthetic_operational
+2026-09-29,1,0,9,29,Orthopedics,28,19,5,2,5,3,8,0.625,synthetic_operational
+2026-09-29,1,0,9,29,General Medicine,36,23,11,4,8,7,15,0.5333,synthetic_operational
+2026-09-29,1,0,9,29,Emergency Medicine,31,1,27,4,4,6,10,0.4,synthetic_operational
+2026-09-29,1,0,9,29,Pediatrics,20,14,6,3,3,3,6,0.5,synthetic_operational
+2026-09-29,1,0,9,29,Dermatology,13,12,0,3,1,1,2,0.5,synthetic_operational
+2026-09-30,2,0,9,30,Cardiology,23,14,4,5,6,6,12,0.5,synthetic_operational
+2026-09-30,2,0,9,30,Neurology,17,14,5,3,4,4,8,0.5,synthetic_operational
+2026-09-30,2,0,9,30,Orthopedics,19,18,2,3,4,4,8,0.5,synthetic_operational
+2026-09-30,2,0,9,30,General Medicine,32,18,12,5,8,7,15,0.5333,synthetic_operational
+2026-09-30,2,0,9,30,Emergency Medicine,33,1,28,5,5,5,10,0.5,synthetic_operational
+2026-09-30,2,0,9,30,Pediatrics,23,17,6,3,4,2,6,0.6667,synthetic_operational
+2026-09-30,2,0,9,30,Dermatology,16,14,0,2,1,1,2,0.5,synthetic_operational
+2026-10-01,3,0,10,1,Cardiology,24,16,5,5,6,6,12,0.5,synthetic_operational
+2026-10-01,3,0,10,1,Neurology,11,8,4,3,3,5,8,0.375,synthetic_operational
+2026-10-01,3,0,10,1,Orthopedics,17,14,5,2,3,5,8,0.375,synthetic_operational
+2026-10-01,3,0,10,1,General Medicine,26,15,7,5,6,9,15,0.4,synthetic_operational
+2026-10-01,3,0,10,1,Emergency Medicine,28,2,24,5,4,6,10,0.4,synthetic_operational
+2026-10-01,3,0,10,1,Pediatrics,16,13,3,2,2,4,6,0.3333,synthetic_operational
+2026-10-01,3,0,10,1,Dermatology,14,14,1,2,1,1,2,0.5,synthetic_operational
+2026-10-02,4,0,10,2,Cardiology,22,15,7,5,5,7,12,0.4167,synthetic_operational
+2026-10-02,4,0,10,2,Neurology,15,7,3,2,4,4,8,0.5,synthetic_operational
+2026-10-02,4,0,10,2,Orthopedics,21,16,3,3,5,3,8,0.625,synthetic_operational
+2026-10-02,4,0,10,2,General Medicine,31,19,9,4,6,9,15,0.4,synthetic_operational
+2026-10-02,4,0,10,2,Emergency Medicine,31,2,27,4,4,6,10,0.4,synthetic_operational
+2026-10-02,4,0,10,2,Pediatrics,21,14,3,3,3,3,6,0.5,synthetic_operational
+2026-10-02,4,0,10,2,Dermatology,12,10,0,2,1,1,2,0.5,synthetic_operational
+2026-10-03,5,1,10,3,Cardiology,17,10,6,3,5,7,12,0.4167,synthetic_operational
+2026-10-03,5,1,10,3,Neurology,12,12,4,1,3,5,8,0.375,synthetic_operational
+2026-10-03,5,1,10,3,Orthopedics,18,14,2,1,4,4,8,0.5,synthetic_operational
+2026-10-03,5,1,10,3,General Medicine,21,12,7,3,6,9,15,0.4,synthetic_operational
+2026-10-03,5,1,10,3,Emergency Medicine,42,4,43,3,6,4,10,0.6,synthetic_operational
+2026-10-03,5,1,10,3,Pediatrics,12,9,3,1,2,4,6,0.3333,synthetic_operational
+2026-10-03,5,1,10,3,Dermatology,13,12,3,1,1,1,2,0.5,synthetic_operational
+2026-10-04,6,1,10,4,Cardiology,14,8,4,3,5,7,12,0.4167,synthetic_operational
+2026-10-04,6,1,10,4,Neurology,8,5,4,1,3,5,8,0.375,synthetic_operational
+2026-10-04,6,1,10,4,Orthopedics,12,8,4,1,3,5,8,0.375,synthetic_operational
+2026-10-04,6,1,10,4,General Medicine,16,6,6,3,6,9,15,0.4,synthetic_operational
+2026-10-04,6,1,10,4,Emergency Medicine,41,4,44,3,5,5,10,0.5,synthetic_operational
+2026-10-04,6,1,10,4,Pediatrics,8,6,4,1,2,4,6,0.3333,synthetic_operational
+2026-10-04,6,1,10,4,Dermatology,13,12,0,1,1,1,2,0.5,synthetic_operational
+2026-10-05,0,0,10,5,Cardiology,26,15,6,4,7,5,12,0.5833,synthetic_operational
+2026-10-05,0,0,10,5,Neurology,20,13,2,3,4,4,8,0.5,synthetic_operational
+2026-10-05,0,0,10,5,Orthopedics,25,19,6,2,5,3,8,0.625,synthetic_operational
+2026-10-05,0,0,10,5,General Medicine,38,23,13,4,8,7,15,0.5333,synthetic_operational
+2026-10-05,0,0,10,5,Emergency Medicine,32,4,27,5,5,5,10,0.5,synthetic_operational
+2026-10-05,0,0,10,5,Pediatrics,26,19,6,3,4,2,6,0.6667,synthetic_operational
+2026-10-05,0,0,10,5,Dermatology,17,18,1,3,1,1,2,0.5,synthetic_operational
+2026-10-06,1,0,10,6,Cardiology,24,13,7,5,9,3,12,0.75,synthetic_operational
+2026-10-06,1,0,10,6,Neurology,19,12,5,3,4,4,8,0.5,synthetic_operational
+2026-10-06,1,0,10,6,Orthopedics,21,17,1,3,3,5,8,0.375,synthetic_operational
+2026-10-06,1,0,10,6,General Medicine,34,22,7,5,8,7,15,0.5333,synthetic_operational
+2026-10-06,1,0,10,6,Emergency Medicine,30,2,28,5,4,6,10,0.4,synthetic_operational
+2026-10-06,1,0,10,6,Pediatrics,18,14,5,3,2,4,6,0.3333,synthetic_operational
+2026-10-06,1,0,10,6,Dermatology,16,14,3,3,1,1,2,0.5,synthetic_operational
+2026-10-07,2,0,10,7,Cardiology,20,13,5,5,6,6,12,0.5,synthetic_operational
+2026-10-07,2,0,10,7,Neurology,19,15,5,3,6,2,8,0.75,synthetic_operational
+2026-10-07,2,0,10,7,Orthopedics,15,9,5,2,3,5,8,0.375,synthetic_operational
+2026-10-07,2,0,10,7,General Medicine,26,15,9,5,7,8,15,0.4667,synthetic_operational
+2026-10-07,2,0,10,7,Emergency Medicine,38,4,32,4,5,5,10,0.5,synthetic_operational
+2026-10-07,2,0,10,7,Pediatrics,14,10,3,2,2,4,6,0.3333,synthetic_operational
+2026-10-07,2,0,10,7,Dermatology,15,12,0,2,1,1,2,0.5,synthetic_operational
+2026-10-08,3,0,10,8,Cardiology,23,16,6,5,6,6,12,0.5,synthetic_operational
+2026-10-08,3,0,10,8,Neurology,17,13,3,3,4,4,8,0.5,synthetic_operational
+2026-10-08,3,0,10,8,Orthopedics,25,21,6,2,3,5,8,0.375,synthetic_operational
+2026-10-08,3,0,10,8,General Medicine,30,20,7,4,6,9,15,0.4,synthetic_operational
+2026-10-08,3,0,10,8,Emergency Medicine,36,4,27,4,7,3,10,0.7,synthetic_operational
+2026-10-08,3,0,10,8,Pediatrics,18,14,4,2,3,3,6,0.5,synthetic_operational
+2026-10-08,3,0,10,8,Dermatology,13,10,2,3,1,1,2,0.5,synthetic_operational
+2026-10-09,4,0,10,9,Cardiology,21,15,9,5,6,6,12,0.5,synthetic_operational
+2026-10-09,4,0,10,9,Neurology,17,9,2,3,4,4,8,0.5,synthetic_operational
+2026-10-09,4,0,10,9,Orthopedics,15,9,3,2,3,5,8,0.375,synthetic_operational
+2026-10-09,4,0,10,9,General Medicine,29,16,8,4,7,8,15,0.4667,synthetic_operational
+2026-10-09,4,0,10,9,Emergency Medicine,36,4,30,5,6,4,10,0.6,synthetic_operational
+2026-10-09,4,0,10,9,Pediatrics,18,14,4,2,2,4,6,0.3333,synthetic_operational
+2026-10-09,4,0,10,9,Dermatology,15,13,2,3,1,1,2,0.5,synthetic_operational
+2026-10-10,5,1,10,10,Cardiology,12,10,3,3,5,7,12,0.4167,synthetic_operational
+2026-10-10,5,1,10,10,Neurology,10,7,4,1,3,5,8,0.375,synthetic_operational
+2026-10-10,5,1,10,10,Orthopedics,13,12,1,1,3,5,8,0.375,synthetic_operational
+2026-10-10,5,1,10,10,General Medicine,22,14,8,3,6,9,15,0.4,synthetic_operational
+2026-10-10,5,1,10,10,Emergency Medicine,45,3,47,3,7,3,10,0.7,synthetic_operational
+2026-10-10,5,1,10,10,Pediatrics,13,5,4,1,2,4,6,0.3333,synthetic_operational
+2026-10-10,5,1,10,10,Dermatology,6,6,0,1,1,1,2,0.5,synthetic_operational
+2026-10-11,6,1,10,11,Cardiology,12,7,4,3,5,7,12,0.4167,synthetic_operational
+2026-10-11,6,1,10,11,Neurology,7,7,3,1,3,5,8,0.375,synthetic_operational
+2026-10-11,6,1,10,11,Orthopedics,13,13,5,1,3,5,8,0.375,synthetic_operational
+2026-10-11,6,1,10,11,General Medicine,14,10,4,3,6,9,15,0.4,synthetic_operational
+2026-10-11,6,1,10,11,Emergency Medicine,45,4,46,3,7,3,10,0.7,synthetic_operational
+2026-10-11,6,1,10,11,Pediatrics,15,13,5,1,3,3,6,0.5,synthetic_operational
+2026-10-11,6,1,10,11,Dermatology,9,9,2,1,1,1,2,0.5,synthetic_operational
+2026-10-12,0,0,10,12,Cardiology,28,18,7,4,7,5,12,0.5833,synthetic_operational
+2026-10-12,0,0,10,12,Neurology,22,17,5,2,5,3,8,0.625,synthetic_operational
+2026-10-12,0,0,10,12,Orthopedics,26,18,5,3,5,3,8,0.625,synthetic_operational
+2026-10-12,0,0,10,12,General Medicine,35,23,11,5,10,5,15,0.6667,synthetic_operational
+2026-10-12,0,0,10,12,Emergency Medicine,37,4,31,4,4,6,10,0.4,synthetic_operational
+2026-10-12,0,0,10,12,Pediatrics,18,12,3,3,3,3,6,0.5,synthetic_operational
+2026-10-12,0,0,10,12,Dermatology,19,18,2,3,1,1,2,0.5,synthetic_operational
+2026-10-13,1,0,10,13,Cardiology,19,16,6,5,5,7,12,0.4167,synthetic_operational
+2026-10-13,1,0,10,13,Neurology,22,15,3,2,6,2,8,0.75,synthetic_operational
+2026-10-13,1,0,10,13,Orthopedics,21,16,2,3,4,4,8,0.5,synthetic_operational
+2026-10-13,1,0,10,13,General Medicine,36,26,13,4,10,5,15,0.6667,synthetic_operational
+2026-10-13,1,0,10,13,Emergency Medicine,33,2,26,4,5,5,10,0.5,synthetic_operational
+2026-10-13,1,0,10,13,Pediatrics,23,18,3,3,4,2,6,0.6667,synthetic_operational
+2026-10-13,1,0,10,13,Dermatology,14,11,1,3,1,1,2,0.5,synthetic_operational
+2026-10-14,2,0,10,14,Cardiology,20,17,2,4,5,7,12,0.4167,synthetic_operational
+2026-10-14,2,0,10,14,Neurology,17,10,4,3,3,5,8,0.375,synthetic_operational
+2026-10-14,2,0,10,14,Orthopedics,21,15,3,3,5,3,8,0.625,synthetic_operational
+2026-10-14,2,0,10,14,General Medicine,28,15,9,5,8,7,15,0.5333,synthetic_operational
+2026-10-14,2,0,10,14,Emergency Medicine,31,3,26,5,5,5,10,0.5,synthetic_operational
+2026-10-14,2,0,10,14,Pediatrics,21,15,7,3,3,3,6,0.5,synthetic_operational
+2026-10-14,2,0,10,14,Dermatology,15,15,0,2,1,1,2,0.5,synthetic_operational
+2026-10-15,3,0,10,15,Cardiology,21,13,5,5,7,5,12,0.5833,synthetic_operational
+2026-10-15,3,0,10,15,Neurology,18,11,2,3,4,4,8,0.5,synthetic_operational
+2026-10-15,3,0,10,15,Orthopedics,16,8,5,2,3,5,8,0.375,synthetic_operational
+2026-10-15,3,0,10,15,General Medicine,29,17,10,5,7,8,15,0.4667,synthetic_operational
+2026-10-15,3,0,10,15,Emergency Medicine,33,1,28,5,4,6,10,0.4,synthetic_operational
+2026-10-15,3,0,10,15,Pediatrics,17,10,2,3,3,3,6,0.5,synthetic_operational
+2026-10-15,3,0,10,15,Dermatology,10,10,1,3,1,1,2,0.5,synthetic_operational
+2026-10-16,4,0,10,16,Cardiology,24,15,7,4,7,5,12,0.5833,synthetic_operational
+2026-10-16,4,0,10,16,Neurology,13,11,2,3,3,5,8,0.375,synthetic_operational
+2026-10-16,4,0,10,16,Orthopedics,18,14,4,3,3,5,8,0.375,synthetic_operational
+2026-10-16,4,0,10,16,General Medicine,31,19,11,4,9,6,15,0.6,synthetic_operational
+2026-10-16,4,0,10,16,Emergency Medicine,32,4,25,5,6,4,10,0.6,synthetic_operational
+2026-10-16,4,0,10,16,Pediatrics,19,12,3,2,3,3,6,0.5,synthetic_operational
+2026-10-16,4,0,10,16,Dermatology,11,11,1,3,1,1,2,0.5,synthetic_operational
+2026-10-17,5,1,10,17,Cardiology,12,4,4,3,5,7,12,0.4167,synthetic_operational
+2026-10-17,5,1,10,17,Neurology,14,11,4,1,3,5,8,0.375,synthetic_operational
+2026-10-17,5,1,10,17,Orthopedics,13,9,3,1,4,4,8,0.5,synthetic_operational
+2026-10-17,5,1,10,17,General Medicine,17,10,7,3,6,9,15,0.4,synthetic_operational
+2026-10-17,5,1,10,17,Emergency Medicine,48,5,50,3,7,3,10,0.7,synthetic_operational
+2026-10-17,5,1,10,17,Pediatrics,10,5,2,1,2,4,6,0.3333,synthetic_operational
+2026-10-17,5,1,10,17,Dermatology,11,10,2,1,1,1,2,0.5,synthetic_operational
+2026-10-18,6,1,10,18,Cardiology,9,6,3,3,5,7,12,0.4167,synthetic_operational
+2026-10-18,6,1,10,18,Neurology,7,3,2,1,3,5,8,0.375,synthetic_operational
+2026-10-18,6,1,10,18,Orthopedics,10,7,1,1,3,5,8,0.375,synthetic_operational
+2026-10-18,6,1,10,18,General Medicine,20,14,5,3,6,9,15,0.4,synthetic_operational
+2026-10-18,6,1,10,18,Emergency Medicine,43,2,44,3,6,4,10,0.6,synthetic_operational
+2026-10-18,6,1,10,18,Pediatrics,9,6,0,1,2,4,6,0.3333,synthetic_operational
+2026-10-18,6,1,10,18,Dermatology,8,7,1,1,1,1,2,0.5,synthetic_operational
+2026-10-19,0,0,10,19,Cardiology,26,17,5,5,7,5,12,0.5833,synthetic_operational
+2026-10-19,0,0,10,19,Neurology,17,9,3,2,4,4,8,0.5,synthetic_operational
+2026-10-19,0,0,10,19,Orthopedics,28,23,5,3,6,2,8,0.75,synthetic_operational
+2026-10-19,0,0,10,19,General Medicine,39,25,13,5,10,5,15,0.6667,synthetic_operational
+2026-10-19,0,0,10,19,Emergency Medicine,32,3,28,4,4,6,10,0.4,synthetic_operational
+2026-10-19,0,0,10,19,Pediatrics,24,18,6,3,4,2,6,0.6667,synthetic_operational
+2026-10-19,0,0,10,19,Dermatology,18,14,1,2,1,1,2,0.5,synthetic_operational
+2026-10-20,1,0,10,20,Cardiology,27,18,8,4,8,4,12,0.6667,synthetic_operational
+2026-10-20,1,0,10,20,Neurology,21,16,3,2,5,3,8,0.625,synthetic_operational
+2026-10-20,1,0,10,20,Orthopedics,23,20,4,2,4,4,8,0.5,synthetic_operational
+2026-10-20,1,0,10,20,General Medicine,34,21,9,4,9,6,15,0.6,synthetic_operational
+2026-10-20,1,0,10,20,Emergency Medicine,31,3,24,4,5,5,10,0.5,synthetic_operational
+2026-10-20,1,0,10,20,Pediatrics,21,13,5,3,4,2,6,0.6667,synthetic_operational
+2026-10-20,1,0,10,20,Dermatology,21,23,1,2,1,1,2,0.5,synthetic_operational
+2026-10-21,2,0,10,21,Cardiology,23,15,6,5,6,6,12,0.5,synthetic_operational
+2026-10-21,2,0,10,21,Neurology,15,11,1,3,5,3,8,0.625,synthetic_operational
+2026-10-21,2,0,10,21,Orthopedics,20,16,2,3,3,5,8,0.375,synthetic_operational
+2026-10-21,2,0,10,21,General Medicine,32,21,9,5,7,8,15,0.4667,synthetic_operational
+2026-10-21,2,0,10,21,Emergency Medicine,33,2,28,4,6,4,10,0.6,synthetic_operational
+2026-10-21,2,0,10,21,Pediatrics,21,15,1,2,4,2,6,0.6667,synthetic_operational
+2026-10-21,2,0,10,21,Dermatology,13,14,0,2,1,1,2,0.5,synthetic_operational
+2026-10-22,3,0,10,22,Cardiology,21,16,5,4,5,7,12,0.4167,synthetic_operational
+2026-10-22,3,0,10,22,Neurology,18,17,4,3,5,3,8,0.625,synthetic_operational
+2026-10-22,3,0,10,22,Orthopedics,20,16,3,2,3,5,8,0.375,synthetic_operational
+2026-10-22,3,0,10,22,General Medicine,32,17,9,5,9,6,15,0.6,synthetic_operational
+2026-10-22,3,0,10,22,Emergency Medicine,31,1,26,4,5,5,10,0.5,synthetic_operational
+2026-10-22,3,0,10,22,Pediatrics,18,10,5,2,3,3,6,0.5,synthetic_operational
+2026-10-22,3,0,10,22,Dermatology,18,15,2,3,1,1,2,0.5,synthetic_operational
+2026-10-23,4,0,10,23,Cardiology,21,15,7,5,6,6,12,0.5,synthetic_operational
+2026-10-23,4,0,10,23,Neurology,14,12,1,2,4,4,8,0.5,synthetic_operational
+2026-10-23,4,0,10,23,Orthopedics,17,11,0,3,3,5,8,0.375,synthetic_operational
+2026-10-23,4,0,10,23,General Medicine,28,17,9,5,8,7,15,0.5333,synthetic_operational
+2026-10-23,4,0,10,23,Emergency Medicine,33,4,27,5,5,5,10,0.5,synthetic_operational
+2026-10-23,4,0,10,23,Pediatrics,16,11,3,2,3,3,6,0.5,synthetic_operational
+2026-10-23,4,0,10,23,Dermatology,14,11,0,2,1,1,2,0.5,synthetic_operational
+2026-10-24,5,1,10,24,Cardiology,12,8,5,3,5,7,12,0.4167,synthetic_operational
+2026-10-24,5,1,10,24,Neurology,13,10,0,1,3,5,8,0.375,synthetic_operational
+2026-10-24,5,1,10,24,Orthopedics,12,10,0,1,4,4,8,0.5,synthetic_operational
+2026-10-24,5,1,10,24,General Medicine,21,13,10,3,8,7,15,0.5333,synthetic_operational
+2026-10-24,5,1,10,24,Emergency Medicine,46,6,49,3,6,4,10,0.6,synthetic_operational
+2026-10-24,5,1,10,24,Pediatrics,11,6,2,1,2,4,6,0.3333,synthetic_operational
+2026-10-24,5,1,10,24,Dermatology,9,5,1,1,1,1,2,0.5,synthetic_operational
+2026-10-25,6,1,10,25,Cardiology,12,7,8,3,5,7,12,0.4167,synthetic_operational
+2026-10-25,6,1,10,25,Neurology,6,5,1,1,3,5,8,0.375,synthetic_operational
+2026-10-25,6,1,10,25,Orthopedics,8,7,0,1,3,5,8,0.375,synthetic_operational
+2026-10-25,6,1,10,25,General Medicine,19,14,6,3,6,9,15,0.4,synthetic_operational
+2026-10-25,6,1,10,25,Emergency Medicine,45,4,47,3,8,2,10,0.8,synthetic_operational
+2026-10-25,6,1,10,25,Pediatrics,10,8,1,1,2,4,6,0.3333,synthetic_operational
+2026-10-25,6,1,10,25,Dermatology,6,5,0,1,1,1,2,0.5,synthetic_operational
+2026-10-26,0,0,10,26,Cardiology,23,13,7,5,7,5,12,0.5833,synthetic_operational
+2026-10-26,0,0,10,26,Neurology,27,21,4,2,6,2,8,0.75,synthetic_operational
+2026-10-26,0,0,10,26,Orthopedics,23,17,2,3,5,3,8,0.625,synthetic_operational
+2026-10-26,0,0,10,26,General Medicine,37,21,6,4,11,4,15,0.7333,synthetic_operational
+2026-10-26,0,0,10,26,Emergency Medicine,30,3,27,5,4,6,10,0.4,synthetic_operational
+2026-10-26,0,0,10,26,Pediatrics,20,10,6,2,3,3,6,0.5,synthetic_operational
+2026-10-26,0,0,10,26,Dermatology,18,14,2,3,1,1,2,0.5,synthetic_operational
+2026-10-27,1,0,10,27,Cardiology,24,15,7,4,7,5,12,0.5833,synthetic_operational
+2026-10-27,1,0,10,27,Neurology,21,10,7,2,6,2,8,0.75,synthetic_operational
+2026-10-27,1,0,10,27,Orthopedics,28,16,4,3,5,3,8,0.625,synthetic_operational
+2026-10-27,1,0,10,27,General Medicine,35,21,10,4,8,7,15,0.5333,synthetic_operational
+2026-10-27,1,0,10,27,Emergency Medicine,34,4,28,5,6,4,10,0.6,synthetic_operational
+2026-10-27,1,0,10,27,Pediatrics,25,20,4,2,4,2,6,0.6667,synthetic_operational
+2026-10-27,1,0,10,27,Dermatology,16,17,1,2,1,1,2,0.5,synthetic_operational
+2026-10-28,2,0,10,28,Cardiology,21,15,7,5,6,6,12,0.5,synthetic_operational
+2026-10-28,2,0,10,28,Neurology,15,11,5,3,3,5,8,0.375,synthetic_operational
+2026-10-28,2,0,10,28,Orthopedics,21,16,2,3,4,4,8,0.5,synthetic_operational
+2026-10-28,2,0,10,28,General Medicine,31,19,8,5,8,7,15,0.5333,synthetic_operational
+2026-10-28,2,0,10,28,Emergency Medicine,28,2,24,5,4,6,10,0.4,synthetic_operational
+2026-10-28,2,0,10,28,Pediatrics,23,16,3,2,3,3,6,0.5,synthetic_operational
+2026-10-28,2,0,10,28,Dermatology,16,18,0,3,1,1,2,0.5,synthetic_operational
+2026-10-29,3,0,10,29,Cardiology,20,16,5,5,5,7,12,0.4167,synthetic_operational
+2026-10-29,3,0,10,29,Neurology,14,5,3,2,5,3,8,0.625,synthetic_operational
+2026-10-29,3,0,10,29,Orthopedics,18,13,2,3,3,5,8,0.375,synthetic_operational
+2026-10-29,3,0,10,29,General Medicine,26,15,9,4,6,9,15,0.4,synthetic_operational
+2026-10-29,3,0,10,29,Emergency Medicine,36,4,31,4,5,5,10,0.5,synthetic_operational
+2026-10-29,3,0,10,29,Pediatrics,18,13,3,2,3,3,6,0.5,synthetic_operational
+2026-10-29,3,0,10,29,Dermatology,13,15,2,3,1,1,2,0.5,synthetic_operational
+2026-10-30,4,0,10,30,Cardiology,21,14,5,4,5,7,12,0.4167,synthetic_operational
+2026-10-30,4,0,10,30,Neurology,21,16,5,2,5,3,8,0.625,synthetic_operational
+2026-10-30,4,0,10,30,Orthopedics,19,12,4,2,4,4,8,0.5,synthetic_operational
+2026-10-30,4,0,10,30,General Medicine,30,16,9,4,10,5,15,0.6667,synthetic_operational
+2026-10-30,4,0,10,30,Emergency Medicine,35,4,31,4,7,3,10,0.7,synthetic_operational
+2026-10-30,4,0,10,30,Pediatrics,19,14,4,3,4,2,6,0.6667,synthetic_operational
+2026-10-30,4,0,10,30,Dermatology,11,12,0,2,1,1,2,0.5,synthetic_operational
+2026-10-31,5,1,10,31,Cardiology,16,13,5,3,5,7,12,0.4167,synthetic_operational
+2026-10-31,5,1,10,31,Neurology,13,10,4,1,3,5,8,0.375,synthetic_operational
+2026-10-31,5,1,10,31,Orthopedics,17,9,4,1,4,4,8,0.5,synthetic_operational
+2026-10-31,5,1,10,31,General Medicine,20,13,7,3,6,9,15,0.4,synthetic_operational
+2026-10-31,5,1,10,31,Emergency Medicine,40,3,41,3,6,4,10,0.6,synthetic_operational
+2026-10-31,5,1,10,31,Pediatrics,10,6,2,1,2,4,6,0.3333,synthetic_operational
+2026-10-31,5,1,10,31,Dermatology,10,10,2,1,1,1,2,0.5,synthetic_operational
+2026-11-01,6,1,11,1,Cardiology,13,8,3,3,5,7,12,0.4167,synthetic_operational
+2026-11-01,6,1,11,1,Neurology,7,5,1,1,3,5,8,0.375,synthetic_operational
+2026-11-01,6,1,11,1,Orthopedics,11,11,3,1,3,5,8,0.375,synthetic_operational
+2026-11-01,6,1,11,1,General Medicine,16,6,6,3,6,9,15,0.4,synthetic_operational
+2026-11-01,6,1,11,1,Emergency Medicine,41,6,45,3,7,3,10,0.7,synthetic_operational
+2026-11-01,6,1,11,1,Pediatrics,12,6,2,1,2,4,6,0.3333,synthetic_operational
+2026-11-01,6,1,11,1,Dermatology,3,2,0,1,1,1,2,0.5,synthetic_operational
+2026-11-02,0,0,11,2,Cardiology,34,22,9,4,9,3,12,0.75,synthetic_operational
+2026-11-02,0,0,11,2,Neurology,20,13,5,2,4,4,8,0.5,synthetic_operational
+2026-11-02,0,0,11,2,Orthopedics,25,20,5,2,5,3,8,0.625,synthetic_operational
+2026-11-02,0,0,11,2,General Medicine,39,26,12,4,11,4,15,0.7333,synthetic_operational
+2026-11-02,0,0,11,2,Emergency Medicine,38,4,33,5,7,3,10,0.7,synthetic_operational
+2026-11-02,0,0,11,2,Pediatrics,20,14,3,2,5,1,6,0.8333,synthetic_operational
+2026-11-02,0,0,11,2,Dermatology,18,16,0,3,1,1,2,0.5,synthetic_operational
+2026-11-03,1,0,11,3,Cardiology,22,11,7,5,7,5,12,0.5833,synthetic_operational
+2026-11-03,1,0,11,3,Neurology,16,13,2,3,3,5,8,0.375,synthetic_operational
+2026-11-03,1,0,11,3,Orthopedics,22,16,4,3,4,4,8,0.5,synthetic_operational
+2026-11-03,1,0,11,3,General Medicine,35,21,9,5,10,5,15,0.6667,synthetic_operational
+2026-11-03,1,0,11,3,Emergency Medicine,32,3,28,4,5,5,10,0.5,synthetic_operational
+2026-11-03,1,0,11,3,Pediatrics,24,18,5,3,3,3,6,0.5,synthetic_operational
+2026-11-03,1,0,11,3,Dermatology,14,11,0,2,1,1,2,0.5,synthetic_operational
+2026-11-04,2,0,11,4,Cardiology,24,16,5,5,7,5,12,0.5833,synthetic_operational
+2026-11-04,2,0,11,4,Neurology,17,14,5,2,3,5,8,0.375,synthetic_operational
+2026-11-04,2,0,11,4,Orthopedics,21,15,4,2,4,4,8,0.5,synthetic_operational
+2026-11-04,2,0,11,4,General Medicine,29,17,9,5,11,4,15,0.7333,synthetic_operational
+2026-11-04,2,0,11,4,Emergency Medicine,35,4,29,4,4,6,10,0.4,synthetic_operational
+2026-11-04,2,0,11,4,Pediatrics,17,15,2,2,3,3,6,0.5,synthetic_operational
+2026-11-04,2,0,11,4,Dermatology,12,12,0,3,1,1,2,0.5,synthetic_operational
+2026-11-05,3,0,11,5,Cardiology,19,9,5,5,5,7,12,0.4167,synthetic_operational
+2026-11-05,3,0,11,5,Neurology,17,10,3,3,4,4,8,0.5,synthetic_operational
+2026-11-05,3,0,11,5,Orthopedics,22,17,4,3,4,4,8,0.5,synthetic_operational
+2026-11-05,3,0,11,5,General Medicine,33,18,8,4,7,8,15,0.4667,synthetic_operational
+2026-11-05,3,0,11,5,Emergency Medicine,29,2,26,5,4,6,10,0.4,synthetic_operational
+2026-11-05,3,0,11,5,Pediatrics,20,14,4,2,4,2,6,0.6667,synthetic_operational
+2026-11-05,3,0,11,5,Dermatology,10,11,1,3,1,1,2,0.5,synthetic_operational
+2026-11-06,4,0,11,6,Cardiology,23,14,6,4,7,5,12,0.5833,synthetic_operational
+2026-11-06,4,0,11,6,Neurology,16,12,4,3,4,4,8,0.5,synthetic_operational
+2026-11-06,4,0,11,6,Orthopedics,15,15,1,3,3,5,8,0.375,synthetic_operational
+2026-11-06,4,0,11,6,General Medicine,27,11,10,5,7,8,15,0.4667,synthetic_operational
+2026-11-06,4,0,11,6,Emergency Medicine,32,3,29,4,4,6,10,0.4,synthetic_operational
+2026-11-06,4,0,11,6,Pediatrics,14,9,3,3,3,3,6,0.5,synthetic_operational
+2026-11-06,4,0,11,6,Dermatology,13,10,0,3,1,1,2,0.5,synthetic_operational
+2026-11-07,5,1,11,7,Cardiology,18,11,6,3,6,6,12,0.5,synthetic_operational
+2026-11-07,5,1,11,7,Neurology,10,8,4,1,3,5,8,0.375,synthetic_operational
+2026-11-07,5,1,11,7,Orthopedics,14,12,2,1,3,5,8,0.375,synthetic_operational
+2026-11-07,5,1,11,7,General Medicine,18,9,4,3,6,9,15,0.4,synthetic_operational
+2026-11-07,5,1,11,7,Emergency Medicine,42,4,46,3,5,5,10,0.5,synthetic_operational
+2026-11-07,5,1,11,7,Pediatrics,7,3,2,1,2,4,6,0.3333,synthetic_operational
+2026-11-07,5,1,11,7,Dermatology,7,9,0,1,1,1,2,0.5,synthetic_operational
+2026-11-08,6,1,11,8,Cardiology,11,5,3,3,5,7,12,0.4167,synthetic_operational
+2026-11-08,6,1,11,8,Neurology,10,9,3,1,3,5,8,0.375,synthetic_operational
+2026-11-08,6,1,11,8,Orthopedics,16,13,4,1,3,5,8,0.375,synthetic_operational
+2026-11-08,6,1,11,8,General Medicine,19,9,8,3,6,9,15,0.4,synthetic_operational
+2026-11-08,6,1,11,8,Emergency Medicine,45,3,48,3,8,2,10,0.8,synthetic_operational
+2026-11-08,6,1,11,8,Pediatrics,12,11,5,1,2,4,6,0.3333,synthetic_operational
+2026-11-08,6,1,11,8,Dermatology,9,5,0,1,1,1,2,0.5,synthetic_operational
+2026-11-09,0,0,11,9,Cardiology,27,14,10,5,8,4,12,0.6667,synthetic_operational
+2026-11-09,0,0,11,9,Neurology,20,10,2,3,5,3,8,0.625,synthetic_operational
+2026-11-09,0,0,11,9,Orthopedics,24,20,3,2,4,4,8,0.5,synthetic_operational
+2026-11-09,0,0,11,9,General Medicine,44,25,15,5,11,4,15,0.7333,synthetic_operational
+2026-11-09,0,0,11,9,Emergency Medicine,33,5,27,5,4,6,10,0.4,synthetic_operational
+2026-11-09,0,0,11,9,Pediatrics,20,15,4,3,4,2,6,0.6667,synthetic_operational
+2026-11-09,0,0,11,9,Dermatology,20,18,1,2,1,1,2,0.5,synthetic_operational
+2026-11-10,1,0,11,10,Cardiology,29,18,7,4,7,5,12,0.5833,synthetic_operational
+2026-11-10,1,0,11,10,Neurology,21,14,3,2,5,3,8,0.625,synthetic_operational
+2026-11-10,1,0,11,10,Orthopedics,21,16,3,3,4,4,8,0.5,synthetic_operational
+2026-11-10,1,0,11,10,General Medicine,34,22,9,5,9,6,15,0.6,synthetic_operational
+2026-11-10,1,0,11,10,Emergency Medicine,32,4,26,4,5,5,10,0.5,synthetic_operational
+2026-11-10,1,0,11,10,Pediatrics,22,8,6,3,3,3,6,0.5,synthetic_operational
+2026-11-10,1,0,11,10,Dermatology,17,17,0,3,1,1,2,0.5,synthetic_operational
+2026-11-11,2,0,11,11,Cardiology,19,11,2,4,5,7,12,0.4167,synthetic_operational
+2026-11-11,2,0,11,11,Neurology,21,17,5,3,4,4,8,0.5,synthetic_operational
+2026-11-11,2,0,11,11,Orthopedics,23,19,1,2,4,4,8,0.5,synthetic_operational
+2026-11-11,2,0,11,11,General Medicine,32,18,10,4,10,5,15,0.6667,synthetic_operational
+2026-11-11,2,0,11,11,Emergency Medicine,34,4,33,4,4,6,10,0.4,synthetic_operational
+2026-11-11,2,0,11,11,Pediatrics,21,16,3,2,4,2,6,0.6667,synthetic_operational
+2026-11-11,2,0,11,11,Dermatology,16,14,1,3,1,1,2,0.5,synthetic_operational
+2026-11-12,3,0,11,12,Cardiology,22,15,4,4,6,6,12,0.5,synthetic_operational
+2026-11-12,3,0,11,12,Neurology,13,5,2,3,3,5,8,0.375,synthetic_operational
+2026-11-12,3,0,11,12,Orthopedics,15,9,4,3,4,4,8,0.5,synthetic_operational
+2026-11-12,3,0,11,12,General Medicine,33,17,11,5,8,7,15,0.5333,synthetic_operational
+2026-11-12,3,0,11,12,Emergency Medicine,30,2,26,5,4,6,10,0.4,synthetic_operational
+2026-11-12,3,0,11,12,Pediatrics,13,10,1,3,2,4,6,0.3333,synthetic_operational
+2026-11-12,3,0,11,12,Dermatology,13,10,3,3,1,1,2,0.5,synthetic_operational
+2026-11-13,4,0,11,13,Cardiology,23,14,4,5,6,6,12,0.5,synthetic_operational
+2026-11-13,4,0,11,13,Neurology,20,14,4,3,4,4,8,0.5,synthetic_operational
+2026-11-13,4,0,11,13,Orthopedics,18,11,3,2,3,5,8,0.375,synthetic_operational
+2026-11-13,4,0,11,13,General Medicine,21,16,7,4,6,9,15,0.4,synthetic_operational
+2026-11-13,4,0,11,13,Emergency Medicine,30,3,24,4,5,5,10,0.5,synthetic_operational
+2026-11-13,4,0,11,13,Pediatrics,14,8,2,3,3,3,6,0.5,synthetic_operational
+2026-11-13,4,0,11,13,Dermatology,14,12,0,2,1,1,2,0.5,synthetic_operational
+2026-11-14,5,1,11,14,Cardiology,18,10,6,3,7,5,12,0.5833,synthetic_operational
+2026-11-14,5,1,11,14,Neurology,10,7,6,1,3,5,8,0.375,synthetic_operational
+2026-11-14,5,1,11,14,Orthopedics,9,5,3,1,3,5,8,0.375,synthetic_operational
+2026-11-14,5,1,11,14,General Medicine,20,16,7,3,6,9,15,0.4,synthetic_operational
+2026-11-14,5,1,11,14,Emergency Medicine,39,5,40,3,6,4,10,0.6,synthetic_operational
+2026-11-14,5,1,11,14,Pediatrics,14,14,4,1,2,4,6,0.3333,synthetic_operational
+2026-11-14,5,1,11,14,Dermatology,10,7,1,1,1,1,2,0.5,synthetic_operational

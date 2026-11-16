@@ -1,0 +1,28 @@
+# ST. JUDE METROPOLITAN HOSPITAL
+## POLICY DOCUMENT: PATIENT ADMISSION PROCEDURES
+Policy Reference: POL-ADM-2024-V2
+Department: Patient Admissions & Registration
+Effective Date: January 1, 2024
+Review Cycle: Annual
+
+1. PURPOSE AND SCOPE
+This document defines the standard operating procedures for inpatient and outpatient admissions across all departments at St. Jude Metropolitan Hospital. This policy applies to all receptionists, admission coordinators, triage nurses, and attending physicians.
+
+2. GENERAL ADMISSION REQUIREMENTS
+2.1 All patients must present valid government-issued photo identification (Driver's License, Passport, or National ID card) upon arrival at the Admissions Desk.
+2.2 Valid health insurance documentation, pre-authorization forms, or secondary payer information must be submitted during registration.
+2.3 Uninsured or self-pay patients must meet with a Financial Counselor prior to elective admission to establish an initial deposit of 30% of estimated procedure costs.
+2.4 Minor patients (under 18 years of age) must be accompanied by a legal parent or court-appointed guardian with documentation of guardianship.
+
+3. ELECTIVE ADMISSION PROTOCOL
+3.1 Elective admissions must be scheduled at least 48 hours in advance by the attending physician or consulting specialist.
+3.2 The admitting physician must provide a formal Admission Order specifying the admitting diagnosis, target department, anticipated length of stay, and level of care required (General Ward, Step-Down, or Intensive Care).
+3.3 Pre-admission laboratory testing, including Complete Blood Count (CBC), Basic Metabolic Panel (BMP), and chest radiography where clinically indicated, must be completed within 7 days prior to scheduled admission.
+3.4 Patients must report to the Central Registration Desk between 07:00 AM and 09:30 AM on the day of scheduled elective admission.
+
+4. FAST-TRACK ADMISSION FOR SPECIAL POPULATIONS
+4.1 Direct transfers from affiliated clinical facilities require Physician-to-Physician signout and prior bed assignment confirmed by Bed Management.
+4.2 Oncology and immunocompromised patients are admitted directly to designated isolated care units to minimize opportunistic infection exposure.
+
+5. NON-DISCRIMINATION AND COMPLIANCE
+St. Jude Metropolitan Hospital strictly adheres to federal and state healthcare non-discrimination mandates. Admission shall never be delayed or denied based on race, ethnicity, religion, gender, sexual orientation, disability, or inability to pay for emergency stabilization services.

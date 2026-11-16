@@ -1,3 +1,4 @@
+import asyncio
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
@@ -6,12 +7,17 @@ from sqlalchemy import text
 
 from backend.config.settings import settings
 from backend.database.database import init_db, get_db
-from backend.routes import patients, doctors, appointments, beds, emergencies, dashboard, workflow
+from backend.routes import patients, doctors, appointments, beds, emergencies, dashboard, workflow, auth, notifications, websocket, policies, predictions, optimization, integrations
+from backend.realtime.connection_manager import connection_manager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Lifespan event handler to ensure DB tables exist on startup."""
+    """Lifespan event handler to ensure DB tables exist on startup and initialize WebSocket loop."""
     init_db()
+    try:
+        connection_manager.set_loop(asyncio.get_running_loop())
+    except Exception:
+        pass
     yield
 
 app = FastAPI(
@@ -33,6 +39,8 @@ app.add_middleware(
 )
 
 # Register API Routers
+app.include_router(auth.router, prefix=settings.API_V1_STR)
+app.include_router(notifications.router, prefix=settings.API_V1_STR)
 app.include_router(patients.router, prefix=settings.API_V1_STR)
 app.include_router(doctors.router, prefix=settings.API_V1_STR)
 app.include_router(appointments.router, prefix=settings.API_V1_STR)
@@ -40,6 +48,12 @@ app.include_router(beds.router, prefix=settings.API_V1_STR)
 app.include_router(emergencies.router, prefix=settings.API_V1_STR)
 app.include_router(dashboard.router, prefix=settings.API_V1_STR)
 app.include_router(workflow.router, prefix=settings.API_V1_STR)
+app.include_router(policies.router)
+app.include_router(predictions.router)
+app.include_router(optimization.router)
+app.include_router(integrations.router)
+app.include_router(websocket.router)
+app.include_router(websocket.router, prefix=settings.API_V1_STR)
 
 
 @app.get("/", summary="Root endpoint", tags=["System"])

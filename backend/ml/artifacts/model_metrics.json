@@ -1,0 +1,290 @@
+{
+  "training_timestamp": "2026-11-15T06:15:45.830190",
+  "total_records": 1288,
+  "train_records": 896,
+  "val_records": 196,
+  "test_records": 196,
+  "feature_columns": [
+    "dept_code",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "day",
+    "total_beds",
+    "arrivals_lag_1d",
+    "arrivals_lag_7d",
+    "arrivals_rolling_7d",
+    "emergency_lag_1d",
+    "emergency_lag_7d",
+    "emergency_rolling_7d",
+    "occupied_beds_lag_1d",
+    "occupied_beds_lag_7d",
+    "occupied_beds_rolling_7d",
+    "appointments_lag_1d",
+    "appointments_lag_7d",
+    "appointments_rolling_7d"
+  ],
+  "departments": [
+    "Cardiology",
+    "Neurology",
+    "Orthopedics",
+    "General Medicine",
+    "Emergency Medicine",
+    "Pediatrics",
+    "Dermatology"
+  ],
+  "targets": {
+    "patient_arrivals": {
+      "target_name": "Patient Arrival Prediction",
+      "selected_model": "GradientBoostingRegressor",
+      "artifact_file": "patient_arrivals_model.joblib",
+      "models_comparison": {
+        "BaselineMovingAverage": {
+          "val": {
+            "mae": 4.264,
+            "rmse": 5.322,
+            "r2": 0.661,
+            "mape": 25.13
+          },
+          "test": {
+            "mae": 4.582,
+            "rmse": 5.583,
+            "r2": 0.629,
+            "mape": 28.48
+          }
+        },
+        "RandomForestRegressor": {
+          "val": {
+            "mae": 2.309,
+            "rmse": 2.88,
+            "r2": 0.901,
+            "mape": 13.09
+          },
+          "test": {
+            "mae": 2.273,
+            "rmse": 2.873,
+            "r2": 0.902,
+            "mape": 13.31
+          }
+        },
+        "GradientBoostingRegressor": {
+          "val": {
+            "mae": 2.263,
+            "rmse": 2.851,
+            "r2": 0.903,
+            "mape": 12.78
+          },
+          "test": {
+            "mae": 2.321,
+            "rmse": 2.885,
+            "r2": 0.901,
+            "mape": 13.36
+          }
+        }
+      },
+      "selected_metrics": {
+        "validation": {
+          "mae": 2.263,
+          "rmse": 2.851,
+          "r2": 0.903,
+          "mape": 12.78
+        },
+        "test": {
+          "mae": 2.321,
+          "rmse": 2.885,
+          "r2": 0.901,
+          "mape": 13.36
+        }
+      }
+    },
+    "emergency_cases": {
+      "target_name": "Emergency Demand Prediction",
+      "selected_model": "RandomForestRegressor",
+      "artifact_file": "emergency_demand_model.joblib",
+      "models_comparison": {
+        "BaselineMovingAverage": {
+          "val": {
+            "mae": 2.244,
+            "rmse": 3.537,
+            "r2": 0.894,
+            "mape": 39.67
+          },
+          "test": {
+            "mae": 2.209,
+            "rmse": 3.56,
+            "r2": 0.892,
+            "mape": 41.89
+          }
+        },
+        "RandomForestRegressor": {
+          "val": {
+            "mae": 1.35,
+            "rmse": 1.727,
+            "r2": 0.975,
+            "mape": 32.28
+          },
+          "test": {
+            "mae": 1.395,
+            "rmse": 1.794,
+            "r2": 0.973,
+            "mape": 35.32
+          }
+        },
+        "GradientBoostingRegressor": {
+          "val": {
+            "mae": 1.382,
+            "rmse": 1.802,
+            "r2": 0.973,
+            "mape": 33.77
+          },
+          "test": {
+            "mae": 1.414,
+            "rmse": 1.83,
+            "r2": 0.972,
+            "mape": 35.56
+          }
+        }
+      },
+      "selected_metrics": {
+        "validation": {
+          "mae": 1.35,
+          "rmse": 1.727,
+          "r2": 0.975,
+          "mape": 32.28
+        },
+        "test": {
+          "mae": 1.395,
+          "rmse": 1.794,
+          "r2": 0.973,
+          "mape": 35.32
+        }
+      }
+    },
+    "occupied_beds": {
+      "target_name": "Bed Occupancy Prediction",
+      "selected_model": "GradientBoostingRegressor",
+      "artifact_file": "bed_occupancy_model.joblib",
+      "models_comparison": {
+        "BaselineMovingAverage": {
+          "val": {
+            "mae": 0.781,
+            "rmse": 1.032,
+            "r2": 0.776,
+            "mape": 17.05
+          },
+          "test": {
+            "mae": 0.857,
+            "rmse": 1.143,
+            "r2": 0.77,
+            "mape": 18.14
+          }
+        },
+        "RandomForestRegressor": {
+          "val": {
+            "mae": 0.56,
+            "rmse": 0.783,
+            "r2": 0.871,
+            "mape": 12.85
+          },
+          "test": {
+            "mae": 0.571,
+            "rmse": 0.844,
+            "r2": 0.875,
+            "mape": 12.12
+          }
+        },
+        "GradientBoostingRegressor": {
+          "val": {
+            "mae": 0.558,
+            "rmse": 0.778,
+            "r2": 0.872,
+            "mape": 13.23
+          },
+          "test": {
+            "mae": 0.571,
+            "rmse": 0.828,
+            "r2": 0.88,
+            "mape": 12.55
+          }
+        }
+      },
+      "selected_metrics": {
+        "validation": {
+          "mae": 0.558,
+          "rmse": 0.778,
+          "r2": 0.872,
+          "mape": 13.23
+        },
+        "test": {
+          "mae": 0.571,
+          "rmse": 0.828,
+          "r2": 0.88,
+          "mape": 12.55
+        }
+      }
+    },
+    "appointment_count": {
+      "target_name": "Appointment Demand Prediction",
+      "selected_model": "GradientBoostingRegressor",
+      "artifact_file": "appointment_demand_model.joblib",
+      "models_comparison": {
+        "BaselineMovingAverage": {
+          "val": {
+            "mae": 3.149,
+            "rmse": 4.026,
+            "r2": 0.451,
+            "mape": 43.32
+          },
+          "test": {
+            "mae": 3.343,
+            "rmse": 4.294,
+            "r2": 0.419,
+            "mape": 39.82
+          }
+        },
+        "RandomForestRegressor": {
+          "val": {
+            "mae": 2.238,
+            "rmse": 2.837,
+            "r2": 0.727,
+            "mape": 30.07
+          },
+          "test": {
+            "mae": 2.26,
+            "rmse": 2.991,
+            "r2": 0.718,
+            "mape": 26.82
+          }
+        },
+        "GradientBoostingRegressor": {
+          "val": {
+            "mae": 2.185,
+            "rmse": 2.769,
+            "r2": 0.74,
+            "mape": 29.34
+          },
+          "test": {
+            "mae": 2.242,
+            "rmse": 2.912,
+            "r2": 0.733,
+            "mape": 26.35
+          }
+        }
+      },
+      "selected_metrics": {
+        "validation": {
+          "mae": 2.185,
+          "rmse": 2.769,
+          "r2": 0.74,
+          "mape": 29.34
+        },
+        "test": {
+          "mae": 2.242,
+          "rmse": 2.912,
+          "r2": 0.733,
+          "mape": 26.35
+        }
+      }
+    }
+  }
+}

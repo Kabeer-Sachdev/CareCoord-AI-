@@ -4,35 +4,103 @@ import {
   Users, 
   UserCheck, 
   Calendar, 
-  BedDouble, 
-  Siren, 
   Bot, 
   Terminal, 
   History,
-  BarChart3, 
-  BookOpen, 
-  Settings, 
-  Activity 
+  Activity,
+  LogOut,
+  Stethoscope,
+  Heart,
+  User,
+  ShieldAlert,
+  BookOpen,
+  TrendingUp,
+  Sliders,
+  Share2
 } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
-export function Sidebar({ currentPage, setCurrentPage }) {
-  const mainNav = [
-    { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-    { id: 'patients', label: 'Patients', icon: Users },
-    { id: 'doctors', label: 'Doctors', icon: UserCheck },
-    { id: 'appointments', label: 'Appointments', icon: Calendar },
-    { id: 'ai-agents', label: 'AI Agents', icon: Bot },
-    { id: 'workflow', label: 'Workflow Terminal', icon: Terminal, highlight: true },
-    { id: 'workflows', label: 'Workflow History', icon: History },
-  ];
+export function Sidebar({ currentPage, setCurrentPage, onLogout }) {
+  const { user, role, logout } = useAuth();
 
-  const futureNav = [
-    { id: 'beds', label: 'Beds & Resource', icon: BedDouble, badge: 'Phase 4' },
-    { id: 'emergency', label: 'Emergency Center', icon: Siren, badge: 'Phase 4' },
-    { id: 'analytics', label: 'ML Analytics', icon: BarChart3, badge: 'Phase 6' },
-    { id: 'policies', label: 'RAG Policies', icon: BookOpen, badge: 'Phase 5' },
-    { id: 'settings', label: 'Settings', icon: Settings, badge: 'Phase 8' },
-  ];
+  const handleLogout = () => {
+    logout();
+    if (onLogout) onLogout();
+  };
+
+  // Role-based Nav links
+  const getNavItems = () => {
+    if (role === 'DOCTOR') {
+      return [
+        { id: 'doctor-portal', label: 'Doctor Schedule', icon: Stethoscope, highlight: true },
+        { id: 'integrations', label: 'External Integrations', icon: Share2 },
+        { id: 'optimization', label: 'Resource Optimization', icon: Sliders },
+        { id: 'predictions', label: 'Predictive Analytics', icon: TrendingUp },
+        { id: 'policies', label: 'Hospital Policies', icon: BookOpen },
+        { id: 'overview', label: 'Hospital Overview', icon: LayoutDashboard },
+        { id: 'workflows', label: 'Workflow History', icon: History },
+      ];
+    }
+    if (role === 'RECEPTIONIST') {
+      return [
+        { id: 'reception-portal', label: 'Reception Desk', icon: UserCheck, highlight: true },
+        { id: 'integrations', label: 'External Integrations', icon: Share2 },
+        { id: 'optimization', label: 'Resource Optimization', icon: Sliders },
+        { id: 'predictions', label: 'Predictive Analytics', icon: TrendingUp },
+        { id: 'policies', label: 'Hospital Policies', icon: BookOpen },
+        { id: 'patients', label: 'Patients', icon: Users },
+        { id: 'doctors', label: 'Doctors', icon: Stethoscope },
+        { id: 'appointments', label: 'Appointments', icon: Calendar },
+        { id: 'workflow', label: 'Workflow Terminal', icon: Terminal },
+        { id: 'workflows', label: 'Workflow History', icon: History },
+      ];
+    }
+    if (role === 'NURSE') {
+      return [
+        { id: 'nurse-portal', label: 'Nurse Station', icon: Heart, highlight: true },
+        { id: 'optimization', label: 'Resource Optimization', icon: Sliders },
+        { id: 'predictions', label: 'Predictive Analytics', icon: TrendingUp },
+        { id: 'policies', label: 'Hospital Policies', icon: BookOpen },
+        { id: 'overview', label: 'Hospital Overview', icon: LayoutDashboard },
+      ];
+    }
+    if (role === 'PATIENT') {
+      return [
+        { id: 'patient-portal', label: 'Patient Portal', icon: User, highlight: true },
+        { id: 'policies', label: 'Hospital Policies', icon: BookOpen },
+        { id: 'overview', label: 'Hospital Overview', icon: LayoutDashboard },
+      ];
+    }
+
+    // Default / ADMIN navigation
+    return [
+      { id: 'overview', label: 'Command Center', icon: LayoutDashboard },
+      { id: 'integrations', label: 'External Integrations', icon: Share2, highlight: true },
+      { id: 'optimization', label: 'Resource Optimization', icon: Sliders },
+      { id: 'predictions', label: 'Predictive Analytics', icon: TrendingUp },
+      { id: 'policies', label: 'Hospital Policies', icon: BookOpen },
+      { id: 'reception-portal', label: 'Reception Portal', icon: UserCheck },
+      { id: 'doctor-portal', label: 'Doctor Portal', icon: Stethoscope },
+      { id: 'nurse-portal', label: 'Nurse Portal', icon: Heart },
+      { id: 'patient-portal', label: 'Patient Portal', icon: User },
+      { id: 'patients', label: 'Patients', icon: Users },
+      { id: 'doctors', label: 'Doctors', icon: UserCheck },
+      { id: 'appointments', label: 'Appointments', icon: Calendar },
+      { id: 'ai-agents', label: 'AI Agents', icon: Bot },
+      { id: 'workflow', label: 'Workflow Terminal', icon: Terminal },
+      { id: 'workflows', label: 'Workflow History', icon: History },
+    ];
+  };
+
+  const navItems = getNavItems();
+
+  const rolePillColors = {
+    ADMIN: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+    DOCTOR: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+    RECEPTIONIST: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+    NURSE: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+    PATIENT: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  };
 
   return (
     <aside className="w-64 bg-dark-800 border-r border-dark-700/80 flex flex-col justify-between h-screen sticky top-0 z-30 select-none shrink-0">
@@ -49,11 +117,13 @@ export function Sidebar({ currentPage, setCurrentPage }) {
         </div>
 
         {/* Navigation Sections */}
-        <div className="p-4 space-y-6 overflow-y-auto max-h-[calc(100vh-140px)]">
+        <div className="p-4 space-y-4 overflow-y-auto max-h-[calc(100vh-200px)]">
           <div>
-            <div className="px-3 text-[10px] font-semibold text-gray-500 uppercase tracking-widest font-mono mb-2">Core Workflow</div>
+            <div className="px-3 text-[10px] font-semibold text-gray-500 uppercase tracking-widest font-mono mb-2">
+              {role ? `${role} Navigation` : 'Core Navigation'}
+            </div>
             <nav className="space-y-1">
-              {mainNav.map((item) => {
+              {navItems.map((item) => {
                 const Icon = item.icon;
                 const active = currentPage === item.id;
                 return (
@@ -78,40 +148,38 @@ export function Sidebar({ currentPage, setCurrentPage }) {
               })}
             </nav>
           </div>
-
-          <div>
-            <div className="px-3 text-[10px] font-semibold text-gray-500 uppercase tracking-widest font-mono mb-2">Planned Modules</div>
-            <nav className="space-y-1">
-              {futureNav.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.id}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg text-xs text-gray-500 opacity-60 cursor-not-allowed border border-transparent"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <Icon className="w-4 h-4 text-gray-600" />
-                      <span>{item.label}</span>
-                    </div>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-dark-700 text-gray-400 border border-dark-600">
-                      {item.badge}
-                    </span>
-                  </div>
-                );
-              })}
-            </nav>
-          </div>
         </div>
       </div>
 
-      {/* System Status Footer */}
-      <div className="p-4 border-t border-dark-700/80 bg-dark-900/40">
-        <div className="flex items-center justify-between px-3 py-2 bg-dark-800 rounded-lg border border-dark-700 text-xs">
-          <div className="flex items-center gap-2 font-mono text-gray-300">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>SYSTEM ONLINE</span>
+      {/* User Footer & Logout */}
+      <div className="p-3 border-t border-dark-700/80 bg-dark-900/40 space-y-2">
+        <div className="flex items-center justify-between px-3 py-2 bg-dark-800 rounded-lg border border-dark-700">
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-white text-xs truncate">
+              {user?.full_name || 'Anonymous User'}
+            </div>
+            <div className="flex items-center gap-1.5 mt-0.5">
+              <span className={`px-1.5 py-0.2 rounded text-[9px] font-mono border ${rolePillColors[role] || 'bg-gray-800 text-gray-400'}`}>
+                {role || 'USER'}
+              </span>
+              <span className="text-[10px] text-gray-500 font-mono truncate">{user?.username}</span>
+            </div>
           </div>
-          <span className="text-[10px] font-mono text-gray-500">v1.0.0</span>
+          <button
+            onClick={handleLogout}
+            title="Log Out"
+            className="p-1.5 text-gray-400 hover:text-red-400 hover:bg-dark-700 rounded-lg transition-colors ml-2"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="flex items-center justify-between px-3 py-1 text-[10px] text-gray-500 font-mono">
+          <span className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            LIVE WS
+          </span>
+          <span>CareCoord v1.0</span>
         </div>
       </div>
     </aside>

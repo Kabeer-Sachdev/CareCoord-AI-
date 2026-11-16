@@ -5,7 +5,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from backend.database.database import SessionLocal, init_db
-from backend.database.models import Patient, Doctor, Appointment, Bed, Emergency
+from backend.database.models import Patient, Doctor, Appointment, Bed, Emergency, User
+from backend.auth.security import hash_password
 
 def seed_patients(db):
     """Seed 20 realistic synthetic patient records."""
@@ -189,6 +190,72 @@ def seed_emergencies(db):
     return count
 
 
+def seed_users(db):
+    """Seed synthetic role-based user accounts for Phase 4 demonstration."""
+    demo_pw_hash = hash_password("Demo@1234")
+    users_data = [
+        {
+            "username": "admin",
+            "email": "admin@carecoord.demo",
+            "password_hash": demo_pw_hash,
+            "role": "ADMIN",
+            "full_name": "Hospital Administrator",
+            "is_active": True,
+            "patient_id": None,
+            "doctor_id": None
+        },
+        {
+            "username": "reception",
+            "email": "reception@carecoord.demo",
+            "password_hash": demo_pw_hash,
+            "role": "RECEPTIONIST",
+            "full_name": "Head Receptionist",
+            "is_active": True,
+            "patient_id": None,
+            "doctor_id": None
+        },
+        {
+            "username": "doctor",
+            "email": "doctor@carecoord.demo",
+            "password_hash": demo_pw_hash,
+            "role": "DOCTOR",
+            "full_name": "Dr. Mehta",
+            "is_active": True,
+            "patient_id": None,
+            "doctor_id": "D001"
+        },
+        {
+            "username": "nurse",
+            "email": "nurse@carecoord.demo",
+            "password_hash": demo_pw_hash,
+            "role": "NURSE",
+            "full_name": "Nurse Priya Nair",
+            "is_active": True,
+            "patient_id": None,
+            "doctor_id": None
+        },
+        {
+            "username": "patient",
+            "email": "patient@carecoord.demo",
+            "password_hash": demo_pw_hash,
+            "role": "PATIENT",
+            "full_name": "Rahul Sharma",
+            "is_active": True,
+            "patient_id": "P001",
+            "doctor_id": None
+        }
+    ]
+
+    count = 0
+    for u in users_data:
+        existing = db.query(User).filter(User.username == u["username"]).first()
+        if not existing:
+            db.add(User(**u))
+            count += 1
+    db.commit()
+    return count
+
+
 def run_seed():
     """Run all seeding steps safely without duplicate key violations."""
     print("Initializing database tables...")
@@ -202,6 +269,7 @@ def run_seed():
         b_added = seed_beds(db)
         a_added = seed_appointments(db)
         e_added = seed_emergencies(db)
+        u_added = seed_users(db)
 
         print(f"Seeding completed successfully!")
         print(f"  Patients added:     {p_added} (Total in DB: {db.query(Patient).count()})")
@@ -209,6 +277,7 @@ def run_seed():
         print(f"  Beds added:         {b_added} (Total in DB: {db.query(Bed).count()})")
         print(f"  Appointments added: {a_added} (Total in DB: {db.query(Appointment).count()})")
         print(f"  Emergencies added:  {e_added} (Total in DB: {db.query(Emergency).count()})")
+        print(f"  Users added:        {u_added} (Total in DB: {db.query(User).count()})")
     except Exception as exc:
         db.rollback()
         print(f"Error during seeding: {exc}")

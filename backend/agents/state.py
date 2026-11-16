@@ -12,6 +12,10 @@ class CareCoordState(TypedDict):
     doctor_result: Optional[Dict[str, Any]]
     appointment_result: Optional[Dict[str, Any]]
     validation_result: Optional[Dict[str, Any]]
+    policy_result: Optional[Dict[str, Any]]
+    prediction_result: Optional[Dict[str, Any]]
+    optimization_result: Optional[Dict[str, Any]]
+    mcp_result: Optional[Dict[str, Any]]
 
     messages: List[Dict[str, Any]]
     execution_log: List[Dict[str, Any]]

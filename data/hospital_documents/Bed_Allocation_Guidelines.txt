@@ -1,0 +1,28 @@
+# ST. JUDE METROPOLITAN HOSPITAL
+## POLICY DOCUMENT: INPATIENT BED ALLOCATION AND UTILIZATION GUIDELINES
+Policy Reference: POL-BED-2024-V5
+Department: Bed Management, Nursing Administration & Patient Flow
+Effective Date: January 15, 2024
+Review Cycle: Annual
+
+1. OVERVIEW AND OBJECTIVES
+Efficient bed management is essential to deliver high-quality acute care, eliminate emergency department crowding, prevent elective surgery cancellations, and minimize hospital-acquired infections.
+
+2. BED ALLOCATION HIERARCHY AND CLINICAL PRIORITIZATION
+When inpatient bed capacity exceeds 85% occupancy, bed assignments follow this strict priority sequence:
+- Priority 1 (Highest): Emergent Level 1/2 transfers from Emergency Department and Code Blue resuscitations.
+- Priority 2: Post-operative surgical recovery patients requiring ICU or Step-down monitoring following urgent/emergency surgery.
+- Priority 3: Scheduled elective surgical patients requiring pre-booked post-operative beds.
+- Priority 4: Inpatient inter-ward transfers due to step-up clinical deterioration.
+- Priority 5: Elective non-surgical admissions from outpatient clinics or physician referrals.
+
+3. INFECTION CONTROL AND ISOLATION PLACEMENT
+3.1 Airborne Isolation (Negative Pressure Rooms): Mandatory for confirmed or suspected pulmonary Tuberculosis, Measles, Varicella, and Disseminated Zoster.
+3.2 Contact Isolation: Patients colonized or infected with Methicillin-Resistant Staphylococcus Aureus (MRSA), Vancomycin-Resistant Enterococcus (VRE), or Clostridioides difficile must be placed in single-occupancy rooms or cohorted with patients possessing identical microbiological profiles.
+3.3 Droplet Isolation: Required for influenza, meningococcal disease, and respiratory syncytial virus (RSV).
+
+4. BED CLEANING AND TURNAROUND STANDARDS
+4.1 Following patient discharge, Environmental Services (EVS) receives an automated notification.
+4.2 Standard Ward Bed Turnaround Target: 45 minutes from discharge confirmation to "Clean & Ready" status.
+4.3 Isolation / Decontamination Bed Turnaround Target: 75 minutes, including ultraviolet-C (UV-C) terminal disinfection.
+4.4 Overcrowding Escalation ("Surge Level 1-3"): If more than 5 patients are waiting in ED for >2 hours without bed placement, the Bed Management Committee initiates surge measures, including opening auxiliary observation units.

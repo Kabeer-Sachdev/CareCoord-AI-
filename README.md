@@ -30,6 +30,45 @@ Established the clean hospital management backend (FastAPI + SQLite + SQLAlchemy
 - **Database Audit Logging**: `workflow_runs` and `workflow_events` tables tracking granular execution logs, tool calls, and execution times in ms.
 - **Upgraded Command Center Dashboard**: Integrated live **LangGraph State Visualizer**, interactive **Human Approval Card**, **Workflow Detail Drawer**, and **Workflow History** page (`/workflows`). Verified via `test_phase3.py`.
 
+### Phase 4: Enterprise RBAC, Bed Management & Role Portals (Completed)
+- JWT authentication with secure password hashing (`passlib`/`bcrypt`) and RBAC across 5 distinct roles (`ADMIN`, `RECEPTIONIST`, `DOCTOR`, `NURSE`, `PATIENT`).
+- Patient data isolation preventing unauthorized access across patients.
+- Ward bed grid, real-time bed transfer operations, and WebSocket live updates.
+- 4 specialized role-specific dashboards (`DoctorPortal`, `ReceptionPortal`, `NursePortal`, `PatientPortal`). Verified via `test_phase4.py`.
+
+### Phase 5: RAG-Based Hospital Policy Intelligence System (Completed)
+- Local ChromaDB vector store paired with document ingestion pipeline (PDF, DOCX, TXT) and SQLite chunk tracking.
+- Specialized Hospital Policy Agent in LangGraph coordinator with citations and anti-hallucination guardrails. Verified via `test_phase5.py`.
+
+### Phase 6: Machine Learning Demand Prediction Engine (Completed)
+- Chronological time-series regression pipeline with zero future data leakage.
+- 4 Scikit-Learn regressors (Gradient Boosting & Random Forest) predicting arrivals, emergency volume, bed occupancy, and appointment volume.
+- Interactive Predictive Demand Command Center (`/predictions`) with capacity surge alerts. Verified via `test_phase6.py`.
+
+### Phase 7: Intelligent Hospital Resource Allocation and Optimization Engine (Completed)
+- Google OR-Tools Mixed Integer Linear Programming (MIP) discrete optimization solver.
+- 0-conflict appointment scheduling, dynamic doctor shift scheduling, and triage-weighted bed allocation.
+- Human review safety gate (`PENDING_APPROVAL`), stale plan conflict checking, and atomic database commits. Verified via `test_phase7.py`.
+
+### Phase 8: MCP-Based External Integrations and Hospital Interoperability (Completed)
+- **Official Model Context Protocol (MCP)** implementation via `mcp` v2.3.0 SDK with standardized `MCPServer`.
+- **Three Demonstration MCP Servers**:
+  1. **Hospital Information System (HIS)** (`hospital-his`): Controlled tools (`get_patient_record`, `get_patient_appointments`, `get_available_doctors`, `get_doctor_schedule`, `get_available_beds`, `get_department_information`).
+  2. **Laboratory Information System (LIS)** (`laboratory-lis`): Demonstration diagnostic catalog and turnaround status (`get_lab_service_catalog`, `check_lab_service_availability`, `get_sample_test_status`, `get_lab_department_information`).
+  3. **Pharmacy Service** (`pharmacy-rx`): Formulary catalog and stock tracking (`get_pharmacy_catalog`, `check_product_availability`, `get_pharmacy_operating_hours`) with read-only administrative oversight.
+- **Reusable MCP Client & Registry**:
+  - Dynamic tool discovery across connected servers.
+  - Automatic JSON schema input validation and error rejection.
+  - Security allowlists and role-based permissions (e.g., patient role blocked from staff-only doctor schedule).
+  - SQLite persistence (`mcp_servers`, `mcp_tool_executions`, `fhir_export_logs`).
+- **LangGraph Coordinator Integration**:
+  - Natural-language routing to `mcp_agent` node for single and federated multi-service queries.
+- **HL7 FHIR R4 Interoperability**:
+  - Bidirectional mapping service converting internal records into FHIR `Patient`, `Practitioner`, and `Appointment` JSON resources.
+  - CapabilityStatement endpoint (`/api/integrations/fhir/metadata`) detailing supported interactions.
+- **External Integrations Command Center (`/integrations`)**:
+  - Interactive dashboard with server overview, tool explorer, JSON results, FHIR R4 export viewer, and persistent activity audit logs. Verified via `test_phase8.py`.
+
 ---
 
 ## 4. Technology Stack
@@ -187,11 +226,16 @@ Open your browser at [http://localhost:5173/](http://localhost:5173/) to access 
 
 ## 8. Automated Test Verification
 
-Run automated test suites to verify system correctness across all phases:
+Run automated test suites to verify system correctness across all 8 implemented phases:
 ```bash
 python test_phase1.py   # Tests Phase 1 backend CRUD services
 python test_phase2.py   # Tests Phase 2 request parsing & deterministic routing
 python test_phase3.py   # Tests Phase 3 LangGraph multi-agent orchestration & human approval
+python test_phase4.py   # Tests Phase 4 JWT auth, RBAC, and patient isolation
+python test_phase5.py   # Tests Phase 5 ChromaDB RAG, document ingestion, and grounded policies
+python test_phase6.py   # Tests Phase 6 ML time-series demand forecasting & alerts
+python test_phase7.py   # Tests Phase 7 Google OR-Tools MIP discrete optimization
+python test_phase8.py   # Tests Phase 8 MCP Server/Client, Tool Discovery, and FHIR R4 (13 tests)
 ```
 
 ---
@@ -199,17 +243,13 @@ python test_phase3.py   # Tests Phase 3 LangGraph multi-agent orchestration & hu
 ## 9. Sample Multi-Agent Demonstration Queries
 
 Try these queries in the **Workflow Command Terminal** (`/workflow`):
-1. `"I need an appointment with a cardiologist tomorrow."` *(Primary Demo: Doctor Agent $\rightarrow$ Appointment Agent $\rightarrow$ Validation Node $\rightarrow$ Human Approval Card $\rightarrow$ Database Mutation)*
-2. `"Find me an available cardiologist."` *(Doctor Search Workflow)*
-3. `"Show appointments for patient P001."` *(Patient Information Workflow)*
-4. `"Book an appointment."` *(Triggers NEEDS_CLARIFICATION prompt)*
-5. `"Find an available neurologist."` *(Doctor Availability Lookup)*
-
----
-
-## 10. Future Phases Roadmap
-- **Phase 4**: Bed Allocation, Nurse Coordination & Emergency Triage Agents (LangGraph expansion)
-- **Phase 5**: RAG Policy Retrieval Agent (ChromaDB + Vector Index)
-- **Phase 6**: ML Resource Surge Prediction (XGBoost / Scikit-Learn)
-- **Phase 7**: OR-Tools Operations & Bed Transfer Optimization
-- **Phase 8**: System Evaluation & Production Deployment
+1. `"Check laboratory availability for CBC blood test and check amoxicillin stock in pharmacy."` *(Phase 8 MCP Multi-Service Federated Query)*
+2. `"Optimize appointment schedule for Cardiology tomorrow"` *(Phase 7 OR-Tools MIP Appointment Optimizer)*
+3. `"Optimize doctor shift schedule for Cardiology tomorrow"` *(Phase 7 ML Demand-Driven Shift Scheduler)*
+4. `"Allocate beds for Emergency Medicine"` *(Phase 7 Triage-Weighted Bed Allocation Engine)*
+5. `"Forecast patient arrivals and bed occupancy for Cardiology"` *(Phase 6 ML Demand Prediction)*
+6. `"Predict emergency workload for Emergency Medicine tomorrow"` *(Phase 6 Emergency Surge Forecast)*
+7. `"What are the visiting hours for the ICU?"` *(Phase 5 RAG Grounded Policy Retrieval)*
+8. `"I need an appointment with a cardiologist tomorrow."` *(Phase 3 Primary Demo: Doctor Agent $\rightarrow$ Appointment Agent $\rightarrow$ Validation Node $\rightarrow$ Human Approval Card)*
+9. `"Find me an available cardiologist."` *(Doctor Search Workflow)*
+10. `"Show appointments for patient P001."` *(Patient Information Workflow)*

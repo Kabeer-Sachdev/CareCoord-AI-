@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Optional, List, Any, Dict, Literal
 from pydantic import BaseModel, Field
 
-REQUEST_TYPES = Literal["doctor_search", "appointment", "patient_information", "unknown"]
+REQUEST_TYPES = Literal["doctor_search", "appointment", "patient_information", "policy", "forecast", "optimization", "mcp_integration", "unknown"]
 URGENCY_LEVELS = Literal["normal", "urgent", "critical"]
 
 class WorkflowRequest(BaseModel):

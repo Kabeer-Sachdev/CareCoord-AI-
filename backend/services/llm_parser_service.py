@@ -3,13 +3,14 @@ import re
 import json
 from typing import Optional
 from backend.schemas.workflow import WorkflowParseResult
+from backend.services.llm_client import llm_client
 
 SYSTEM_PROMPT = """You are a hospital workflow request parser for CareCoord.
 You convert natural-language operational requests into structured workflow information.
 You do NOT diagnose patients, prescribe medication, recommend treatment, or make clinical decisions.
 
 Your task is to extract structured parameters from the user's operational query.
-Valid request_type values: "doctor_search", "appointment", "patient_information", "unknown"
+Valid request_type values: "doctor_search", "appointment", "patient_information", "policy", "forecast", "optimization", "mcp_integration", "unknown"
 Valid urgency values: "normal", "urgent", "critical"
 
 If mandatory information is missing for an action (such as booking an appointment without specifying a department or doctor), set clarification_needed = true and list missing fields in missing_info.
@@ -74,6 +75,71 @@ def heuristic_parse_request(message: str) -> WorkflowParseResult:
         date_hint = "next week"
 
     # Classify Request Type
+    # 0. Policy Question / Guidelines lookup
+    policy_keywords = [
+        "policy", "guideline", "guidelines", "protocol", "visiting hours",
+        "discharge procedure", "admission procedure", "cancellation policy",
+        "reschedule policy", "rules", "rule", "bed allocation guideline",
+        "refund policy", "billing policy", "how do i admit", "how do i discharge",
+        "what are the visiting hours", "what is the policy"
+    ]
+    if any(pk in msg_lower for pk in policy_keywords):
+        return WorkflowParseResult(
+            request_type="policy",
+            department=found_dept,
+            urgency=urgency,
+            reason=msg
+        )
+
+    # 0.1 Forecast / Prediction Request
+    forecast_keywords = [
+        "forecast", "predict", "prediction", "how many beds", "expected arrivals",
+        "expected emergency", "expected appointments", "resource demand", "future workload",
+        "occupancy tomorrow", "arrivals tomorrow", "emergency tomorrow", "demand tomorrow"
+    ]
+    if any(fk in msg_lower for fk in forecast_keywords):
+        return WorkflowParseResult(
+            request_type="forecast",
+            department=found_dept or "Cardiology",
+            urgency=urgency,
+            date=date_hint or "tomorrow",
+            reason=msg
+        )
+
+    # 0.2 Resource Optimization / Allocation Request
+    optimization_keywords = [
+        "optimize", "optimization", "optimal schedule", "allocate beds", "allocate bed", "allocate doctor",
+        "doctor scheduling", "schedule optimization", "resource allocation", "reallocate",
+        "solve schedule", "optimal allocation", "shift assignment", "shift optimization",
+        "bed allocation optimization", "appointment optimization"
+    ]
+    if any(ok in msg_lower for ok in optimization_keywords):
+        return WorkflowParseResult(
+            request_type="optimization",
+            department=found_dept or "Cardiology",
+            doctor_id=found_doctor_id,
+            patient_id=found_patient_id,
+            urgency=urgency,
+            date=date_hint or "tomorrow",
+            reason=msg
+        )
+
+    # 0.3 MCP External Tool Integration (Lab, Pharmacy, External HIS)
+    mcp_keywords = [
+        "laboratory", "lab service", "lab test", "lab availability", "specimen", "sample test",
+        "sample status", "blood count", "troponin", "reagent", "pharmacy", "medication", "drug stock",
+        "product availability", "amoxicillin", "atorvastatin", "metformin", "paracetamol", "pantoprazole",
+        "salbutamol", "insulin", "dispensary", "formulary", "mcp tool", "external service", "his sandbox"
+    ]
+    if any(mk in msg_lower for mk in mcp_keywords):
+        return WorkflowParseResult(
+            request_type="mcp_integration",
+            department=found_dept or "Laboratory",
+            patient_id=found_patient_id,
+            urgency=urgency,
+            reason=msg
+        )
+
     # 1. Ambiguous/incomplete appointment booking
     if msg_lower.strip() in ["book an appointment.", "book an appointment", "schedule appointment", "i want an appointment"]:
         return WorkflowParseResult(
@@ -126,29 +192,36 @@ def heuristic_parse_request(message: str) -> WorkflowParseResult:
 def parse_workflow_request(message: str) -> WorkflowParseResult:
     """
     Parses a natural-language request into a structured WorkflowParseResult model.
-    Attempts LLM parsing if GEMINI_API_KEY / OPENAI_API_KEY is configured,
-    otherwise uses high-accuracy fallback parser.
+    Uses local Ollama (qwen2.5:3b) on the user's laptop, with graceful fallback to heuristic parser.
     """
-    api_key = os.getenv("GEMINI_API_KEY") or os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        # Use clean rule-based parser when API key is absent
-        return heuristic_parse_request(message)
-
     try:
-        # If Gemini API key is present, attempt SDK call
-        import google.genai as genai
-        client = genai.Client(api_key=api_key)
-        prompt = f"{SYSTEM_PROMPT}\n\nParse this hospital request into JSON format strictly matching keys (request_type, department, specialization, patient_id, doctor_id, urgency, date, missing_info, clarification_needed, clarification_prompt):\n'{message}'"
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=prompt,
+        prompt = (
+            f"Parse the following operational hospital request into a JSON object strictly matching these keys: "
+            f"\"request_type\" (must be one of: \"doctor_search\", \"appointment\", \"patient_information\", \"policy\", \"forecast\", \"optimization\", \"unknown\"), "
+            f"\"department\" (string or null), \"specialization\" (string or null), "
+            f"\"patient_id\" (string or null), \"doctor_id\" (string or null), "
+            f"\"urgency\" (\"normal\", \"urgent\", or \"critical\"), \"date\" (string or null), "
+            f"\"missing_info\" (list of strings), \"clarification_needed\" (boolean), "
+            f"\"clarification_prompt\" (string or null).\n\n"
+            f"Request: \"{message}\"\n\nJSON Output:"
         )
-        text_resp = response.text.strip()
-        # Clean JSON markdown fences if any
-        if text_resp.startswith("```"):
-            text_resp = text_resp.split("```")[1].lstrip("json").strip()
-        data = json.loads(text_resp)
-        return WorkflowParseResult(**data)
+        resp_text = llm_client.generate(
+            prompt=prompt,
+            system_prompt=SYSTEM_PROMPT,
+            temperature=0.1,
+            json_mode=True,
+            timeout=25
+        )
+        if resp_text:
+            cleaned = resp_text.strip()
+            if cleaned.startswith("```"):
+                cleaned = cleaned.split("```")[1].lstrip("json").strip()
+            data = json.loads(cleaned)
+            # Ensure mandatory keys exist
+            if "request_type" in data:
+                return WorkflowParseResult(**data)
     except Exception:
-        # Graceful fallback on LLM error or format error
-        return heuristic_parse_request(message)
+        pass
+
+    # High-accuracy heuristic fallback
+    return heuristic_parse_request(message)

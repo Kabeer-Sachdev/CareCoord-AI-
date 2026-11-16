@@ -1,0 +1,42 @@
+{
+  "dataset_name": "CareCoord Synthetic Hospital Operations Time-Series",
+  "description": "Historical daily operational resource tracking across 7 hospital departments for machine learning forecasting. Contains no Personal Identifiable Information (PII).",
+  "record_count": 1288,
+  "start_date": "2026-05-15",
+  "end_date": "2026-11-14",
+  "departments": [
+    "Cardiology",
+    "Neurology",
+    "Orthopedics",
+    "General Medicine",
+    "Emergency Medicine",
+    "Pediatrics",
+    "Dermatology"
+  ],
+  "features": [
+    "date",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "day",
+    "department",
+    "patient_arrivals",
+    "appointment_count",
+    "emergency_cases",
+    "available_doctors",
+    "occupied_beds",
+    "available_beds",
+    "total_beds",
+    "bed_occupancy_rate",
+    "data_type"
+  ],
+  "data_classification": "SYNTHETIC_OPERATIONAL",
+  "is_real_hospital_data": false,
+  "generation_timestamp": "2026-11-15T06:13:55.473697",
+  "prediction_targets": [
+    "patient_arrivals",
+    "emergency_cases",
+    "occupied_beds",
+    "appointment_count"
+  ]
+}

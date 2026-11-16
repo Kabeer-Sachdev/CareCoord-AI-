@@ -1,0 +1,29 @@
+# ST. JUDE METROPOLITAN HOSPITAL
+## POLICY DOCUMENT: EMERGENCY ADMISSION AND TRAUMA WORKFLOW
+Policy Reference: POL-ER-2024-V3
+Department: Emergency Medicine & Trauma Center
+Effective Date: March 1, 2024
+Review Cycle: Semi-Annual
+
+1. EMERGENCY DEPARTMENT MISSION AND MANDATE
+In compliance with Emergency Medical Treatment and Labor Act (EMTALA) and national accreditation standards, any individual presenting to the Emergency Department (ED) shall receive an immediate Medical Screening Examination (MSE) to determine the presence of an Emergency Medical Condition (EMC), regardless of insurance status or ability to pay.
+
+2. TRIAGE PROTOCOL (EMERGENCY SEVERITY INDEX - ESI)
+All presenting patients undergo immediate primary nursing triage utilizing the 5-level Emergency Severity Index:
+- Level 1 (Resuscitation / Immediate): Life-threatening conditions (e.g., cardiac arrest, respiratory failure, severe trauma). Immediate bed placement and trauma team activation required within 0 minutes.
+- Level 2 (Emergent): High-risk situations, altered mental status, severe pain, suspected acute coronary syndrome, or acute stroke. Physician evaluation target: within 10 minutes.
+- Level 3 (Urgent): Patient requires multiple resources (labs, imaging, IV medications) but has stable vital signs. Evaluation target: within 30 minutes.
+- Level 4 (Semi-Urgent): Requires one resource (e.g., simple laceration repair or X-ray). Evaluation target: within 60 minutes.
+- Level 5 (Non-Urgent): Requires zero resources (e.g., suture removal or medication refill). Evaluation target: within 120 minutes.
+
+3. EMERGENCY BED ALLOCATION AND ADMISSION DECISION
+3.1 Decision to Admit: The attending ED physician must document the admission decision within 4 hours of patient arrival.
+3.2 Bed Request Submission: The ED charge nurse submits electronic bed requests specifying level of care:
+   - Intensive Care Unit (ICU): Cardiac ICU, Medical ICU, Surgical ICU.
+   - Step-Down / Telemetry Ward: Continuous cardiac monitoring required.
+   - General Inpatient Medical/Surgical Ward: Stable acute care.
+3.3 Holding in ED: If inpatient beds are temporarily at 100% occupancy, ED boarding protocol is activated. The Patient Flow Coordinator initiates bed re-allocation and rapid discharge huddles on inpatient floors.
+
+4. EMERGENCY REGISTRATION PROCEDURES
+4.1 Bedside Registration: Triage, clinical stabilization, and life-saving interventions must NEVER be delayed for demographic or billing registration.
+4.2 "John/Jane Doe" Protocol: Unidentified or unconscious patients are assigned temporary synthetic identifiers (e.g., TRAUMA-M-01) with biometric fingerprinting or photograph for subsequent positive identification.

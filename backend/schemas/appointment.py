@@ -2,7 +2,13 @@ from datetime import datetime
 from typing import Optional, Literal
 from pydantic import BaseModel, Field
 
-APPOINTMENT_STATUS_TYPES = Literal["scheduled", "completed", "cancelled", "pending"]
+APPOINTMENT_STATUS_TYPES = Literal[
+    "scheduled", "completed", "cancelled", "pending", "confirmed", "rejected", "accepted"
+]
+
+class AppointmentStatusUpdate(BaseModel):
+    status: APPOINTMENT_STATUS_TYPES = Field(..., example="confirmed")
+    notes: Optional[str] = Field(None, example="Accepted by doctor")
 
 class AppointmentBase(BaseModel):
     patient_id: str = Field(..., example="P001")

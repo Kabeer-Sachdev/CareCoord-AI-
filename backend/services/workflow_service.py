@@ -2,11 +2,17 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional
 from sqlalchemy.orm import Session
 
-from backend.database.models import WorkflowRun, WorkflowEvent
+from backend.database.models import WorkflowRun, WorkflowEvent, User
 from backend.schemas.workflow import WorkflowRequest, WorkflowResponse, WorkflowParseResult
 from backend.agents.state import CareCoordState
 from backend.agents.graph import carecoord_graph
 from backend.tools import appointment_tools
+from backend.realtime.connection_manager import connection_manager
+from backend.realtime.events import EventType
+from backend.services.notification_service import (
+    notify_workflow_approval_required,
+    create_notification,
+)
 
 class WorkflowService:
     """Service layer managing LangGraph state executions and SQLite workflow audit records."""
@@ -16,7 +22,7 @@ class WorkflowService:
         count = db.query(WorkflowRun).count()
         return f"WF-{count + 1:06d}"
 
-    def process_workflow(self, db: Session, request: WorkflowRequest) -> WorkflowResponse:
+    def process_workflow(self, db: Session, request: WorkflowRequest, user: Optional[User] = None) -> WorkflowResponse:
         raw_msg = request.message.strip()
         wf_id = self.generate_workflow_id(db)
 
@@ -27,11 +33,24 @@ class WorkflowService:
             workflow_type="pending",
             status="RUNNING",
             requires_human_approval=False,
+            requested_by=user.username if user else None,
+            requested_role=user.role if user else None,
             started_at=datetime.utcnow()
         )
         db.add(run)
         db.commit()
         db.refresh(run)
+
+        # Broadcast started event
+        connection_manager.broadcast_sync(
+            event_type=EventType.WORKFLOW_STARTED,
+            payload={
+                "workflow_id": wf_id,
+                "request": raw_msg,
+                "requested_by": run.requested_by,
+                "requested_role": run.requested_role
+            }
+        )
 
         # 2. Build initial CareCoordState
         initial_state: CareCoordState = {
@@ -113,6 +132,21 @@ class WorkflowService:
 
         db.commit()
         db.refresh(run)
+
+        # Broadcast status and trigger notifications
+        if status_str == "REQUIRES_HUMAN_APPROVAL":
+            notify_workflow_approval_required(db, run)
+
+        connection_manager.broadcast_sync(
+            event_type=EventType.WORKFLOW_STATUS_CHANGED,
+            payload={
+                "workflow_id": wf_id,
+                "status": run.status,
+                "requires_human_approval": run.requires_human_approval,
+                "workflow_type": run.workflow_type,
+                "recommendation": run.recommendation
+            }
+        )
 
         # 6. Extract step list for UI display
         steps = []
@@ -203,6 +237,21 @@ class WorkflowService:
         db.add(event)
         db.commit()
         db.refresh(run)
+
+        # Broadcast real-time notifications and events
+        if created_appt:
+            connection_manager.broadcast_sync(
+                event_type=EventType.APPOINTMENT_CREATED,
+                payload=created_appt
+            )
+        connection_manager.broadcast_sync(
+            event_type=EventType.WORKFLOW_STATUS_CHANGED,
+            payload={
+                "workflow_id": workflow_id,
+                "status": run.status,
+                "recommendation": run.recommendation
+            }
+        )
         return run
 
     def reject_workflow(self, db: Session, workflow_id: str, notes: Optional[str] = None) -> WorkflowRun:
@@ -233,6 +282,14 @@ class WorkflowService:
         db.add(event)
         db.commit()
         db.refresh(run)
+
+        connection_manager.broadcast_sync(
+            event_type=EventType.WORKFLOW_STATUS_CHANGED,
+            payload={
+                "workflow_id": workflow_id,
+                "status": run.status
+            }
+        )
         return run
 
 workflow_service = WorkflowService()

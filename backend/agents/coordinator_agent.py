@@ -42,6 +42,14 @@ class CoordinatorAgent:
                 state["required_agents"] = ["Doctor Agent"]
             elif request_type == "patient_information":
                 state["required_agents"] = ["Patient Agent"]
+            elif request_type == "policy":
+                state["required_agents"] = ["Policy Agent"]
+            elif request_type == "forecast":
+                state["required_agents"] = ["Prediction Agent"]
+            elif request_type == "optimization":
+                state["required_agents"] = ["Optimization Agent"]
+            elif request_type == "mcp_integration":
+                state["required_agents"] = ["MCP Agent"]
             else:
                 state["required_agents"] = []
 
@@ -137,6 +145,65 @@ class CoordinatorAgent:
                     "steps": steps_summary
                 }
                 state["status"] = "COMPLETED"
+
+        elif request_type == "policy":
+            pol_res = state.get("policy_result") or {}
+            pol_data = pol_res.get("data", {})
+            answer = pol_data.get("answer", "Policy information processed.")
+            sources = pol_data.get("sources", [])
+            insufficient = pol_data.get("insufficient_information", False)
+
+            state["final_recommendation"] = {
+                "agent_used": "Policy Agent",
+                "status": "insufficient_information" if insufficient else "success",
+                "recommendation": answer,
+                "data": pol_data,
+                "steps": steps_summary
+            }
+            state["status"] = "COMPLETED"
+
+        elif request_type == "forecast":
+            pred_res = state.get("prediction_result") or {}
+            pred_data = pred_res.get("data", {})
+            summary_text = pred_res.get("summary") or "ML resource forecast completed."
+
+            state["final_recommendation"] = {
+                "agent_used": "Prediction Agent",
+                "status": "success",
+                "recommendation": summary_text,
+                "data": pred_data,
+                "steps": steps_summary
+            }
+            state["status"] = "COMPLETED"
+
+        elif request_type == "optimization":
+            opt_res = state.get("optimization_result") or {}
+            opt_data = opt_res.get("data", {})
+            summary_text = opt_res.get("summary") or "Resource allocation optimization completed."
+
+            state["final_recommendation"] = {
+                "agent_used": "Optimization Agent",
+                "status": "REQUIRES_HUMAN_APPROVAL",
+                "recommendation": summary_text,
+                "data": opt_data,
+                "steps": steps_summary
+            }
+            state["status"] = "REQUIRES_HUMAN_APPROVAL"
+            state["requires_human_review"] = True
+
+        elif request_type == "mcp_integration":
+            mcp_res = state.get("mcp_result") or {}
+            summary_text = mcp_res.get("summary") or "External hospital service MCP tool invocation completed."
+            mcp_data = mcp_res.get("data", {})
+
+            state["final_recommendation"] = {
+                "agent_used": "MCP Agent",
+                "status": "success",
+                "recommendation": summary_text,
+                "data": mcp_data,
+                "steps": steps_summary
+            }
+            state["status"] = "COMPLETED"
 
         return state
 

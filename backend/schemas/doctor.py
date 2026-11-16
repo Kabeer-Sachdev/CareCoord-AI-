@@ -7,6 +7,7 @@ class DoctorBase(BaseModel):
     department: str = Field(..., example="Cardiology")
     experience_years: int = Field(..., ge=0, le=70, example=12)
     availability: bool = Field(default=True, example=True)
+    availability_status: Optional[str] = Field(default="Available", example="Available")
     shift: str = Field(..., example="09:00-17:00")
     current_patients: int = Field(default=0, ge=0, example=4)
 
@@ -21,8 +22,14 @@ class DoctorUpdate(BaseModel):
     department: Optional[str] = None
     experience_years: Optional[int] = Field(None, ge=0, le=70)
     availability: Optional[bool] = None
+    availability_status: Optional[str] = None
     shift: Optional[str] = None
     current_patients: Optional[int] = Field(None, ge=0)
+
+
+class DoctorStatusUpdate(BaseModel):
+    availability_status: str = Field(..., example="Available")  # Available, Busy, Unavailable, On Leave
+    notes: Optional[str] = Field(None, example="In emergency surgery")
 
 
 class DoctorResponse(DoctorBase):

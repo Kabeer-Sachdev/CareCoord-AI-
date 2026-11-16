@@ -2,6 +2,8 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from backend.database.database import get_db
+from backend.database.models import User
+from backend.auth.dependencies import get_optional_current_user
 from backend.schemas.workflow import (
     WorkflowRequest,
     WorkflowResponse,
@@ -10,17 +12,31 @@ from backend.schemas.workflow import (
     WorkflowApprovalRequest
 )
 from backend.services.workflow_service import workflow_service
+from backend.services.audit_service import log_audit
 
 router = APIRouter(tags=["AI Workflow Orchestration"])
 
 @router.post("/workflow/request", response_model=WorkflowResponse, summary="Process natural-language hospital request (Phase 2 & 3 Compatible)")
-def handle_workflow_request(request: WorkflowRequest, db: Session = Depends(get_db)):
+def handle_workflow_request(
+    request: WorkflowRequest,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_current_user)
+):
     """
     Receives a natural-language operational query, parses it into structured parameters via LLM/Heuristic parser,
     orchestrates execution via LangGraph multi-agent graph engine, and returns database-backed results.
     """
     try:
-        return workflow_service.process_workflow(db, request)
+        resp = workflow_service.process_workflow(db, request, user=current_user)
+        log_audit(
+            db,
+            user=current_user,
+            action="EXECUTE_WORKFLOW",
+            entity_type="WorkflowRun",
+            entity_id=resp.workflow_id,
+            meta_data={"status": resp.status, "agent_used": resp.agent_used}
+        )
+        return resp
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -29,10 +45,22 @@ def handle_workflow_request(request: WorkflowRequest, db: Session = Depends(get_
 
 
 @router.post("/workflows", response_model=WorkflowResponse, summary="Start a new LangGraph workflow execution")
-def create_workflow_run(request: WorkflowRequest, db: Session = Depends(get_db)):
+def create_workflow_run(
+    request: WorkflowRequest,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_current_user)
+):
     """Starts a new stateful multi-agent workflow execution."""
     try:
-        return workflow_service.process_workflow(db, request)
+        resp = workflow_service.process_workflow(db, request, user=current_user)
+        log_audit(
+            db,
+            user=current_user,
+            action="EXECUTE_WORKFLOW",
+            entity_type="WorkflowRun",
+            entity_id=resp.workflow_id
+        )
+        return resp
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -126,11 +154,24 @@ def get_workflow_events(workflow_id: str, db: Session = Depends(get_db)):
 
 
 @router.post("/workflows/{workflow_id}/approve", summary="Human Staff Approval for pending workflow")
-def approve_workflow(workflow_id: str, req: Optional[WorkflowApprovalRequest] = None, db: Session = Depends(get_db)):
+def approve_workflow(
+    workflow_id: str,
+    req: Optional[WorkflowApprovalRequest] = None,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_current_user)
+):
     """Approves a pending workflow and executes the actual appointment creation database mutation."""
     notes = req.notes if req else None
     try:
         updated_run = workflow_service.approve_workflow(db, workflow_id, notes=notes)
+        log_audit(
+            db,
+            user=current_user,
+            action="APPROVE_WORKFLOW",
+            entity_type="WorkflowRun",
+            entity_id=workflow_id,
+            meta_data={"notes": notes}
+        )
         return {
             "status": "success",
             "message": f"Workflow {workflow_id} approved successfully and committed to database.",
@@ -145,11 +186,24 @@ def approve_workflow(workflow_id: str, req: Optional[WorkflowApprovalRequest] = 
 
 
 @router.post("/workflows/{workflow_id}/reject", summary="Human Staff Rejection for pending workflow")
-def reject_workflow(workflow_id: str, req: Optional[WorkflowApprovalRequest] = None, db: Session = Depends(get_db)):
+def reject_workflow(
+    workflow_id: str,
+    req: Optional[WorkflowApprovalRequest] = None,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_current_user)
+):
     """Rejects a pending workflow without performing database mutations."""
     notes = req.notes if req else None
     try:
         updated_run = workflow_service.reject_workflow(db, workflow_id, notes=notes)
+        log_audit(
+            db,
+            user=current_user,
+            action="REJECT_WORKFLOW",
+            entity_type="WorkflowRun",
+            entity_id=workflow_id,
+            meta_data={"notes": notes}
+        )
         return {
             "status": "success",
             "message": f"Workflow {workflow_id} rejected.",

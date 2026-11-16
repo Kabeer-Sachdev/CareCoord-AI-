@@ -7,6 +7,10 @@ from backend.agents.patient_agent import PatientAgent
 from backend.agents.doctor_agent import DoctorAgent
 from backend.agents.appointment_agent import AppointmentAgent
 from backend.agents.validation_agent import ValidationAgent
+from backend.agents.policy_agent import PolicyAgent
+from backend.agents.prediction_agent import PredictionAgent
+from backend.agents.optimization_agent import OptimizationAgent
+from backend.agents.mcp_agent import MCPAgent
 from backend.services.llm_parser_service import parse_workflow_request
 
 coordinator_agent = CoordinatorAgent()
@@ -14,6 +18,10 @@ patient_agent_node = PatientAgent()
 doctor_agent_node = DoctorAgent()
 appointment_agent_node = AppointmentAgent()
 validation_agent_node = ValidationAgent()
+policy_agent_node = PolicyAgent()
+prediction_agent_node = PredictionAgent()
+optimization_agent_node = OptimizationAgent()
+mcp_agent_node = MCPAgent()
 
 def parse_request_node(state: CareCoordState) -> CareCoordState:
     """Graph Node: Parses original natural language request into structured JSON parameters."""
@@ -57,6 +65,22 @@ def doctor_agent_graph_node(state: CareCoordState) -> CareCoordState:
 def appointment_agent_graph_node(state: CareCoordState) -> CareCoordState:
     """Graph Node: Appointment Agent."""
     return appointment_agent_node.process_node(state)
+
+def policy_agent_graph_node(state: CareCoordState) -> CareCoordState:
+    """Graph Node: Hospital Policy Agent."""
+    return policy_agent_node.process_node(state)
+
+def prediction_agent_graph_node(state: CareCoordState) -> CareCoordState:
+    """Graph Node: ML Resource Prediction Agent."""
+    return prediction_agent_node.process_node(state)
+
+def optimization_agent_graph_node(state: CareCoordState) -> CareCoordState:
+    """Graph Node: Resource Allocation and Optimization Agent."""
+    return optimization_agent_node.process_node(state)
+
+def mcp_agent_graph_node(state: CareCoordState) -> CareCoordState:
+    """Graph Node: MCP External Hospital Interoperability Agent."""
+    return mcp_agent_node.process_node(state)
 
 def validation_graph_node(state: CareCoordState) -> CareCoordState:
     """Graph Node: Operational Validation Agent."""
@@ -129,6 +153,18 @@ def route_next_node(state: CareCoordState) -> str:
     if "Patient Agent" in required and "Patient Agent" not in executed:
         return "patient_agent"
 
+    if "Policy Agent" in required and "Policy Agent" not in executed:
+        return "policy_agent"
+
+    if "Prediction Agent" in required and "Prediction Agent" not in executed:
+        return "prediction_agent"
+
+    if "Optimization Agent" in required and "Optimization Agent" not in executed:
+        return "optimization_agent"
+
+    if "MCP Agent" in required and "MCP Agent" not in executed:
+        return "mcp_agent"
+
     # 5. Validation Node execution for appointments
     req_type = state.get("workflow_request", {}).get("request_type")
     if req_type == "appointment" and "validation" not in executed:
@@ -151,6 +187,10 @@ def build_carecoord_graph() -> StateGraph:
     builder.add_node("patient_agent", patient_agent_graph_node)
     builder.add_node("doctor_agent", doctor_agent_graph_node)
     builder.add_node("appointment_agent", appointment_agent_graph_node)
+    builder.add_node("policy_agent", policy_agent_graph_node)
+    builder.add_node("prediction_agent", prediction_agent_graph_node)
+    builder.add_node("optimization_agent", optimization_agent_graph_node)
+    builder.add_node("mcp_agent", mcp_agent_graph_node)
     builder.add_node("validation", validation_graph_node)
     builder.add_node("final_response", final_response_node)
 
@@ -168,6 +208,10 @@ def build_carecoord_graph() -> StateGraph:
             "doctor_agent": "doctor_agent",
             "appointment_agent": "appointment_agent",
             "patient_agent": "patient_agent",
+            "policy_agent": "policy_agent",
+            "prediction_agent": "prediction_agent",
+            "optimization_agent": "optimization_agent",
+            "mcp_agent": "mcp_agent",
             "validation": "validation",
             "coordinator": "coordinator",
             "final_response": "final_response"
@@ -178,6 +222,10 @@ def build_carecoord_graph() -> StateGraph:
     builder.add_edge("patient_agent", "coordinator")
     builder.add_edge("doctor_agent", "coordinator")
     builder.add_edge("appointment_agent", "coordinator")
+    builder.add_edge("policy_agent", "coordinator")
+    builder.add_edge("prediction_agent", "coordinator")
+    builder.add_edge("optimization_agent", "coordinator")
+    builder.add_edge("mcp_agent", "coordinator")
     builder.add_edge("validation", "coordinator")
 
     # Final response finishes graph

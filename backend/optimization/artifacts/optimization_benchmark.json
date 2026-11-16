@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-11-16T12:31:55",
+  "scenario": {
+    "department": "Cardiology",
+    "total_requests": 12,
+    "doctors_count": 3,
+    "time_slots_count": 12
+  },
+  "baseline_fifo": {
+    "total_requests": 12,
+    "allocated_count": 12,
+    "unallocated_count": 0,
+    "allocation_rate_percent": 100.0,
+    "average_wait_minutes": 165.0,
+    "workload_imbalance_std": 4.97,
+    "scheduling_conflicts": 0,
+    "execution_time_ms": 0.0
+  },
+  "ortools_optimizer": {
+    "total_requests": 12,
+    "allocated_count": 12,
+    "unallocated_count": 0,
+    "allocation_rate_percent": 100.0,
+    "average_wait_minutes": 60.0,
+    "workload_imbalance_std": 0.0,
+    "scheduling_conflicts": 0,
+    "execution_time_ms": 52.91,
+    "solver_status": "OPTIMAL",
+    "objective_value": 440.0
+  },
+  "improvements": {
+    "waiting_time_reduction_percent": 63.6,
+    "workload_imbalance_reduction_percent": 100.0,
+    "conflict_elimination": "100% (Zero Conflicts)"
+  }
+}

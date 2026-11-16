@@ -1,0 +1,29 @@
+# ST. JUDE METROPOLITAN HOSPITAL
+## POLICY DOCUMENT: APPOINTMENT CANCELLATION AND RESCHEDULING RULES
+Policy Reference: POL-SCH-2024-V4
+Department: Outpatient Services & Scheduling
+Effective Date: February 1, 2024
+Review Cycle: Annual
+
+1. PURPOSE
+The purpose of this policy is to establish clear, fair, and standardized guidelines for outpatient appointment scheduling, cancellations, rescheduling, and missed appointments (no-shows) to ensure maximum clinical availability for all patients.
+
+2. CANCELLATION NOTICE TIMELINES
+2.1 General Outpatient Consultations: Patients must notify the clinic or call center at least 24 hours prior to the scheduled appointment time.
+2.2 Specialized Diagnostic Procedures (e.g., MRI, CT Scans, Cardiac Catheterization, Endoscopy): Patients must provide at least 48 hours advance notice due to specialized preparation and equipment allocation.
+2.3 Same-day cancellations within 4 hours of the appointment will be categorized as "Late Cancellation" unless accompanied by documentation of a medical emergency or severe transit disruption.
+
+3. RESCHEDULING GUIDELINES
+3.1 Patients may reschedule an appointment up to two (2) consecutive times without clinical re-triage or administrative review.
+3.2 Requests to reschedule a third consecutive time require review and authorization by the department clinic manager or attending physician.
+3.3 Rescheduled appointments are offered based on next-available doctor slots or prioritized standby lists for urgent clinical needs.
+
+4. NO-SHOW POLICY AND PENALTIES
+4.1 A "No-Show" occurs when a patient fails to arrive for a scheduled appointment and did not provide prior cancellation notification.
+4.2 First Incident: The patient receives an automated courtesy reminder explaining the scheduling policy via SMS or secure portal.
+4.3 Second Incident: A formal written notice is issued, and a $25 scheduling administrative fee is recorded on the patient account (fee waiver available for verified hardships).
+4.4 Third Incident within a 12-month period: The patient's scheduling privileges for non-urgent elective appointments are restricted to same-day call-in standby for a period of six months. Emergency services are never restricted.
+
+5. PROVIDER CANCELLATIONS
+5.1 When a physician or provider must cancel outpatient clinic hours due to urgent surgical calls or emergency consultations, the scheduling department must contact affected patients within 2 hours of notification.
+5.2 Patients affected by provider cancellations receive priority expedited booking within 72 hours with the same physician or a qualified department colleague.

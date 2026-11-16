@@ -1,0 +1,32 @@
+# ST. JUDE METROPOLITAN HOSPITAL
+## POLICY DOCUMENT: PATIENT DISCHARGE AND TRANSITION OF CARE PROCEDURE
+Policy Reference: POL-DIS-2024-V2
+Department: Clinical Quality, Nursing & Case Management
+Effective Date: March 15, 2024
+Review Cycle: Annual
+
+1. PURPOSE
+The goal of this policy is to facilitate safe, coordinated, and timely patient discharges, reduce unplanned 30-day hospital readmissions, and ensure continuity of outpatient medical care and medication management.
+
+2. DISCHARGE TIMELINE AND ADVANCE PLANNING
+2.1 Discharge planning begins within 24 hours of inpatient admission through multidisciplinary evaluation by Case Management and Social Services.
+2.2 Target Daily Discharge Time: Patients scheduled for discharge should vacate inpatient beds by 11:00 AM on their discharge day. This standard turnaround ensures morning bed availability for ED and surgical admissions.
+2.3 The attending physician must communicate the expected discharge date (EDD) to the patient, primary caregiver, and nursing staff at least 24 hours prior to anticipated departure.
+
+3. CLINICAL CLEARANCE AND DISCHARGE ORDERS
+3.1 A formal electronic Discharge Order must be signed by the attending physician or credentialed resident by 09:00 AM on the day of discharge.
+3.2 Nursing discharge assessment verifies stable vital signs, independent ambulation or safe transfer capability, and resolution of acute clinical issues.
+3.3 Discharge Medication Reconciliation: Clinical Pharmacist conducts comprehensive medication reconciliation, reviewing home medications against newly prescribed inpatient medications to prevent dangerous interactions or duplicate therapies.
+
+4. PATIENT EDUCATION AND WRITTEN INSTRUCTIONS
+4.1 The bedside nurse reviews the Written After-Visit Summary (AVS) with the patient and primary caregiver using the "Teach-Back" method.
+4.2 Instructions must include:
+    - Clear diagnosis summary in plain, non-technical language.
+    - Prescribed medications, dosages, frequency, and instructions on side effects.
+    - Specific dietary restrictions, wound care instructions, and activity limitations.
+    - Scheduled follow-up appointments with outpatient specialists within 7 to 14 days.
+    - "Red Flag" warning symptoms requiring immediate return to the Emergency Department (e.g., chest pain, shortness of breath, sudden fever >101°F).
+
+5. DISCHARGE TRANSIT LOUNGE AND TRANSPORTATION
+5.1 Patients cleared clinically who are awaiting family pickup or pharmacy prescription fulfillment after 11:00 AM are transitioned to the comfortable Discharge Hospitality Lounge.
+5.2 Wheelchair escorts provided by patient transport staff are mandatory from the hospital unit to the patient's departure vehicle.
