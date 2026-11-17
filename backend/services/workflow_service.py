@@ -1,6 +1,16 @@
-from datetime import datetime
+from datetime import datetime, date
 from typing import Dict, Any, List, Optional
 from sqlalchemy.orm import Session
+
+def make_json_safe(obj: Any) -> Any:
+    """Recursively converts non-JSON serializable objects (dates, datetimes) to ISO strings."""
+    if isinstance(obj, dict):
+        return {str(k): make_json_safe(v) for k, v in obj.items()}
+    elif isinstance(obj, (list, tuple, set)):
+        return [make_json_safe(x) for x in obj]
+    elif isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    return obj
 
 from backend.database.models import WorkflowRun, WorkflowEvent, User
 from backend.schemas.workflow import WorkflowRequest, WorkflowResponse, WorkflowParseResult
@@ -126,7 +136,7 @@ class WorkflowService:
         run.requires_human_approval = final_state.get("requires_human_review", False)
         run.agent_used = agent_used
         run.recommendation = final_rec.get("recommendation")
-        run.final_result = final_rec
+        run.final_result = make_json_safe(final_rec)
         if status_str != "REQUIRES_HUMAN_APPROVAL":
             run.completed_at = datetime.utcnow()
 
